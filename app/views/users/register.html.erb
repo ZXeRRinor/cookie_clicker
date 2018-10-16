@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= stylesheet_pack_tag 'stylesheets/users/register' %>
+  </head>
+  <body>
+    <% if @status != 'success' %>
+      <div class="notice alert alert-danger" role="alert">
+        <%= @status %>
+        <%= link_to 'Try again.', {controller: 'users', action: 'register'}, class: 'alert-link' %>
+      </div>
+    <% else %>
+      <div class="account_settings">
+
+      </div>
+    <% end %>
+  </body>
+</html>
