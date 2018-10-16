@@ -20,7 +20,12 @@ class Shop extends Component {
     }
 
     buy(action) {
-        this.props.dispatch('buyProducer', PRODUCER_LIST[action.target.id]);
+        let producer = PRODUCER_LIST[action.target.id];
+        if (this.props.store.userCookies >= SHOP_ELEMENTS[producer]['price']) {
+            this.props.dispatch('buyProducer', producer);
+        } else {
+            console.log('You don\'t have enough money to buy this!');
+        }
     }
 
     render() {

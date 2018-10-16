@@ -39,12 +39,11 @@ function gameReducer(state = initialState, action) {
 
         case 'buyProducer': {
             let new_state = state;
+            new_state['userCookies'] -= SHOP_ELEMENTS[action.payload]['price'];
             new_state['producers'][action.payload] += 1;
             console.log(new_state);
             return (new_state);
         }
-
-
     }
 }
 
