@@ -5,7 +5,7 @@ class Clicker extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {x: 0}
+        this.state = {x: 0};
         this.cookie_click = this.cookie_click.bind(this);
     }
 

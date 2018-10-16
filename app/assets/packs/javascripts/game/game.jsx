@@ -3,11 +3,11 @@ import {createStore} from 'redux'
 import {Provider} from 'react-redux'
 import Clicker from "./clicker";
 import Shop from "./shop";
-import {SHOP_ELEMENTS, MACHINE_LIST} from "./game.design";
+import {SHOP_ELEMENTS, PRODUCER_LIST} from "./game.design";
 
 const initialState = {
     userCookies: 0,
-    machines: {
+    producers: {
         'Auto Clicker': 0,
         'Auto Oven': 0,
         'Cookie Farm': 0,
@@ -36,6 +36,15 @@ function gameReducer(state = initialState, action) {
                 ...state, userCookies: userCookies
             });
         }
+
+        case 'buyProducer': {
+            let new_state = state;
+            new_state['producers'][action.payload] += 1;
+            console.log(new_state);
+            return (new_state);
+        }
+
+
     }
 }
 
@@ -50,10 +59,10 @@ class Game extends Component {
     }
 
     cookieIncrement() {
-        let machines = game_store.getState().machines;
+        let producers = game_store.getState().producers;
         let cookies = 0;
-        for (let i = 0; i < MACHINE_LIST.length; i++) {
-            cookies += machines[MACHINE_LIST[i]] * SHOP_ELEMENTS[MACHINE_LIST[i]].performance;
+        for (let i = 0; i < PRODUCER_LIST.length; i++) {
+            cookies += producers[PRODUCER_LIST[i]] * SHOP_ELEMENTS[PRODUCER_LIST[i]].performance;
         }
         game_store.dispatch({type: 'addUserCookies', payload: cookies});
     }

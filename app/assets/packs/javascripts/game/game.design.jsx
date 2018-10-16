@@ -1,7 +1,7 @@
 //Shop titles, base prices and performance:
 //Need rebalance;
 
-const MACHINE_LIST = ['Auto Clicker', 'Auto Oven', 'Cookie Farm', 'Cookie Factory', 'Cookie Reactor', 'Cookie Materialiser', 'Quantum Cookie Singularity', 'Admin Cookie Creator'];
+const PRODUCER_LIST = ['Auto Clicker', 'Auto Oven', 'Cookie Farm', 'Cookie Factory', 'Cookie Reactor', 'Cookie Materialiser', 'Quantum Cookie Singularity', 'Admin Cookie Creator'];
 
 const SHOP_ELEMENTS = {
     'Auto Clicker': {'price': 8, 'performance': 1},
@@ -14,4 +14,4 @@ const SHOP_ELEMENTS = {
     'Admin Cookie Creator': {'price': 134217728, 'performance': 4194304},
 };
 
-export {SHOP_ELEMENTS, MACHINE_LIST};
+export {SHOP_ELEMENTS, PRODUCER_LIST};
