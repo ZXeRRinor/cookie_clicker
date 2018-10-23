@@ -4,6 +4,7 @@
 const PRODUCER_LIST = ['Auto Clicker', 'Auto Oven', 'Cookie Farm', 'Cookie Factory', 'Cookie Reactor', 'Cookie Materialiser', 'Quantum Cookie Singularity', 'Admin Cookie Creator'];
 
 const SHOP_ELEMENTS = {
+    //'Your Cursor': {'price': 8, 'performance': 1},
     'Auto Clicker': {'price': 8, 'performance': 1},
     'Auto Oven': {'price': 64, 'performance': 8},
     'Cookie Farm': {'price': 512, 'performance': 64},

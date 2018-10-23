@@ -1,0 +1,12 @@
+<% case @error_status %>
+<% when 'invalid_email' %>
+  <% render 'errors/invalid_email' %>
+<% when 'incorrect_password' %>
+  <% render 'errors/incorrect_password' %>
+<% when 'user_exists' %>
+  <% render 'errors/user_exists' %>
+<% when 'not_enough_permissions' %>
+  <% render 'errors/not_enough_permissions' %>
+<% else %>
+  <% render 'errors/default_error' %>
+<% end %>

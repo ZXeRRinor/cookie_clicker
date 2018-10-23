@@ -10,12 +10,23 @@ class UsersController < ApplicationController
     @status = 'Incorrect email or password!'
     unless User.find_by(email: user.email).nil?
       @status = 'This email is using!'
+      redirect_to url: {controller: 'users', action: 'error'}
       return
     end
     if user.save
       @status = 'success'
       set_current_user(user)
+    else
+      redirect_to url: {controller: 'users', action: 'error'}
     end
+  end
+
+  def error
+
+  end
+
+  def profile
+    @user = current_user
   end
 
   def show_current
@@ -25,8 +36,8 @@ class UsersController < ApplicationController
   def show_user
     @user = User.find_by(id: params[:id])
   end
-end
 
-def user_params
-  params.require(:user).permit(:email, :name, :password, :password_confirmation)
+  def user_params
+    params.require(:user).permit(:email, :name, :password, :password_confirmation)
+  end
 end

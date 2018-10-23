@@ -17,8 +17,8 @@ class Clicker extends Component {
 
     render() {
         return (
-            <div className='cookie'>
-                <img onClick={this.cookie_click} src="https://avatanplus.com/files/resources/mid/578cdb575613a155fe38cd39.png" />
+            <div className='clicker'>
+                <img onClick={this.cookie_click} src="https://avatanplus.com/files/resources/mid/578cdb575613a155fe38cd39.png" width="200px" height="200px" />
             </div>
         )
     }

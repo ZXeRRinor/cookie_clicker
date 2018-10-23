@@ -20,8 +20,8 @@ class Shop extends Component {
     }
 
     buy(action) {
-        let producer = PRODUCER_LIST[action.target.id];
-        if (this.props.store.userCookies >= SHOP_ELEMENTS[producer]['price']) {
+        let producer = PRODUCER_LIST[parseInt(action.target.id)];
+        if (this.props.store.userCookies >= this.props.store['currentPricesOfProducers'][producer]) {
             this.props.dispatch('buyProducer', producer);
         } else {
             console.log('You don\'t have enough money to buy this!');
@@ -31,9 +31,18 @@ class Shop extends Component {
     render() {
         return (
             <div className="shop">
-                {PRODUCER_LIST.map((producer, index) =>
-                    <div className="shop_element" key={index} id={index} onClick={this.buy}>{producer}</div>
-                )}
+                <div className="user_balance">
+                    Your balance: {this.props.store.userCookies}
+                </div>
+                <div className="producer_list">
+                    {PRODUCER_LIST.map((producer, index) =>
+                        <div className="shop_element" key={index} id={index + '_producer'} onClick={this.buy}>
+                            {producer} - Production: {SHOP_ELEMENTS[producer]['performance']} -
+                            Price: {this.props.store.currentPricesOfProducers[producer]} -
+                            Current Amount: {this.props.store.userProducers[producer]}
+                        </div>
+                    )}
+                </div>
             </div>
         );
     }
