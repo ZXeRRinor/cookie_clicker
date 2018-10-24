@@ -6,7 +6,5 @@ Rails.application.routes.draw do
   get 'login', to: 'sessions#try_login'
   post 'login', to: 'sessions#login'
   get 'logout', to: 'sessions#logout'
-  get 'my_profile', to: 'users#profile'
-  get 'error', to: 'users#error'
-  patch 'change_password', to: 'users#change_password'
+  get 'my_profile', to: 'users#show_current'
 end

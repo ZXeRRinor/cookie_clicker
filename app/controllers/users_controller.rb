@@ -7,26 +7,17 @@ class UsersController < ApplicationController
 
   def register
     user = User.new(user_params)
-    @status = 'incorrect_password'
+    @status = 'Incorrect email or password!'
     unless User.find_by(email: user.email).nil?
-      @status = 'user_exists'
-      redirect_to_error
+      @status = 'This email is using!'
+      redirect_to url: {controller: 'users', action: 'error'}
+      return
     end
     if user.save
       @status = 'success'
       set_current_user(user)
     else
-      redirect_to_error
-    end
-  end
-
-  def change_password
-    unless current_user
-      @status = 'unauthorized_user'
-      redirect_to_error
-    end
-    unless current_user.update_attributes(password: update_params[:password])
-      redirect_to_error
+      redirect_to url: {controller: 'users', action: 'error'}
     end
   end
 
@@ -35,22 +26,18 @@ class UsersController < ApplicationController
   end
 
   def profile
-    @user = User.new
+    @user = current_user
+  end
+
+  def show_current
+    redirect_to url: {controller: 'users', action: 'show_user', id: current_user.id}
   end
 
   def show_user
     @user = User.find_by(id: params[:id])
   end
-end
 
-def show_current
-  redirect_to controller: 'users', action: 'show_user', id: current_user.id
-end
-
-def user_params
-  params.require(:user).permit(:email, :name, :password, :password_confirmation)
-end
-
-def redirect_to_error
-  redirect_to controller: 'users', action: 'error'
+  def user_params
+    params.require(:user).permit(:email, :name, :password, :password_confirmation)
+  end
 end

@@ -84,7 +84,6 @@ test:
 #
 production:
   <<: *default
-  database: d6oso48l835qu2
-  username: kxeddbembeclhl
-  password: 9f16bdfee8f2744753d84eddef8af7429a4994cf6852d583b73f673b66ea5047
-  host: ec2-54-247-86-89.eu-west-1.compute.amazonaws.com
+  database: cookie_clicker_production
+  username: cookie_clicker
+  password: <%= ENV['COOKIE_CLICKER_DATABASE_PASSWORD'] %>
