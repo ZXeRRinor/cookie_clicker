@@ -5,8 +5,8 @@
   <body>
     <div class="profile">
       <div class="user_avatar"></div>
-      <div class="user_name"></div>
-      <div class="user_email"></div>
+      <div class="user_name"><%= @current_user.name %></div>
+      <div class="user_email"><%= @current_user.email %></div>
       <div class="change_password">
         <p>
           <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">

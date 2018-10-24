@@ -21,6 +21,7 @@
         </div>
         <div class="form-group">
           <%= f.submit 'Register', class: 'btn btn-primary' %>
+          <%= link_to 'Log in', {controller: 'sessions', action: 'try_login'}, class: 'btn btn-primary' %>
         </div>
       <% end %>
     </div>
