@@ -25,19 +25,23 @@ class UsersController < ApplicationController
 
   end
 
-  def profile
-    @user = current_user
+  def change_password
+
   end
 
-  def show_current
-    redirect_to url: {controller: 'users', action: 'show_user', id: current_user.id}
+  def profile
+    @user = User.new
   end
 
   def show_user
     @user = User.find_by(id: params[:id])
   end
 
-  def user_params
-    params.require(:user).permit(:email, :name, :password, :password_confirmation)
+  def show_current
+    redirect_to url: {controller: 'users', action: 'show_user', id: current_user.id}
   end
+end
+
+def user_params
+  params.require(:user).permit(:email, :name, :password, :password_confirmation)
 end

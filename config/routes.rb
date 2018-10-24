@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   post 'login', to: 'sessions#login'
   get 'logout', to: 'sessions#logout'
   get 'my_profile', to: 'users#show_current'
+  patch 'change_password', to: 'users#change_password'
 end
