@@ -11,13 +11,14 @@ class SessionsController < ApplicationController
       @status = 'You are logged in now!'
       return
     end
-    user = User.find_by(user_params[:email])
+    user = User.find_by(email: user_params[:email])
     if user.nil?
-      @status = 'Users with such email not found!'
-      return
+      @status = 'invalid_email'
+      redirect_to controller: 'users', action: 'error'
     end
     unless user.authenticate(user_params[:password])
-      @status = 'Incorrect password!'
+      @status = 'incorrect_password!'
+      redirect_to controller: 'users', action: 'error'
     end
   end
 

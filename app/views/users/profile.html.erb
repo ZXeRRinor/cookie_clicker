@@ -1,1 +1,35 @@
 <html>
+  <head>
+
+  </head>
+  <body>
+    <div class="profile">
+      <div class="avatar">
+      </div>
+      <div class="user_info">
+        <div class="user_name"></div>
+        <div class="user_email"></div>
+        <p>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            Change password.
+          </button>
+        </p>
+        <div class="collapse" id="collapseExample">
+          <div class="card card-body">
+            <%= form_with model: @user, method: 'patch', url: {controller: 'users', action: 'change_password'} do |f| %>
+              <div class="form-group">
+                <%= f.password_field :password, class: 'form-control', placeholder: 'New password' %>
+              </div>
+              <div class="form-group">
+                <%= f.password_field :password_confirmation, class: 'form-control', placeholder: 'Confirm your new password' %>
+              </div>
+              <div class="form-group">
+                <%= f.submit 'Change', class: 'btn btn-primary' %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
