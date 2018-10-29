@@ -1,4 +1,4 @@
-include(Currents)
+include(Currents, Errors)
 
 class UsersController < ApplicationController
   def try_register
@@ -7,37 +7,34 @@ class UsersController < ApplicationController
 
   def register
     user = User.new(user_params)
-    @error_status = 'incorrect_password'
-    unless User.find_by(email: user.email).nil?
-      @error_status = 'user_exists'
-      redirect_to_error
+    unless User.find_by(email: user_params[:email]).nil?
+      redirect_to_error('user_exists')
     end
     if user.save
-      @error_status = 'success'
       set_current_user(user)
     else
-      redirect_to_error
+      if /[\w]+@[\w]+\.[A-Za-z]/ =~ user_params[:email]
+        redirect_to_error('invalid_email')
+      end
+      if (6..50).cover?(user_params[:email].length)
+        redirect_to_error('invalid_password')
+      end
     end
-  end
-
-  def error
-
   end
 
   def change_password
     unless current_user
-      @status = 'unauthorized_user'
-      redirect_to_error
+      redirect_to_error('not_logged_in')
     end
     unless current_user.update_attributes(password: user_params[:password])
-      redirect_to_error
+      redirect_to_error('password_not_changed')
     end
     redirect_to controller: 'sessions', action: 'logout'
   end
 
   def profile
     unless current_user
-      redirect_to_error
+      redirect_to_error('not_logged_in')
     end
     @user = User.new
     @current_user = current_user
@@ -50,10 +47,6 @@ class UsersController < ApplicationController
   def show_current
     redirect_to controller: 'users', action: 'show_user', id: current_user.id
   end
-end
-
-def redirect_to_error
-  redirect_to controller: 'users', action: 'error'
 end
 
 def user_params

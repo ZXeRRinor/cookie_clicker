@@ -1,4 +1,4 @@
-include(Currents)
+include(Currents, Errors)
 
 class SessionsController < ApplicationController
   def try_login
@@ -6,27 +6,29 @@ class SessionsController < ApplicationController
   end
 
   def login
-    @status = 'Successfully logged in!'
     if current_user
-      @status = 'You are logged in now!'
-      return
+      redirect_to_error('logged_in')
     end
     user = User.find_by(email: user_params[:email])
     if user.nil?
-      @status = 'Users with such email not found!'
-      return
+      redirect_to_error('incorrect_email_or_password')
     end
-    unless user.authenticate(user_params[:password])
-      @status = 'Incorrect password!'
+    if user.authenticate(user_params[:password])
+      set_current_user(user)
+    else
+      redirect_to_error('incorrect_email_or_password')
     end
   end
 
   def logout
-    @status = 'Successfully logged out!'
-    if current_user.nil?
-      @status = 'You are not logged in!'
-      return
+    unless current_user
+      redirect_to_error('not_logged_in')
     end
     reset_current_user
+    redirect_to '/'
   end
+end
+
+def user_params
+  params.require(:user).permit(:email, :name, :password, :password_confirmation)
 end

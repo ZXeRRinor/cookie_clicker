@@ -1,0 +1,17 @@
+<html>
+  <head>
+
+  </head>
+  <body>
+    <div>
+      <%= form_with model: @subforum, method: 'post', url: {controller: 'subforums', action: 'create'} do |f| %>
+        <div class="form-group">
+          <%= f.text_field :title, class: 'form-control', placeholder: 'Enter ' %>
+        </div>
+        <div class="form-group">
+          <%= f.submit 'Create', class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+    </div>
+  </body>
+</html>

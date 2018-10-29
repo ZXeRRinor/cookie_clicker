@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <%= stylesheet_pack_tag 'stylesheets/subforums/show' %>
+  </head>
+  <body>
+    <div class="root">
+      <div class="posts_list">
+        <ul class="list-group list-group-flush">
+          <% @posts.each do |post| %>
+            <li class="list-group-item list-group-item-primary">
+              <div class="post_link">
+                <%= link_to "#{post.title}", {controller: 'posts', action: 'show', id: post.id} %>
+              </div>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="subforums_list">
+        <ul class="list-group list-group-flush">
+          <% @subs.each do |sub| %>
+            <li class="list-group-item list-group-item-dark">
+              <div class="subforum_link">
+                <%= link_to "#{sub.title}", {controller: 'subforums', action: 'show', id: sub.id} %>
+              </div>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

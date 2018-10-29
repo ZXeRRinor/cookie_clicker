@@ -1,0 +1,31 @@
+.root {
+  width: 1800px;
+  margin: 0 auto;
+}
+
+.post {
+  border-radius: 3px;
+  background-color: #9fcdff;
+  height: 300px;
+  margin: 7px auto;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 10px 0 0 10px;
+}
+
+.content {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.message_form {
+  width: 1000px;
+  height: 250px;
+}
+
+.message_list {
+  margin: 0 10px 0 10px;
+}
