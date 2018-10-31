@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Печенухи!</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <%= link_to 'Game', {controller: 'game', action: 'game'}, class: 'nav-link' %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Forum', {controller: 'subforums', action: 'show', id: 0}, class: 'nav-link' %>
+      </li>
+    </ul>
+    <ul class="navbar-nav right_block">
+      <% user ||= User.find_by(id: session[:user_id]) %>
+      <% if user %>
+        <%= render 'partials/dropdown', open_btn: user.email, items: {'Profile' => {controller: 'users', action: 'profile'}}, last_item_text: 'Logout', last_item_path: {controller: 'sessions', action: 'logout'} %>
+      <% else %>
+        <div>
+          <%= render 'partials/login_modal' %>
+          <%= render 'partials/register_modal' %>
+        </div>
+      <% end %>
+    </ul>
+  </div>
+</nav>

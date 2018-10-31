@@ -17,18 +17,12 @@
           <%= f.submit 'Log in', class: 'btn btn-primary' %>
         </div>
       <% end %>
-      <p>
-        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-          Я забыл пароль!
-        </button>
-      </p>
-      <div class="collapse" id="collapseExample">
-        <div class="card card-body">
-          <span>Ну зарегистрируй новый аккаунт, тут всё равно можно в качестве мыла писать всякую ересь!</span>
-          <br/>
-          <%= link_to 'Новый аккаунт!', {controller: 'users', action: 'register'}, class: 'btn btn-primary' %>
-        </div>
-      </div>
+
+      <%= render 'partials/collapse', id: 'new_account', btn_text: 'Я забыл пароль!' do %>
+        <span>Ну зарегистрируй новый аккаунт, тут всё равно можно в качестве мыла писать всякую ересь!</span>
+        <br/>
+        <%= link_to 'Новый аккаунт!', {controller: 'users', action: 'register'}, class: 'btn btn-primary' %>
+      <% end %>
     </div>
   </body>
 </html>

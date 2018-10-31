@@ -11,10 +11,12 @@ Rails.application.routes.draw do
 
   get 'forum/:id/new_sub',       to: 'subforums#new'
   post 'forum/:id/new_sub',      to: 'subforums#create'
+  get 'forum/:id/new_post',      to: 'posts#new'
+  post 'forum/:id/new_post',     to: 'posts#create'
+  post 'forum/posts/:id/new',    to: 'messages#create'
   get 'forum/:id',               to: 'subforums#show'
   get 'forum/init',              to: 'subforums#init'
   get 'forum/post/:id',          to: 'posts#show'
-  post 'forum/post/:id/create',  to: 'messages#create'
 
   get 'error/1/:type',  to: 'errors#default_error'
   get 'error/2',        to: 'errors#incorrect_email_or_password'

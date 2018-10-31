@@ -1,0 +1,13 @@
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <%= open_btn %>
+  </a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <% items.each_with_index do |item, key| %>
+      <% p key %>
+      <%= link_to item.first, item.last, class: 'dropdown-item' %>
+    <% end %>
+    <div class="dropdown-divider"></div>
+    <%= link_to last_item_text, last_item_path, class: 'dropdown-item' %>
+  </div>
+</li>

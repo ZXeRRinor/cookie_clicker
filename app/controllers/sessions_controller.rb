@@ -15,6 +15,7 @@ class SessionsController < ApplicationController
     end
     if user.authenticate(user_params[:password])
       set_current_user(user)
+      redirect_to controller: 'users', action: 'profile'
     else
       redirect_to_error('incorrect_email_or_password')
     end
