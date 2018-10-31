@@ -1,0 +1,59 @@
+<div class="root">
+  <%= render 'partials/collapse', btn_text: 'User list', id: 'user_list' do %>
+    <table>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.id %></td>
+          <td><%= user.email %></td>
+          <td><%= user.name %></td>
+          <td><%= user.permissions %></td>
+          <td><%= user.created_at %></td>
+          <td><%= user.updated_at %></td>
+        </tr>
+      <% end %>
+    </table>
+  <% end %>
+  <%= render 'partials/collapse', btn_text: 'Subforum list', id: 'sub_list' do %>
+    <table>
+      <% @subforums.each do |subforum| %>
+        <tr>
+          <td><%= subforum.id %></td>
+          <td><%= subforum.title %></td>
+          <td><%= subforum.user_id %></td>
+          <td><%= subforum.subforum_id %></td>
+          <td><%= subforum.created_at %></td>
+          <td><%= subforum.updated_at %></td>
+        </tr>
+      <% end %>
+    </table>
+  <% end %>
+  <%= render 'partials/collapse', btn_text: 'Post list', id: 'post_list' do %>
+    <table>
+      <% @posts.each do |post| %>
+        <tr>
+          <td><%= post.id %></td>
+          <td><%= post.title %></td>
+          <td><%= post.content %></td>
+          <td><%= post.user_id %></td>
+          <td><%= post.subforum_id %></td>
+          <td><%= post.created_at %></td>
+          <td><%= post.updated_at %></td>
+        </tr>
+      <% end %>
+    </table>
+  <% end %>
+  <%= render 'partials/collapse', btn_text: 'Message list', id: 'msg_list' do %>
+    <table>
+      <% @messages.each do |message| %>
+        <tr>
+          <td><%= message.id %></td>
+          <td><%= message.content %></td>
+          <td><%= message.user_id %></td>
+          <td><%= message.post_id %></td>
+          <td><%= message.created_at %></td>
+          <td><%= message.updated_at %></td>
+        </tr>
+      <% end %>
+    </table>
+  <% end %>
+</div>
