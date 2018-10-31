@@ -26,7 +26,7 @@ class ErrorsController < ApplicationController
 
   end
 
-  def not_enough_permissions
+  def not_enough_perms
 
   end
 
