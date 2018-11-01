@@ -10,6 +10,7 @@ class UsersController < ApplicationController
     unless User.find_by(email: user_params[:email]).nil?
       redirect_to_error('user_exists')
     end
+    user.permissions = 0
     if user.save
       set_current_user(user)
     else

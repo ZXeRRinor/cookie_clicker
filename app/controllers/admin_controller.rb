@@ -14,10 +14,10 @@ class AdminController < ApplicationController
 
   def admin_panel
     check_user
-    @users = User.all
-    @subforums = Subforum.all
-    @posts = Post.all
-    @messages = Message.all
+    @users = User.all.order(id: :asc)
+    @subforums = Subforum.all.order(id: :asc)
+    @posts = Post.all.order(id: :asc)
+    @messages = Message.all.order(id: :asc)
   end
 end
 

@@ -27,4 +27,6 @@ Rails.application.routes.draw do
   get 'error/7',        to: 'errors#not_logged_in'
   get 'error/8',        to: 'errors#user_exists'
   get 'error/:type',    to: 'errors#error'
+
+  get 'admin/panel', to: 'admin#admin_panel'
 end

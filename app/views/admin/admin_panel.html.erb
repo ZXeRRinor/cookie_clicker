@@ -1,6 +1,17 @@
 <div class="root">
   <%= render 'partials/collapse', btn_text: 'User list', id: 'user_list' do %>
-    <table>
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Email</th>
+        <th scope="col">Name</th>
+        <th scope="col">Permissions</th>
+        <th scope="col">Created at</th>
+        <th scope="col">Updated at</th>
+      </tr>
+      </thead>
+      <tbody>
       <% @users.each do |user| %>
         <tr>
           <td><%= user.id %></td>
@@ -11,10 +22,22 @@
           <td><%= user.updated_at %></td>
         </tr>
       <% end %>
+      </tbody>
     </table>
   <% end %>
   <%= render 'partials/collapse', btn_text: 'Subforum list', id: 'sub_list' do %>
-    <table>
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">User ID</th>
+        <th scope="col">Parent subforum ID</th>
+        <th scope="col">Created at</th>
+        <th scope="col">Updated at</th>
+      </tr>
+      </thead>
+      <tbody>
       <% @subforums.each do |subforum| %>
         <tr>
           <td><%= subforum.id %></td>
@@ -25,10 +48,23 @@
           <td><%= subforum.updated_at %></td>
         </tr>
       <% end %>
+      </tbody>
     </table>
   <% end %>
   <%= render 'partials/collapse', btn_text: 'Post list', id: 'post_list' do %>
-    <table>
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+        <th scope="col">User ID</th>
+        <th scope="col">Subforum ID</th>
+        <th scope="col">Created at</th>
+        <th scope="col">Updated at</th>
+      </tr>
+      </thead>
+      <tbody>
       <% @posts.each do |post| %>
         <tr>
           <td><%= post.id %></td>
@@ -40,10 +76,22 @@
           <td><%= post.updated_at %></td>
         </tr>
       <% end %>
+      </tbody>
     </table>
   <% end %>
   <%= render 'partials/collapse', btn_text: 'Message list', id: 'msg_list' do %>
-    <table>
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Content</th>
+        <th scope="col">User ID</th>
+        <th scope="col">Post ID</th>
+        <th scope="col">Created at</th>
+        <th scope="col">Updated at</th>
+      </tr>
+      </thead>
+      <tbody>
       <% @messages.each do |message| %>
         <tr>
           <td><%= message.id %></td>
@@ -54,6 +102,7 @@
           <td><%= message.updated_at %></td>
         </tr>
       <% end %>
+      </tbody>
     </table>
   <% end %>
 </div>
