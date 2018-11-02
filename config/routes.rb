@@ -9,14 +9,14 @@ Rails.application.routes.draw do
   get 'my_profile', to: 'users#profile'
   patch 'change_password', to: 'users#change_password'
 
-  get 'forum/:id/new_sub',       to: 'subforums#new'
-  post 'forum/:id/new_sub',      to: 'subforums#create'
-  get 'forum/:id/new_post',      to: 'posts#new'
-  post 'forum/:id/new_post',     to: 'posts#create'
-  post 'forum/posts/:id/new',    to: 'messages#create'
-  get 'forum/:id',               to: 'subforums#show'
-  get 'forum/init',              to: 'subforums#init'
-  get 'forum/post/:id',          to: 'posts#show'
+  get  'forum/:id/new_sub',     to: 'subforums#new'
+  post 'forum/:id/new_sub',     to: 'subforums#create'
+  get  'forum/:id/new_post',    to: 'posts#new'
+  post 'forum/:id/new_post',    to: 'posts#create'
+  post 'forum/posts/:id/new',   to: 'messages#create'
+  get  'forum/:id',             to: 'subforums#show'
+  get  'forum/init',            to: 'subforums#init'
+  get  'forum/post/:id',        to: 'posts#show'
 
   get 'error/1/:type',  to: 'errors#default_error'
   get 'error/2',        to: 'errors#incorrect_email_or_password'
@@ -28,5 +28,5 @@ Rails.application.routes.draw do
   get 'error/8',        to: 'errors#user_exists'
   get 'error/:type',    to: 'errors#error'
 
-  get 'admin/panel', to: 'admin#admin_panel'
+  get  'admin/panel', to: 'admin#admin_panel'
 end

@@ -2,7 +2,7 @@ include(Currents, Errors, Permissions)
 
 class AdminController < ApplicationController
   def set_perms
-    check_user
+    check_curr_user
     user = User.find_by(id: set_perms_id)
     user.permissions = params[:perms]
     if user.save
@@ -12,8 +12,15 @@ class AdminController < ApplicationController
     end
   end
 
+  def create_user
+    check_curr_user
+    user = User.new(create_user_params)
+    user.save(validate: false)
+    p user
+  end
+
   def admin_panel
-    check_user
+    check_curr_user
     @users = User.all.order(id: :asc)
     @subforums = Subforum.all.order(id: :asc)
     @posts = Post.all.order(id: :asc)
@@ -21,7 +28,11 @@ class AdminController < ApplicationController
   end
 end
 
-def check_user
+def create_user_params
+  params.require(:user).permit(:id, :email, :name, :permissions, :created_at, :updated_at, :password)
+end
+
+def check_curr_user
   unless current_user
     redirect_to_error 'not_logged_in'
   end

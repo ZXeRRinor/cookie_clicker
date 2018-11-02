@@ -22,6 +22,24 @@
           <td><%= user.updated_at %></td>
         </tr>
       <% end %>
+      <%= form_with model: User.new, method: 'post', url: {controller: 'admin', action: 'create_user'} do |f| %>
+        <tr>
+          <td><%= f.text_field :id, class: 'form-control', placeholder: 'ID' %></td>
+          <td><%= f.text_field :email, class: 'form-control', placeholder: 'E-Mail' %></td>
+          <td><%= f.text_field :name, class: 'form-control', placeholder: 'Name' %></td>
+          <td><%= f.text_field :permissions, class: 'form-control', placeholder: 'Permissions' %></td>
+          <td><%= f.text_field :created_at, class: 'form-control', placeholder: 'Created at' %></td>
+          <td><%= f.text_field :updated_at, class: 'form-control', placeholder: 'Updated at' %></td>
+        </tr>
+        <tr>
+          <td>
+            <%= f.text_field :password, class: 'form-control', placeholder: 'Password' %>
+          </td>
+          <td>
+            <%= f.submit 'Force add to database', class: 'btn btn-warning' %>
+          </td>
+        </tr>
+      <% end %>
       </tbody>
     </table>
   <% end %>
@@ -46,6 +64,21 @@
           <td><%= subforum.subforum_id %></td>
           <td><%= subforum.created_at %></td>
           <td><%= subforum.updated_at %></td>
+        </tr>
+      <% end %>
+      <%= form_with model: Subforum.new, method: 'post', url: {controller: 'admin', action: 'create_subforum'} do |f| %>
+        <tr>
+          <td><%= f.text_field :id, class: 'form-control', placeholder: 'ID' %></td>
+          <td><%= f.text_field :title, class: 'form-control', placeholder: 'Title' %></td>
+          <td><%= f.text_field :user_id, class: 'form-control', placeholder: 'User ID' %></td>
+          <td><%= f.text_field :subforum_id, class: 'form-control', placeholder: 'Par. subforum ID' %></td>
+          <td><%= f.text_field :created_at, class: 'form-control', placeholder: 'Created at' %></td>
+          <td><%= f.text_field :updated_at, class: 'form-control', placeholder: 'Updated at' %></td>
+        </tr>
+        <tr>
+          <td>
+            <%= f.submit 'Force add to database', class: 'btn btn-warning' %>
+          </td>
         </tr>
       <% end %>
       </tbody>
@@ -76,6 +109,22 @@
           <td><%= post.updated_at %></td>
         </tr>
       <% end %>
+      <%= form_with model: Post.new, method: 'post', url: {controller: 'admin', action: 'create_post'} do |f| %>
+        <tr>
+          <td><%= f.text_field :id, class: 'form-control', placeholder: 'ID' %></td>
+          <td><%= f.text_field :title, class: 'form-control', placeholder: 'Title' %></td>
+          <td><%= f.text_field :content, class: 'form-control', placeholder: 'Content' %></td>
+          <td><%= f.text_field :user_id, class: 'form-control', placeholder: 'User ID' %></td>
+          <td><%= f.text_field :subforum_id, class: 'form-control', placeholder: 'Subforum ID' %></td>
+          <td><%= f.text_field :created_at, class: 'form-control', placeholder: 'Created at' %></td>
+          <td><%= f.text_field :updated_at, class: 'form-control', placeholder: 'Updated at' %></td>
+        </tr>
+        <tr>
+          <td>
+            <%= f.submit 'Force add to database', class: 'btn btn-warning' %>
+          </td>
+        </tr>
+      <% end %>
       </tbody>
     </table>
   <% end %>
@@ -100,6 +149,21 @@
           <td><%= message.post_id %></td>
           <td><%= message.created_at %></td>
           <td><%= message.updated_at %></td>
+        </tr>
+      <% end %>
+      <%= form_with model: Message.new, method: 'post', url: {controller: 'admin', action: 'create_message'} do |f| %>
+        <tr>
+          <td><%= f.text_field :id, class: 'form-control', placeholder: 'ID' %></td>
+          <td><%= f.text_field :content, class: 'form-control', placeholder: 'Content' %></td>
+          <td><%= f.text_field :user_id, class: 'form-control', placeholder: 'User ID' %></td>
+          <td><%= f.text_field :post_id, class: 'form-control', placeholder: 'Post ID' %></td>
+          <td><%= f.text_field :created_at, class: 'form-control', placeholder: 'Created at' %></td>
+          <td><%= f.text_field :updated_at, class: 'form-control', placeholder: 'Updated at' %></td>
+        </tr>
+        <tr>
+          <td>
+            <%= f.submit 'Force add to database', class: 'btn btn-warning' %>
+          </td>
         </tr>
       <% end %>
       </tbody>
