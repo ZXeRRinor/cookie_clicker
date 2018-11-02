@@ -12,11 +12,20 @@ class AdminController < ApplicationController
     end
   end
 
-  def create_user
+  def create_record
     check_curr_user
-    user = User.new(create_user_params)
-    user.save(validate: false)
-    p user
+    case params[:record]
+    when 'user'
+      User.new(user_params).save(validate: false)
+    when 'subforum'
+      Subforum.new(subforum_params).save(validate: false)
+    when 'post'
+      Post.new(post_params).save(validate: false)
+    when 'message'
+      Message.new(message_params).save(validate: false)
+    else
+      redirect_to_error 'unknown record type'
+    end
   end
 
   def admin_panel
@@ -28,8 +37,20 @@ class AdminController < ApplicationController
   end
 end
 
-def create_user_params
+def user_params
   params.require(:user).permit(:id, :email, :name, :permissions, :created_at, :updated_at, :password)
+end
+
+def subforum_params
+  params.require(:subforum).permit(:id, :title, :user_id, :subforum_id, :created_at, :updated_at, :password)
+end
+
+def post_params
+  params.require(:post).permit(:id, :title, :content, :user_id, :subforum_id, :created_at, :updated_at, :password)
+end
+
+def message_params
+  params.require(:message).permit(:id, :content, :user_id, :post_id, :created_at, :updated_at, :password)
 end
 
 def check_curr_user
