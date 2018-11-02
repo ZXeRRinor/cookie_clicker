@@ -2,10 +2,12 @@
   <dictionary name="zxerr">
     <words>
       <w>adminperms</w>
+      <w>dropdown</w>
       <w>jumbotron</w>
       <w>materialiser</w>
       <w>materialisers</w>
       <w>moderperms</w>
+      <w>navbar</w>
       <w>subforum</w>
       <w>subforums</w>
       <w>userperms</w>
