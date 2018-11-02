@@ -22,7 +22,7 @@
           <td><%= user.updated_at %></td>
         </tr>
       <% end %>
-      <%= form_with model: User.new, method: 'post', url: {controller: 'admin', action: 'create_record', record: 'user'} do |f| %>
+      <%= form_with model: User.new, method: 'post', url: {controller: 'admin', action: 'create_record', record_type: 'user'} do |f| %>
         <tr>
           <td><%= f.text_field :id, class: 'form-control', placeholder: 'ID' %></td>
           <td><%= f.text_field :email, class: 'form-control', placeholder: 'E-Mail' %></td>
@@ -66,7 +66,7 @@
           <td><%= subforum.updated_at %></td>
         </tr>
       <% end %>
-      <%= form_with model: Subforum.new, method: 'post', url: {controller: 'admin', action: 'create_record', record: 'subforum'} do |f| %>
+      <%= form_with model: Subforum.new, method: 'post', url: {controller: 'admin', action: 'create_record', record_type: 'subforum'} do |f| %>
         <tr>
           <td><%= f.text_field :id, class: 'form-control', placeholder: 'ID' %></td>
           <td><%= f.text_field :title, class: 'form-control', placeholder: 'Title' %></td>
@@ -109,7 +109,7 @@
           <td><%= post.updated_at %></td>
         </tr>
       <% end %>
-      <%= form_with model: Post.new, method: 'post', url: {controller: 'admin', action: 'create_record', record: 'post'} do |f| %>
+      <%= form_with model: Post.new, method: 'post', url: {controller: 'admin', action: 'create_record', record_type: 'post'} do |f| %>
         <tr>
           <td><%= f.text_field :id, class: 'form-control', placeholder: 'ID' %></td>
           <td><%= f.text_field :title, class: 'form-control', placeholder: 'Title' %></td>
@@ -151,7 +151,7 @@
           <td><%= message.updated_at %></td>
         </tr>
       <% end %>
-      <%= form_with model: Message.new, method: 'post', url: {controller: 'admin', action: 'create_record', record: 'message'} do |f| %>
+      <%= form_with model: Message.new, method: 'post', url: {controller: 'admin', action: 'create_record', record_type: 'message'} do |f| %>
         <tr>
           <td><%= f.text_field :id, class: 'form-control', placeholder: 'ID' %></td>
           <td><%= f.text_field :content, class: 'form-control', placeholder: 'Content' %></td>

@@ -14,7 +14,7 @@ class AdminController < ApplicationController
 
   def create_record
     check_curr_user
-    case params[:record]
+    case params[:record_type]
     when 'user'
       User.new(user_params).save(validate: false)
     when 'subforum'
@@ -23,6 +23,23 @@ class AdminController < ApplicationController
       Post.new(post_params).save(validate: false)
     when 'message'
       Message.new(message_params).save(validate: false)
+    else
+      redirect_to_error 'unknown record type'
+    end
+  end
+
+  def delete_record
+    check_curr_user
+    #record_type, id = params[:id].split('_')
+    case record_type
+    when 'user'
+      User.find_by(id: id).delete
+    when 'subforum'
+      Subforum.find_by(id: id).delete
+    when 'post'
+      Post.find_by(id: id).delete
+    when 'message'
+      Message.find_by(id: id).delete
     else
       redirect_to_error 'unknown record type'
     end

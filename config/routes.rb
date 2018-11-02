@@ -29,5 +29,5 @@ Rails.application.routes.draw do
   get 'error/:type',    to: 'errors#error'
 
   get  'admin/panel', to: 'admin#admin_panel'
-  post 'admin/create/:record', to: 'admin#create_record'
+  post 'admin/create/:record_type', to: 'admin#create_record'
 end
