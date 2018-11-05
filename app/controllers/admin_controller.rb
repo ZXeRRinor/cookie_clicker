@@ -30,7 +30,8 @@ class AdminController < ApplicationController
 
   def delete_record
     check_curr_user
-    #record_type, id = params[:id].split('_')
+    record_type, id = params[:id].split('_')
+    id = id.to_i
     case record_type
     when 'user'
       User.find_by(id: id).delete
@@ -40,6 +41,55 @@ class AdminController < ApplicationController
       Post.find_by(id: id).delete
     when 'message'
       Message.find_by(id: id).delete
+    else
+      redirect_to_error 'unknown record type'
+    end
+    redirect_to controller: 'admin', action: 'admin_panel'
+  end
+
+  def change_record
+    check_curr_user
+    record_type, id = params[:type], params[:id].to_i
+    case record_type
+    when 'user'
+      user_params.to_enum.each do |attr|
+          User.find_by(id: id).update_attribute(attr.first, attr.last)
+      end
+    when 'subforum'
+      subforum_params.to_enum.each do |attr|
+        Subforum.find_by(id: id).update_attribute(attr.first, attr.last)
+      end
+    when 'post'
+      post_params.to_enum.each do |attr|
+        Post.find_by(id: id).update_attribute(attr.first, attr.last)
+      end
+    when 'message'
+      message_params.to_enum.each do |attr|
+        Message.find_by(id: id).update_attribute(attr.first, attr.last)
+      end
+    else
+      redirect_to_error 'unknown record type'
+    end
+    redirect_to controller: 'admin', action: 'admin_panel'
+  end
+
+  def change_record_form
+    check_curr_user
+    record_type, id = params[:id].split('_')
+    id = id.to_i
+    case record_type
+    when 'user'
+      @user = User.find_by(id: id)
+      render 'admin/change_record_forms/user'
+    when 'subforum'
+      @subforum = Subforum.find_by(id: id)
+      render 'admin/change_record_forms/subforum'
+    when 'post'
+      @post = Post.find_by(id: id)
+      render 'admin/change_record_forms/post'
+    when 'message'
+      @message = Message.find_by(id: id)
+      render 'admin/change_record_forms/message'
     else
       redirect_to_error 'unknown record type'
     end

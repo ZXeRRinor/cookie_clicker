@@ -28,6 +28,9 @@ Rails.application.routes.draw do
   get 'error/8',        to: 'errors#user_exists'
   get 'error/:type',    to: 'errors#error'
 
-  get  'admin/panel', to: 'admin#admin_panel'
-  post 'admin/create/:record_type', to: 'admin#create_record'
+  get   'admin/panel', to: 'admin#admin_panel'
+  post  'admin/create/:record_type', to: 'admin#create_record'
+  get   'admin/delete/:id', to: 'admin#delete_record'
+  get   'admin/change/:id', to: 'admin#change_record_form'
+  patch 'admin/change/:type/:id', to: 'admin#change_record'
 end

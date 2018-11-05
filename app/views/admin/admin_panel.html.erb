@@ -13,13 +13,14 @@
       </thead>
       <tbody>
       <% @users.each do |user| %>
-        <tr>
+        <tr class="user" id="<%= user.id %>">
           <td><%= user.id %></td>
           <td><%= user.email %></td>
           <td><%= user.name %></td>
           <td><%= user.permissions %></td>
           <td><%= user.created_at %></td>
           <td><%= user.updated_at %></td>
+          <td><%= render 'partials/additional_links', ctrlr: 'admin', id: "user_#{ user.id }", actCh: 'change_record_form', actDel: 'delete_record' %></td>
         </tr>
       <% end %>
       <%= form_with model: User.new, method: 'post', url: {controller: 'admin', action: 'create_record', record_type: 'user'} do |f| %>
@@ -64,6 +65,7 @@
           <td><%= subforum.subforum_id %></td>
           <td><%= subforum.created_at %></td>
           <td><%= subforum.updated_at %></td>
+          <td><%= render 'partials/additional_links', ctrlr: 'admin', id: "subforum_#{ subforum.id }", actCh: 'change_record_form', actDel: 'delete_record' %></td>
         </tr>
       <% end %>
       <%= form_with model: Subforum.new, method: 'post', url: {controller: 'admin', action: 'create_record', record_type: 'subforum'} do |f| %>
@@ -107,6 +109,7 @@
           <td><%= post.subforum_id %></td>
           <td><%= post.created_at %></td>
           <td><%= post.updated_at %></td>
+          <td><%= render 'partials/additional_links', ctrlr: 'admin', id: "post_#{ post.id }", actCh: 'change_record_form', actDel: 'delete_record' %></td>
         </tr>
       <% end %>
       <%= form_with model: Post.new, method: 'post', url: {controller: 'admin', action: 'create_record', record_type: 'post'} do |f| %>
@@ -149,6 +152,7 @@
           <td><%= message.post_id %></td>
           <td><%= message.created_at %></td>
           <td><%= message.updated_at %></td>
+          <td><%= render 'partials/additional_links', ctrlr: 'admin', id: "message_#{ message.id }", actCh: 'change_record_form', actDel: 'delete_record' %></td>
         </tr>
       <% end %>
       <%= form_with model: Message.new, method: 'post', url: {controller: 'admin', action: 'create_record', record_type: 'message'} do |f| %>

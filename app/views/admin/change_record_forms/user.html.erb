@@ -1,0 +1,27 @@
+<%= form_with model: @user, url: {controller: 'admin', action: 'change_record', type: 'user', id: @user.id} do |f| %>
+  <div class="form-group">
+    <%= f.text_field :id, class: 'form-control', placeholder: 'ID', value: @user.id %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :email, class: 'form-control', placeholder: 'E-Mail', value: @user.email %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :name, class: 'form-control', placeholder: 'Name', value: @user.name %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :password, class: 'form-control', placeholder: 'Password' %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :permissions, class: 'form-control', placeholder: 'Permissions', value: @user.permissions %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :updated_at, class: 'form-control', placeholder: 'Updated at', value: @user.updated_at %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :created_at, class: 'form-control', placeholder: 'Created at', value: @user.created_at %>
+  </div>
+  <div class="form-group">
+    <%= f.submit 'Change', class: 'btn btn-outline-warning' %>
+    <input type="reset" value="Clear" class="btn btn-outline-success">
+  </div>
+<% end %>

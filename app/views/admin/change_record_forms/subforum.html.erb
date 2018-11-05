@@ -1,0 +1,27 @@
+<%= form_with model: @subforum, url: {controller: 'admin', action: 'change_record', type: 'subforum', id: @subforum.id} do |f| %>
+  <div class="form-group">
+    <%= f.text_field :id, class: 'form-control', placeholder: 'ID', value: @subforum.id %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :subforum_id, class: 'form-control', placeholder: 'Parent subforum ID', value: @subforum.subforum_id %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :user_id, class: 'form-control', placeholder: 'User ID', value: @subforum.user_id %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :title, class: 'form-control', placeholder: 'Title', value: @subforum.title %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :perm_level, class: 'form-control', placeholder: 'Permission level', value: @subforum.perm_level %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :updated_at, class: 'form-control', placeholder: 'Updated at', value: @subforum.updated_at %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :created_at, class: 'form-control', placeholder: 'Created at', value: @subforum.created_at %>
+  </div>
+  <div class="form-group">
+    <%= f.submit 'Change', class: 'btn btn-outline-warning' %>
+    <input type="reset" value="Clear" class="btn btn-outline-success">
+  </div>
+<% end %>

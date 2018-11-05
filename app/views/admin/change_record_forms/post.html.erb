@@ -1,0 +1,30 @@
+<%= form_with model: @post, url: {controller: 'admin', action: 'change_record', type: 'post', id: @post.id} do |f| %>
+  <div class="form-group">
+    <%= f.text_field :id, class: 'form-control', placeholder: 'ID', value: @post.id %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :subforum_id, class: 'form-control', placeholder: 'Subforum ID', value: @post.subforum_id %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :user_id, class: 'form-control', placeholder: 'User ID', value: @post.user_id %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :title, class: 'form-control', placeholder: 'Title', value: @post.title %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :content, class: 'form-control', placeholder: 'Content', value: @post.content %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :perm_level, class: 'form-control', placeholder: 'Permission level', value: @post.perm_level %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :updated_at, class: 'form-control', placeholder: 'Updated at', value: @post.updated_at %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :created_at, class: 'form-control', placeholder: 'Created at', value: @post.created_at %>
+  </div>
+  <div class="form-group">
+    <%= f.submit 'Change', class: 'btn btn-outline-warning' %>
+    <input type="reset" value="Clear" class="btn btn-outline-success">
+  </div>
+<% end %>
