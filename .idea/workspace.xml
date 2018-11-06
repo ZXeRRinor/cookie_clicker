@@ -1,0 +1,1681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a6b44f51-5573-4dd3-be02-e4278347effa" name="Default Changelist" comment="DB Config">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a03f6ba0-961a-4c39-a4f2-396bb4209ccb.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a03f6ba0-961a-4c39-a4f2-396bb4209ccb/storage_v2/_src_/database/cookie_clicker_development.1mE-4A.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a03f6ba0-961a-4c39-a4f2-396bb4209ccb/storage_v2/_src_/database/cookie_clicker_development.1mE-4A/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/.keep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/cookie_clicker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cookie_clicker.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/zxerr.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/zxerr.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/errors.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/errors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/messages.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/posts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/subforums.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/subforums.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/packs/javascripts/admin/admin_panel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/packs/javascripts/admin/admin_panel.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/packs/javascripts/game/clicker.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/packs/javascripts/game/clicker.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/packs/javascripts/game/game.design.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/packs/javascripts/game/game.design.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/packs/javascripts/game/game.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/packs/javascripts/game/game.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/packs/javascripts/game/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/packs/javascripts/game/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/packs/javascripts/game/shop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/packs/javascripts/game/shop.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/packs/javascripts/quad_equ.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/packs/javascripts/quad_equ.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/packs/stylesheets/errors/error.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/packs/stylesheets/errors/error.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/packs/stylesheets/game/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/packs/stylesheets/game/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/packs/stylesheets/posts/show.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/packs/stylesheets/posts/show.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/packs/stylesheets/sessions/try_login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/packs/stylesheets/sessions/try_login.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/packs/stylesheets/subforums/show.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/packs/stylesheets/subforums/show.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/packs/stylesheets/users/register.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/packs/stylesheets/users/register.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/packs/stylesheets/users/try_register.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/packs/stylesheets/users/try_register.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/errors.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/errors.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/messages.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/messages.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/posts.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/posts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/subforums.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/subforums.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/admin_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/errors_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/errors_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/game_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/game_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/messages_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/messages_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/posts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/posts_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/subforums_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/subforums_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/admin_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/admin_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/errors_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/errors_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/messages_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/messages_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/posts_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/posts_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/subforums_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/subforums_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/message.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/message.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/subforum.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/subforum.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/_chemistry.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/_chemistry.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/currents.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/currents.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/errors.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/errors.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/permissions.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/permissions.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/admin_panel.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/admin_panel.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/change_record_forms/message.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/change_record_forms/message.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/change_record_forms/post.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/change_record_forms/post.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/change_record_forms/subforum.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/change_record_forms/subforum.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/change_record_forms/user.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/change_record_forms/user.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/errors/_error_template.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/errors/_error_template.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/errors/default_error.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/errors/default_error.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/errors/incorrect_email_or_password.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/errors/incorrect_email_or_password.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/errors/invalid_email.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/errors/invalid_email.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/errors/invalid_password.hml.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/errors/invalid_password.hml.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/errors/logged_in.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/errors/logged_in.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/errors/not_enough_perms.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/errors/not_enough_perms.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/errors/not_logged_in.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/errors/not_logged_in.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/errors/user_exists.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/errors/user_exists.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/game/game.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/game/game.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/messages/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/messages/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/partials/_additional_links.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/_additional_links.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/partials/_collapse.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/_collapse.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/partials/_dropdown.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/_dropdown.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/partials/_login_modal.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/_login_modal.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/partials/_modal.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/_modal.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/partials/_navbar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/_navbar.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/partials/_register_modal.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/_register_modal.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/posts/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/posts/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/sessions/try_login.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/sessions/try_login.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/subforums/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/subforums/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/subforums/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/subforums/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/profile.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/profile.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/register.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/register.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/try_register.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/try_register.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20181011081000_create_users.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20181011081000_create_users.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/admin_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/admin_controller_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/errors_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/errors_controller_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/messages_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/messages_controller_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/posts_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/posts_controller_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/subforums_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/subforums_controller_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/messages.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/messages.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/posts.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/posts.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/subforums.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/subforums.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/message_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/message_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/post_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/post_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/subforum_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/subforum_test.rb" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.bundle/" />
+    <ignored path="$PROJECT_DIR$/components/" />
+    <ignored path="$PROJECT_DIR$/public/system/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <ignored path="$PROJECT_DIR$/vendor/bundle/" />
+    <ignored path="$PROJECT_DIR$/vendor/cache/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="cookie_clicker_development@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="cookie_clicker_development@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="cookie_clicker_development@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="cookie_clicker_development: database" type="6d9b600a:PostgresImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="cookie_clicker_development@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="cookie_clicker_development: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="cookie_clicker_development@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="cookie_clicker_development: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="cookie_clicker_development@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="cookie_clicker_development: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-84944944">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.113" value="1" />
+          <entry key="project.open.time.28" value="1" />
+          <entry key="project.open.time.32" value="2" />
+          <entry key="project.open.time.37" value="1" />
+          <entry key="project.open.time.39" value="1" />
+          <entry key="project.open.time.44" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.54" value="1" />
+          <entry key="project.opened" value="9" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="Gemfile" value="1" />
+          <entry key="design" value="1" />
+          <entry key="enc" value="1" />
+          <entry key="erb" value="106" />
+          <entry key="js" value="12" />
+          <entry key="jsx" value="27" />
+          <entry key="messages" value="2" />
+          <entry key="png" value="1" />
+          <entry key="posts" value="3" />
+          <entry key="rb" value="76" />
+          <entry key="scss" value="17" />
+          <entry key="sql" value="2" />
+          <entry key="subforums" value="7" />
+          <entry key="users" value="2" />
+          <entry key="yml" value="9" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Database Element" value="14" />
+          <entry key="Image" value="1" />
+          <entry key="JSX Harmony" value="27" />
+          <entry key="JavaScript" value="12" />
+          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="RHTML" value="106" />
+          <entry key="Ruby" value="77" />
+          <entry key="SCSS" value="17" />
+          <entry key="SQL" value="1" />
+          <entry key="Scratch" value="1" />
+          <entry key="YAML" value="9" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="Gemfile" value="45" />
+          <entry key="cell" value="38" />
+          <entry key="design" value="133" />
+          <entry key="erb" value="11782" />
+          <entry key="js" value="32" />
+          <entry key="jsx" value="6974" />
+          <entry key="rb" value="14193" />
+          <entry key="scss" value="1424" />
+          <entry key="sql" value="7" />
+          <entry key="txt" value="1494" />
+          <entry key="yml" value="269" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JSX Harmony" value="6974" />
+          <entry key="JavaScript" value="32" />
+          <entry key="PLAIN_TEXT" value="1627" />
+          <entry key="RHTML" value="11782" />
+          <entry key="Ruby" value="14238" />
+          <entry key="SCSS" value="1424" />
+          <entry key="SQL" value="7" />
+          <entry key="Scratch" value="38" />
+          <entry key="YAML" value="269" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages">
+        <counts>
+          <entry key="git.branch.checkout.local" value="1" />
+          <entry key="git.branch.compare" value="1" />
+          <entry key="git.branch.create.new" value="1" />
+          <entry key="git.branch.merge" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="293">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="17" column="56" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/services/permissions.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="7" selection-start-column="7" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/sessions/try_login.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/services/errors.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/post.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="3" column="41" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/posts/new.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/packs/stylesheets/errors/error.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/packs/stylesheets/application.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="828">
+              <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/packs/stylesheets/subforums/show.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/subforums_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="641">
+              <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/admin_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="827">
+              <caret line="128" column="40" selection-start-line="128" selection-start-column="40" selection-end-line="128" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://a03f6ba0-961a-4c39-a4f2-396bb4209ccb/database/cookie_clicker_development/schema/public/table/subforums">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://a03f6ba0-961a-4c39-a4f2-396bb4209ccb/database/cookie_clicker_development/schema/public/table/users">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/partials/_dropdown.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="28" selection-start-column="28" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/partials/_navbar.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/posts/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="552">
+              <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/packs/stylesheets/posts/show.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="782">
+              <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/messages/new.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/subforums/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="832">
+              <caret line="43" column="7" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://a03f6ba0-961a-4c39-a4f2-396bb4209ccb/database/cookie_clicker_development/schema/public/table/messages">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/partials/_collapse.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/messages_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://D:/web__/Forum/config/database.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="621">
+              <caret line="27" selection-start-line="27" selection-end-line="34" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/schema.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="12" column="54" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20181011081000_create_users.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20181026032415_create_subforums.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="8" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20181026032458_create_posts.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="11" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20181026033130_subforums_belongs_to_subforum.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="1" column="12" lean-forward="true" selection-start-line="1" selection-start-column="12" selection-end-line="4" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20181026200532_create_messages.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="7" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20181026203947_messages_belongs_to_user_and_post.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="5" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/database.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="763">
+              <caret line="92" column="11" selection-start-line="92" selection-start-column="11" selection-end-line="92" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="Ruby Class Template" />
+        <option value="SCSS File" />
+        <option value="Ruby Module Template" />
+        <option value="Erb File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>machine</find>
+      <find>machines</find>
+      <find>MACHINE</find>
+      <find>sub</find>
+      <find>message</find>
+      <find>&lt;td&gt;</find>
+      <find>&lt;/td&gt;</find>
+      <find>check_user</find>
+      <find>create_</find>
+      <find>user</find>
+      <find>subforum</find>
+      <find>post</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>PR</replace>
+      <replace>profucers</replace>
+      <replace>PRODUCER</replace>
+      <replace>subforum</replace>
+      <replace>check_curr_user</replace>
+      <replace>@user</replace>
+      <replace>post</replace>
+      <replace>message</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="AdminTools" />
+      </map>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/app/assets/packs/javascripts/game/clicker.jsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/assets/packs/javascripts/game/game.jsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/config/database.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/assets/packs/javascripts/game/shop.jsx" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/app/views/errors/default_error.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/errors/incorrect_email_or_password.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/errors/invalid_password.hml.erb" />
+        <option value="$PROJECT_DIR$/app/views/errors/logged_in.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/errors/not_enough_permissions.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/errors/user_exists.erb" />
+        <option value="$PROJECT_DIR$/app/views/errors/invalid_email.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/partials/_login_modal.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/partials/_register_modal.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/messages_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/packs/stylesheets/posts/show.scss" />
+        <option value="$PROJECT_DIR$/app/views/posts/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/subforum.rb" />
+        <option value="$PROJECT_DIR$/app/views/sessions/try_login.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/partials/_modal.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/posts_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/partials/_collapse.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/subforums/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/posts/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/packs/stylesheets/subforums/show.scss" />
+        <option value="$PROJECT_DIR$/app/views/partials/_dropdown.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/packs/stylesheets/application.scss" />
+        <option value="$PROJECT_DIR$/app/views/partials/_additional_btns.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/partials/_admin_btns.html.erb" />
+        <option value="$PROJECT_DIR$/app/services/permissions.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/errors_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/partials/_additional_links.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/partials/_navbar.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/packs/javascripts/game/game.jsx" />
+        <option value="$PROJECT_DIR$/app/controllers/game_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/packs/javascripts/game/clicker.jsx" />
+        <option value="$PROJECT_DIR$/app/assets/packs/javascripts/game/index.jsx" />
+        <option value="$PROJECT_DIR$/app/assets/packs/javascripts/admin/admin_panel.jsx" />
+        <option value="$PROJECT_DIR$/app/views/admin/change_record_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/partials/forms/_user.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/partials/forms/_subforum.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/partials/forms/user.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/admin/change_record_forms/_subforum.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/admin/change_record_forms/user.html.erb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/views/admin/admin_panel.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/admin/change_record_forms/subforum.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/admin/change_record_forms/post.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/admin/change_record_forms/message.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/subforums_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/admin_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/sessions_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
+        <option value="$PROJECT_DIR$/config/database.yml" />
+        <option value="$PROJECT_DIR$/db/migrate/20181011081000_create_users.rb" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="563" />
+    <option name="y" value="266" />
+    <option name="width" value="983" />
+    <option name="height" value="827" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>DOM issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Gems</id>
+          </State>
+          <State>
+            <id>GeneralJavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>Ruby</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Action Cable</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="cookie_clicker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cookie_clicker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cookie_clicker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cookie_clicker" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cookie_clicker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cookie_clicker" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cookie_clicker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cookie_clicker" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="packs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cookie_clicker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cookie_clicker" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="packs" type="462c0819:PsiDirectoryNode" />
+              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cookie_clicker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cookie_clicker" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="packs" type="462c0819:PsiDirectoryNode" />
+              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
+              <item name="posts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cookie_clicker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cookie_clicker" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="packs" type="462c0819:PsiDirectoryNode" />
+              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
+              <item name="subforums" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cookie_clicker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cookie_clicker" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cookie_clicker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cookie_clicker" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cookie_clicker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cookie_clicker" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cookie_clicker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cookie_clicker" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cookie_clicker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cookie_clicker" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="errors" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cookie_clicker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cookie_clicker" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cookie_clicker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cookie_clicker" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cookie_clicker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cookie_clicker" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="partials" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cookie_clicker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cookie_clicker" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="sessions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cookie_clicker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cookie_clicker" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cookie_clicker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cookie_clicker" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cookie_clicker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cookie_clicker" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cookie_clicker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cookie_clicker" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="migrate" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="RailsProjectView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="D:/Desktop/АлгоЛабы/LW2/lw3" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
+    <property name="node.js.detected.package.stylelint" value="true" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.selected.package.stylelint" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\proj\cookie_clicker\app\views\admin\change_record_forms" />
+      <recent name="D:\proj\cookie_clicker\app\views\game" />
+      <recent name="D:\proj\cookie_clicker\app\assets\packs\javascripts\game" />
+      <recent name="D:\proj\cookie_clicker\app\assets\packs" />
+      <recent name="D:\proj\cookie_clicker\app\assets" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Rails.Production: cookie_clicker">
+    <configuration name="Development: cookie_clicker" type="RailsRunConfigurationType" factoryName="Rails">
+      <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
+      <module name="cookie_clicker" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="127.0.0.1" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Production: cookie_clicker" type="RailsRunConfigurationType" factoryName="Rails">
+      <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
+      <module name="cookie_clicker" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="127.0.0.1" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="production" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="spec: cookie_clicker" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="cookie_clicker" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="spec" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":rspec " />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test: cookie_clicker" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="cookie_clicker" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="test" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":test_unit " />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Rake.test: cookie_clicker" />
+      <item itemvalue="Rake.spec: cookie_clicker" />
+      <item itemvalue="Rails.Production: cookie_clicker" />
+      <item itemvalue="Rails.Development: cookie_clicker" />
+    </list>
+  </component>
+  <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\zxerr\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a6b44f51-5573-4dd3-be02-e4278347effa" name="Default Changelist" comment="" />
+      <created>1539230096636</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1539230096636</updated>
+      <workItem from="1539230100523" duration="78812000" />
+      <workItem from="1539696267643" duration="12065000" />
+      <workItem from="1539747018284" duration="4945000" />
+      <workItem from="1539936858025" duration="3011000" />
+      <workItem from="1540017739838" duration="6901000" />
+      <workItem from="1540061935581" duration="14000" />
+      <workItem from="1540296802771" duration="15016000" />
+      <workItem from="1540400420043" duration="34021000" />
+      <workItem from="1540613303040" duration="123589000" />
+    </task>
+    <task id="LOCAL-00001" summary="Minimal game implementation.">
+      <created>1539700438465</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1539700438465</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added minimal shop implementation. &quot;Machines&quot; renamed to &quot;producers&quot;.">
+      <created>1539709442025</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1539709442025</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Money are spending. User can't to buy producer, if he haven't enough money.">
+      <created>1539709953366</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1539709953366</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added error-pages.">
+      <created>1540306900755</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1540306900755</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added error-pages.">
+      <created>1540391146366</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1540391146366</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Database parameters changed.">
+      <created>1540391424482</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1540391424482</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Database parameters changed.">
+      <created>1540405506803</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1540405506803</updated>
+    </task>
+    <task id="LOCAL-00008" summary="User profile.">
+      <created>1540406515151</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1540406515151</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Error-partials become a ErrorsController. Added minimal implementation of forum.">
+      <created>1540783688501</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1540783688501</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added navbar and more other.">
+      <created>1540975565757</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1540975565757</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Created partial with additional buttons 'Change' and 'Delete'.">
+      <created>1540987069248</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1540987069248</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Created AdminController for placing actions for administrating of forum.">
+      <created>1540987775556</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1540987775556</updated>
+    </task>
+    <task id="LOCAL-00013" summary="File with permission-level constants">
+      <created>1540988070827</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1540988070827</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Action admin_panel, action set_perms, checking for user permissions moved to method 'check_user'.">
+      <created>1540989149011</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1540989149011</updated>
+    </task>
+    <task id="LOCAL-00015" summary="View for admin_panel.">
+      <created>1541005153098</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1541005153098</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Refactored view for admin_panel. Data for view ordered by id. To user registration action added default set of permission level.">
+      <created>1541049338476</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1541049338476</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Forms in admin panel tables for adding records to database.">
+      <created>1541132743601</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1541132743601</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Action create_record for force adding records to database from admin panel.">
+      <created>1541161998246</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1541161998246</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Link to admin panel from navbar.">
+      <created>1541164452734</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1541164452734</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Action delete_record for deleting records from database via admin panel.">
+      <created>1541166628621</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1541166628621</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Actions change_record and change_record_form for change records in database from admin panel. Views for change_record_form.">
+      <created>1541417282383</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1541417282383</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Removed import of unused libs.">
+      <created>1541417645821</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1541417645821</updated>
+    </task>
+    <task id="LOCAL-00023" summary="DB config">
+      <created>1541507976441</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1541507976441</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Force exit if error">
+      <created>1541511813180</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1541511813180</updated>
+    </task>
+    <task id="LOCAL-00025" summary="DB Config">
+      <created>1541513437239</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1541513437239</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Migration fix try">
+      <created>1541514622265</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1541514622265</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="278374000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1825" height="1096" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17677054" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Database Console" order="0" weight="0.32946146" />
+      <window_info anchor="bottom" id="Messages" order="1" weight="0.32946146" />
+      <window_info anchor="bottom" id="Message" order="2" />
+      <window_info anchor="bottom" id="Find" order="3" weight="0.32946146" />
+      <window_info anchor="bottom" id="Run" order="4" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32946146" />
+      <window_info anchor="bottom" id="Terminal" order="12" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" weight="0.18243626" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Minimal game implementation." />
+    <MESSAGE value="Added minimal shop implementation. &quot;Machines&quot; renamed to &quot;producers&quot;." />
+    <MESSAGE value="Money are spending. User can't to buy producer, if he haven't enough money." />
+    <MESSAGE value="Added error-pages." />
+    <MESSAGE value="Database parameters changed." />
+    <MESSAGE value="User profile." />
+    <MESSAGE value="Error-partials become a ErrorsController. Added minimal implementation of forum." />
+    <MESSAGE value="Added navbar and more other." />
+    <MESSAGE value="Created partial with additional buttons 'Change' and 'Delete'." />
+    <MESSAGE value="Created AdminController for placing actions for administrating of forum." />
+    <MESSAGE value="File with permission-level constants" />
+    <MESSAGE value="Action admin_panel, action set_perms, checking for user permissions moved to method 'check_user'." />
+    <MESSAGE value="View for admin_panel." />
+    <MESSAGE value="Refactored view for admin_panel. Data for view ordered by id. To user registration action added default set of permission level." />
+    <MESSAGE value="Forms in admin panel tables for adding records to database." />
+    <MESSAGE value="Action create_record for force adding records to database from admin panel." />
+    <MESSAGE value="Link to admin panel from navbar." />
+    <MESSAGE value="Action delete_record for deleting records from database via admin panel." />
+    <MESSAGE value="Actions change_record and change_record_form for change records in database from admin panel. Views for change_record_form." />
+    <MESSAGE value="Removed import of unused libs." />
+    <MESSAGE value="DB config" />
+    <MESSAGE value="Force exit if error" />
+    <MESSAGE value="DB Config" />
+    <MESSAGE value="Migration fix try" />
+    <option name="LAST_COMMIT_MESSAGE" value="Migration fix try" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/assets/packs/javascripts/game/game.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/packs/javascripts/admin/admin_panel.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="2" lean-forward="true" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/packs/javascripts/game/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/game_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="37" selection-start-column="37" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/change_record_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://a03f6ba0-961a-4c39-a4f2-396bb4209ccb/database/cookie_clicker_development/schema/public/table/posts">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/posts_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/_additional_links.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="91" selection-start-line="1" selection-start-column="91" selection-end-line="1" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/change_record_forms/user.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/admin_panel.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="154" column="82" selection-start-line="154" selection-start-column="82" selection-end-line="154" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/change_record_forms/post.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="73" selection-start-line="5" selection-start-column="73" selection-end-line="5" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/change_record_forms/subforum.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/change_record_forms/message.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/sessions/try_login.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/post.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="41" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/posts/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/packs/stylesheets/errors/error.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/packs/stylesheets/application.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/_navbar.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/posts/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/packs/stylesheets/posts/show.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/messages/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://a03f6ba0-961a-4c39-a4f2-396bb4209ccb/database/cookie_clicker_development/schema/public/table/messages">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/superBackup2/web__/Forum/app/controllers/alpha_parser_controller.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/_collapse.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/superBackup2/web__/Forum/app/controllers/messages_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1054" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/messages_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/packs/stylesheets/subforums/show.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/subforums_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="641">
+          <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/admin_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="827">
+          <caret line="128" column="40" selection-start-line="128" selection-start-column="40" selection-end-line="128" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/errors.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://a03f6ba0-961a-4c39-a4f2-396bb4209ccb/database/cookie_clicker_development/schema/public/table/subforums">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/permissions.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://a03f6ba0-961a-4c39-a4f2-396bb4209ccb/database/cookie_clicker_development/schema/public/table/users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" column="56" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/web__/Forum/config/database.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="27" selection-start-line="27" selection-end-line="34" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/_dropdown.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/subforums/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="832">
+          <caret line="43" column="7" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="763">
+          <caret line="92" column="11" selection-start-line="92" selection-start-column="11" selection-end-line="92" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="12" column="54" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20181026032415_create_subforums.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="8" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20181026032458_create_posts.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20181026033130_subforums_belongs_to_subforum.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="12" lean-forward="true" selection-start-line="1" selection-start-column="12" selection-end-line="4" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20181026200532_create_messages.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20181026203947_messages_belongs_to_user_and_post.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="5" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20181011081000_create_users.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
