@@ -20,14 +20,14 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: postgres
+  timeout: 5000
   port: 5432
   host: localhost
-  password: 787898
+  username: user
+  database: app-dev
 
 development:
   <<: *default
-  database: cookie_clicker_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -84,7 +84,3 @@ test:
 #
 production:
   <<: *default
-  database: d6oso48l835qu2
-  username: kxeddbembeclhl
-  password: 9f16bdfee8f2744753d84eddef8af7429a4994cf6852d583b73f673b66ea5047
-  host: ec2-54-247-86-89.eu-west-1.compute.amazonaws.com
