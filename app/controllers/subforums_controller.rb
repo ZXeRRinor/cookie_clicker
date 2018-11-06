@@ -8,24 +8,27 @@ class SubforumsController < ApplicationController
 
   def new
     unless current_user
-      redirect_to_error('not_logged_in')
+      redirect_to_error 'not_logged_in'
+      return
     end
     @subforum = Subforum.new
   end
 
   def create
     unless current_user
-      redirect_to_error('not_logged_in')
+      redirect_to_error 'not_logged_in'
+      return
     end
     curr_sub = Subforum.find_by(id: params[:id])
     sub = curr_sub.subforums.new(subforum_params)
     if sub.title.nil?
-      redirect_to_error('empty_title')
+      redirect_to_error 'empty_title'
+      return
     end
     if sub.save
       redirect_to controller: 'subforums', action: 'show', id: sub.id
     else
-      redirect_to_error('saving_error')
+      redirect_to_error 'saving_error'
     end
   end
 

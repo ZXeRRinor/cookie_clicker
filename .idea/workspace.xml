@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6b44f51-5573-4dd3-be02-e4278347effa" name="Default Changelist" comment="DB Config">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a03f6ba0-961a-4c39-a4f2-396bb4209ccb.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a03f6ba0-961a-4c39-a4f2-396bb4209ccb/storage_v2/_src_/database/cookie_clicker_development.1mE-4A.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a03f6ba0-961a-4c39-a4f2-396bb4209ccb/storage_v2/_src_/database/cookie_clicker_development.1mE-4A/schema/public.abK9xQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tmp/.keep" afterDir="false" />
+    <list default="true" id="a6b44f51-5573-4dd3-be02-e4278347effa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/cookie_clicker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cookie_clicker.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a03f6ba0-961a-4c39-a4f2-396bb4209ccb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a03f6ba0-961a-4c39-a4f2-396bb4209ccb.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/zxerr.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/zxerr.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
@@ -92,7 +88,6 @@
       <change beforePath="$PROJECT_DIR$/app/views/users/try_register.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/try_register.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20181011081000_create_users.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20181011081000_create_users.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/controllers/admin_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/admin_controller_test.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/controllers/errors_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/errors_controller_test.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/controllers/messages_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/messages_controller_test.rb" afterDir="false" />
@@ -175,7 +170,7 @@
     <session id="-84944944">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.113" value="1" />
           <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.32" value="2" />
@@ -226,13 +221,13 @@
           <entry key="Gemfile" value="45" />
           <entry key="cell" value="38" />
           <entry key="design" value="133" />
-          <entry key="erb" value="11782" />
+          <entry key="erb" value="11843" />
           <entry key="js" value="32" />
           <entry key="jsx" value="6974" />
-          <entry key="rb" value="14193" />
+          <entry key="rb" value="14219" />
           <entry key="scss" value="1424" />
           <entry key="sql" value="7" />
-          <entry key="txt" value="1494" />
+          <entry key="txt" value="1506" />
           <entry key="yml" value="269" />
         </counts>
       </usages-collector>
@@ -240,9 +235,9 @@
         <counts>
           <entry key="JSX Harmony" value="6974" />
           <entry key="JavaScript" value="32" />
-          <entry key="PLAIN_TEXT" value="1627" />
-          <entry key="RHTML" value="11782" />
-          <entry key="Ruby" value="14238" />
+          <entry key="PLAIN_TEXT" value="1639" />
+          <entry key="RHTML" value="11843" />
+          <entry key="Ruby" value="14264" />
           <entry key="SCSS" value="1424" />
           <entry key="SQL" value="7" />
           <entry key="Scratch" value="38" />
@@ -360,11 +355,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/subforums_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="641">
-              <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+            <state relative-caret-position="782">
+              <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -408,8 +403,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/partials/_navbar.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+            <state relative-caret-position="322">
+              <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -453,8 +448,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/subforums/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="832">
-              <caret line="43" column="7" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
+            <state relative-caret-position="644">
+              <caret line="28" column="31" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -518,56 +513,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/migrate/20181011081000_create_users.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="207">
               <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20181026032415_create_subforums.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="8" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20181026032458_create_posts.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="11" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20181026033130_subforums_belongs_to_subforum.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="1" column="12" lean-forward="true" selection-start-line="1" selection-start-column="12" selection-end-line="4" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20181026200532_create_messages.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="7" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20181026203947_messages_belongs_to_user_and_post.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="5" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -656,7 +606,6 @@
         <option value="$PROJECT_DIR$/app/views/partials/_modal.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/posts_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/partials/_collapse.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/subforums/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/posts/new.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/packs/stylesheets/subforums/show.scss" />
         <option value="$PROJECT_DIR$/app/views/partials/_dropdown.html.erb" />
@@ -666,7 +615,6 @@
         <option value="$PROJECT_DIR$/app/services/permissions.rb" />
         <option value="$PROJECT_DIR$/app/controllers/errors_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/partials/_additional_links.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/partials/_navbar.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/packs/javascripts/game/game.jsx" />
         <option value="$PROJECT_DIR$/app/controllers/game_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/packs/javascripts/game/clicker.jsx" />
@@ -683,12 +631,14 @@
         <option value="$PROJECT_DIR$/app/views/admin/change_record_forms/subforum.html.erb" />
         <option value="$PROJECT_DIR$/app/views/admin/change_record_forms/post.html.erb" />
         <option value="$PROJECT_DIR$/app/views/admin/change_record_forms/message.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/subforums_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/admin_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/sessions_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
         <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/db/migrate/20181011081000_create_users.rb" />
+        <option value="$PROJECT_DIR$/app/views/partials/_navbar.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/subforums_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/subforums/show.html.erb" />
       </list>
     </option>
   </component>
@@ -892,8 +842,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="RailsProjectView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -931,7 +881,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Rails.Production: cookie_clicker">
+  <component name="RunManager" selected="Rails.Development: cookie_clicker">
     <configuration name="Development: cookie_clicker" type="RailsRunConfigurationType" factoryName="Rails">
       <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
       <module name="cookie_clicker" />
@@ -1033,7 +983,7 @@
       <workItem from="1540061935581" duration="14000" />
       <workItem from="1540296802771" duration="15016000" />
       <workItem from="1540400420043" duration="34021000" />
-      <workItem from="1540613303040" duration="123589000" />
+      <workItem from="1540613303040" duration="124876000" />
     </task>
     <task id="LOCAL-00001" summary="Minimal game implementation.">
       <created>1539700438465</created>
@@ -1217,17 +1167,30 @@
       <option name="project" value="LOCAL" />
       <updated>1541514622265</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Full upload.">
+      <created>1541515436155</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1541515436155</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Revert &quot;Migration fix try&quot;&#10;&#10;This reverts commit 377e056">
+      <created>1541515479708</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1541515479708</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="278374000" />
+    <option name="totallyTimeSpent" value="279661000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1825" height="1096" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1825" height="1096" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17677054" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17677054" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.32946146" />
@@ -1283,7 +1246,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Minimal game implementation." />
     <MESSAGE value="Added minimal shop implementation. &quot;Machines&quot; renamed to &quot;producers&quot;." />
     <MESSAGE value="Money are spending. User can't to buy producer, if he haven't enough money." />
     <MESSAGE value="Added error-pages." />
@@ -1307,7 +1269,9 @@
     <MESSAGE value="Force exit if error" />
     <MESSAGE value="DB Config" />
     <MESSAGE value="Migration fix try" />
-    <option name="LAST_COMMIT_MESSAGE" value="Migration fix try" />
+    <MESSAGE value="Full upload." />
+    <MESSAGE value="Revert &quot;Migration fix try&quot;&#10;&#10;This reverts commit 377e056" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;Migration fix try&quot;&#10;&#10;This reverts commit 377e056" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/assets/packs/javascripts/game/game.jsx">
@@ -1441,20 +1405,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/_navbar.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/posts/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
@@ -1508,27 +1458,6 @@
     <entry file="file://$PROJECT_DIR$/db/seeds.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/packs/stylesheets/subforums/show.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/subforums_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="641">
-          <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/admin_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="827">
@@ -1578,13 +1507,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="56" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/web__/Forum/config/database.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="621">
@@ -1596,13 +1518,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="28" selection-start-column="28" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/subforums/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="832">
-          <caret line="43" column="7" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -1659,6 +1574,55 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" column="56" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/packs/stylesheets/subforums/show.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/_navbar.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/subforums/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="28" column="31" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/subforums_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
         </state>
       </provider>
     </entry>
