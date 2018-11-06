@@ -8,14 +8,16 @@ class SessionsController < ApplicationController
   def login
     if current_user
       redirect_to_error('logged_in')
+      return
     end
     user = User.find_by(email: user_params[:email])
-    if user.nil?
-      redirect_to_error('incorrect_email_or_password')
+    unless user
+      redirect_to_error 'incorrect_email_or_password'
+      return
     end
     if user.authenticate(user_params[:password])
       set_current_user(user)
-      redirect_to controller: 'users', action: 'profile'
+      #redirect_to '/'
     else
       redirect_to_error('incorrect_email_or_password')
     end
@@ -24,6 +26,7 @@ class SessionsController < ApplicationController
   def logout
     unless current_user
       redirect_to_error('not_logged_in')
+      return
     end
     reset_current_user
     redirect_to '/'

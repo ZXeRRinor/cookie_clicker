@@ -123,6 +123,7 @@ end
 def check_curr_user
   unless current_user
     redirect_to_error 'not_logged_in'
+    return
   end
   unless current_user.permissions >= ADMINPERMS
     redirect_to_error 'not_enough_perms'

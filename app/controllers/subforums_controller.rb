@@ -34,7 +34,7 @@ class SubforumsController < ApplicationController
       @subs = Subforum.where(subforum_id: params[:id])
       @posts = Post.where(subforum_id: params[:id])
     else
-      redirect_to_error
+      redirect_to_error 'error'
     end
   end
 end
