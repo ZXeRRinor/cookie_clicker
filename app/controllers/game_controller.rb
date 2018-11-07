@@ -5,9 +5,17 @@ class GameController < ApplicationController
 
   end
 
+  def get_results
+    unless check_curr_user
+      return
+    end
+    @cookies = current_user.user_cookies
+    @producers = current_user.producers.first
+    @prices = current_user.prices.first
+  end
+
   def save_results
-    unless current_user
-      redirect_to_error 'not_logged_in'
+    unless check_curr_user
       return
     end
     producers = Producer.find_by(user_id: current_user.id)
@@ -30,6 +38,14 @@ class GameController < ApplicationController
       end
     end
   end
+end
+
+def check_curr_user
+  unless current_user
+    redirect_to_error 'not_logged_in'
+    return false
+  end
+  true
 end
 
 def data
