@@ -65,10 +65,12 @@ class Game extends Component {
     constructor(props) {
         super(props);
         game_store.dispatch({type: 'addUserCookie'});
-        this.state = {incrementTimer: setInterval(this.cookieIncrement, 1000), saveTimer: setInterval(this.saveResults, 10000)};
+        this.state = {incrementTimer: setInterval(this.cookieIncrement, 1000)};//, saveTimer: setInterval(this.saveResults, 10000)};
+        this.saveResults = this.saveResults.bind(this)
     }
 
-    static saveResults() {
+    saveResults() {
+        console.log('saving');
         let userProducers = game_store.getState().userProducers;
         let currentPricesOfProducers = game_store.getState().currentPricesOfProducers;
         let userCookies = game_store.getState().userCookies;
@@ -82,7 +84,7 @@ class Game extends Component {
         });
     }
 
-    static cookieIncrement() {
+    cookieIncrement() {
         let userProducers = game_store.getState().userProducers;
         let cookies = 0;
         for (let i = 0; i < PRODUCER_LIST.length; i++) {
@@ -98,6 +100,7 @@ class Game extends Component {
     render() {
         return (
             <div>
+                <button onClick={this.saveResults}>SAVE</button>
                 <Provider store={game_store}>
                     <Clicker/>
                 </Provider>
