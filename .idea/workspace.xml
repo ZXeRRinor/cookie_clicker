@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6b44f51-5573-4dd3-be02-e4278347effa" name="Default Changelist" comment="">
+    <list default="true" id="a6b44f51-5573-4dd3-be02-e4278347effa" name="Default Changelist" comment="Migraton">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/game_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/game_controller.rb" afterDir="false" />
     </list>
     <list id="5c2c2762-acd2-456e-b40f-c71b9aeabb2d" name="Action save_results upgraded to update producers and prices of user, instead of save new record" comment="Optimised data updating algorithm in save_results action" />
     <list id="176341b9-5b0c-44fb-96c6-86706ebd2266" name="Revert &quot;Revert &quot;Migration fix try&quot;&quot;" comment="Revert &quot;Revert &quot;Migration fix try&quot;&quot;&#10;&#10;This reverts commit 7904c2b" />
@@ -103,7 +102,7 @@
           <entry key="png" value="1" />
           <entry key="posts" value="3" />
           <entry key="producers" value="2" />
-          <entry key="rb" value="85" />
+          <entry key="rb" value="87" />
           <entry key="scss" value="17" />
           <entry key="sql" value="2" />
           <entry key="subforums" value="7" />
@@ -119,7 +118,7 @@
           <entry key="JavaScript" value="12" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="RHTML" value="107" />
-          <entry key="Ruby" value="86" />
+          <entry key="Ruby" value="88" />
           <entry key="SCSS" value="17" />
           <entry key="SQL" value="1" />
           <entry key="Scratch" value="1" />
@@ -134,10 +133,10 @@
           <entry key="erb" value="12022" />
           <entry key="js" value="32" />
           <entry key="jsx" value="7698" />
-          <entry key="rb" value="15790" />
+          <entry key="rb" value="15849" />
           <entry key="scss" value="1424" />
           <entry key="sql" value="7" />
-          <entry key="txt" value="1906" />
+          <entry key="txt" value="1982" />
           <entry key="yml" value="269" />
         </counts>
       </usages-collector>
@@ -145,9 +144,9 @@
         <counts>
           <entry key="JSX Harmony" value="7698" />
           <entry key="JavaScript" value="32" />
-          <entry key="PLAIN_TEXT" value="2039" />
+          <entry key="PLAIN_TEXT" value="2115" />
           <entry key="RHTML" value="12022" />
-          <entry key="Ruby" value="15835" />
+          <entry key="Ruby" value="15894" />
           <entry key="SCSS" value="1424" />
           <entry key="SQL" value="7" />
           <entry key="Scratch" value="38" />
@@ -169,7 +168,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
+            <state>
               <caret line="17" column="56" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
             </state>
           </provider>
@@ -229,11 +228,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/game_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+            <state relative-caret-position="460">
+              <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -243,6 +242,15 @@
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20181107183058_add_user_cookies_to_user.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -574,7 +582,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/errors/invalid_email.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/partials/_login_modal.html.erb" />
         <option value="$PROJECT_DIR$/app/views/partials/_register_modal.html.erb" />
@@ -625,6 +632,7 @@
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/game_controller.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20181107183058_add_user_cookies_to_user.rb" />
       </list>
     </option>
   </component>
@@ -989,7 +997,7 @@
       <workItem from="1540400420043" duration="34021000" />
       <workItem from="1540613303040" duration="124876000" />
       <workItem from="1541516769623" duration="18377000" />
-      <workItem from="1541610280662" duration="3524000" />
+      <workItem from="1541610280662" duration="3756000" />
     </task>
     <task id="LOCAL-00001" summary="Minimal game implementation.">
       <created>1539700438465</created>
@@ -1236,17 +1244,24 @@
       <option name="project" value="LOCAL" />
       <updated>1541615038231</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Refactored data saving algorithm in save_results action">
+      <created>1541615409963</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1541615409963</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="301562000" />
+    <option name="totallyTimeSpent" value="301794000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1825" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18016997" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18016997" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.32946146" />
@@ -1260,7 +1275,7 @@
       <window_info anchor="bottom" id="TODO" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="11" visible="true" weight="0.15733896" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.15733896" />
       <window_info anchor="bottom" id="Terminal" order="12" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1302,7 +1317,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added navbar and more other." />
     <MESSAGE value="Created partial with additional buttons 'Change' and 'Delete'." />
     <MESSAGE value="Created AdminController for placing actions for administrating of forum." />
     <MESSAGE value="File with permission-level constants" />
@@ -1327,16 +1341,10 @@
     <MESSAGE value="Method saveResults for game" />
     <MESSAGE value="Action save_results in GameController for saving game result in DB" />
     <MESSAGE value="Action save_results upgraded to update producers and prices of user, instead of save new record" />
-    <option name="LAST_COMMIT_MESSAGE" value="Action save_results upgraded to update producers and prices of user, instead of save new record" />
+    <MESSAGE value="Refactored data saving algorithm in save_results action" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored data saving algorithm in save_results action" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/admin/change_record_forms/post.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="73" selection-start-line="5" selection-start-column="73" selection-end-line="5" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/change_record_forms/subforum.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -1361,7 +1369,7 @@
     <entry file="file://$PROJECT_DIR$/db/migrate/20181107154716_create_producers.rb" />
     <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
+        <state>
           <caret line="17" column="56" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
         </state>
       </provider>
@@ -1625,6 +1633,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/game_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="das://a03f6ba0-961a-4c39-a4f2-396bb4209ccb/database/cookie_clicker_development/schema/public/table/producers">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1632,10 +1647,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/game_controller.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20181107183058_add_user_cookies_to_user.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+        <state relative-caret-position="161">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
