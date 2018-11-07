@@ -10,16 +10,24 @@ class GameController < ApplicationController
       redirect_to_error 'not_logged_in'
       return
     end
-    producers = current_user.producers.new(data[:producers])
-    producers.id = prod_id
-    prices = current_user.prices.new(data[:prices])
-    prices.id = price_id
-    unless producers.save
-      redirect_to_error 'saving_error'
-      return
+    producers = Producer.find_by(user_id: current_user.id)
+    if producers
+      producers.update_attributes(data[:producers])
+    else
+      producers = current_user.producers.new(data[:producers])
+      unless producers.save
+        redirect_to_error 'saving_error'
+        return
+      end
     end
-    unless prices.save
-      redirect_to_error 'saving_error'
+    prices = Price.find_by(user_id: current_user.id)
+    if prices
+      prices.update_attributes(data[:prices])
+    else
+      prices = current_user.prices.new(data[:prices])
+      unless prices.save
+        redirect_to_error 'saving_error'
+      end
     end
   end
 end
