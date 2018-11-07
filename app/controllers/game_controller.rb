@@ -11,7 +11,9 @@ class GameController < ApplicationController
       return
     end
     producers = current_user.producers.new(data[:producers])
+    producers.id = prod_id
     prices = current_user.prices.new(data[:prices])
+    prices.id = price_id
     unless producers.save
       redirect_to_error 'saving_error'
       return
