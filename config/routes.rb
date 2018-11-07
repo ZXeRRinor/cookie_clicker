@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'game#game'
+  post 'game/save_result', to: 'game#save_result'
+
   get 'register', to: 'users#try_register'
   post 'register', to: 'users#register'
   get 'login', to: 'sessions#try_login'
