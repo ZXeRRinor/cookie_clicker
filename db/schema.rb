@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_26_203947) do
+ActiveRecord::Schema.define(version: 2018_11_07_160743) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,38 @@ ActiveRecord::Schema.define(version: 2018_10_26_203947) do
     t.datetime "updated_at", null: false
     t.index ["subforum_id"], name: "index_posts_on_subforum_id"
     t.index ["user_id"], name: "index_posts_on_user_id"
+  end
+
+  create_table "prices", force: :cascade do |t|
+    t.integer "Hand"
+    t.integer "Auto Clicker"
+    t.integer "Auto Oven"
+    t.integer "Cookie Farm"
+    t.integer "Cookie Factory"
+    t.integer "Cookie Reactor"
+    t.integer "Cookie Materialiser"
+    t.integer "Quantum Cookie Singularity"
+    t.integer "Admin Cookie Creator"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_prices_on_user_id"
+  end
+
+  create_table "producers", force: :cascade do |t|
+    t.integer "Hand"
+    t.integer "Auto Clicker"
+    t.integer "Auto Oven"
+    t.integer "Cookie Farm"
+    t.integer "Cookie Factory"
+    t.integer "Cookie Reactor"
+    t.integer "Cookie Materialiser"
+    t.integer "Quantum Cookie Singularity"
+    t.integer "Admin Cookie Creator"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_producers_on_user_id"
   end
 
   create_table "subforums", force: :cascade do |t|

@@ -65,20 +65,14 @@ class Game extends Component {
     constructor(props) {
         super(props);
         game_store.dispatch({type: 'addUserCookie'});
-        this.state = {timer: setInterval(this.cookieIncrement, 1000)};
+        this.state = {incrementTimer: setInterval(this.cookieIncrement, 1000), saveTimer: setInterval(this.saveResults, 10000)};
     }
 
-    cookieIncrement() {
+    static saveResults() {
         let userProducers = game_store.getState().userProducers;
         let currentPricesOfProducers = game_store.getState().currentPricesOfProducers;
-        let cookies = 0;
-        for (let i = 0; i < PRODUCER_LIST.length; i++) {
-            cookies += userProducers[PRODUCER_LIST[i]] * SHOP_ELEMENTS[PRODUCER_LIST[i]].performance;
-        }
-        game_store.dispatch({type: 'addUserCookies', payload: cookies});
-        let authenticity_token = document.querySelector('.data').childNodes[3].content;
-        console.log(authenticity_token);
         let userCookies = game_store.getState().userCookies;
+        let authenticity_token = document.querySelector('.data').childNodes[3].content;
         $.post('/game/save_result', {
             data: {
                 user_cookies: userCookies,
@@ -86,6 +80,15 @@ class Game extends Component {
                 current_prices_of_producers: currentPricesOfProducers
             }, authenticity_token: authenticity_token
         });
+    }
+
+    static cookieIncrement() {
+        let userProducers = game_store.getState().userProducers;
+        let cookies = 0;
+        for (let i = 0; i < PRODUCER_LIST.length; i++) {
+            cookies += userProducers[PRODUCER_LIST[i]] * SHOP_ELEMENTS[PRODUCER_LIST[i]].performance;
+        }
+        game_store.dispatch({type: 'addUserCookies', payload: cookies});
     }
 
     componentWillUnmount() {
