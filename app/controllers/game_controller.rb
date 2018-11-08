@@ -9,9 +9,16 @@ class GameController < ApplicationController
     unless check_curr_user
       return
     end
-    @cookies = current_user.user_cookies
-    @producers = current_user.producers.first
-    @prices = current_user.prices.first
+    cookies = current_user.user_cookies
+
+    producers = current_user.producers.first
+    prices = current_user.prices.first
+    @json = {
+        userCookies: cookies,
+        userProducers: producers,
+        currentPricesOfProducers: prices
+    }.to_json.to_s
+    render json: @json, content_type: 'application/json'
   end
 
   def save_results
