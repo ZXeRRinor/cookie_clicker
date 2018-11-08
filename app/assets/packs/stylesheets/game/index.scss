@@ -19,7 +19,17 @@
   float: left;
 }
 
+.click_button {
+  color: white;
+  border: none;
+  background-color: white;
+}
+
 .game_field {
   width: 500px;
+  height: 500px;
+}
+
+.main_container {
   height: 500px;
 }

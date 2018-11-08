@@ -117,7 +117,7 @@ class Game extends Component {
 
     render() {
         return (
-            <div>
+            <div className='main_continer'>
                 <button onClick={this.saveResults}>SAVE</button>
                 <Provider store={game_store}>
                     <Clicker/>

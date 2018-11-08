@@ -36,11 +36,11 @@ class Shop extends Component {
                 </div>
                 <div className="producer_list">
                     {PRODUCER_LIST.map((producer, index) =>
-                        <div className="shop_element" key={index} id={index + '_producer'} onClick={this.buy}>
+                        <button className="shop_element" key={index} id={index + '_producer'} onClick={this.buy}>
                             {producer} - Production: {SHOP_ELEMENTS[producer]['performance']} -
                             Price: {this.props.store.currentPricesOfProducers[producer]} -
                             Current Amount: {this.props.store.userProducers[producer]}
-                        </div>
+                        </button>
                     )}
                 </div>
             </div>
