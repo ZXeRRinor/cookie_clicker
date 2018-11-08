@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6b44f51-5573-4dd3-be02-e4278347effa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/models/price.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/producer.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/packs/javascripts/game/game.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/packs/javascripts/game/game.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/game_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/game_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/game/get_results.html.erb" beforeDir="false" />
     </list>
     <list id="60ff61af-420c-4c48-9303-ae31d37a7758" name="Action get_results upgraded to send JSON" comment="">
       <change afterPath="$PROJECT_DIR$/app/services/game.rb" afterDir="false" />
@@ -106,7 +107,7 @@
           <entry key="enc" value="1" />
           <entry key="erb" value="108" />
           <entry key="js" value="12" />
-          <entry key="jsx" value="33" />
+          <entry key="jsx" value="34" />
           <entry key="messages" value="2" />
           <entry key="png" value="1" />
           <entry key="posts" value="3" />
@@ -123,7 +124,7 @@
         <counts>
           <entry key="Database Element" value="16" />
           <entry key="Image" value="1" />
-          <entry key="JSX Harmony" value="33" />
+          <entry key="JSX Harmony" value="34" />
           <entry key="JavaScript" value="12" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="RHTML" value="108" />
@@ -137,28 +138,28 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Gemfile" value="45" />
-          <entry key="cell" value="43" />
+          <entry key="cell" value="44" />
           <entry key="design" value="133" />
           <entry key="erb" value="12218" />
           <entry key="js" value="32" />
-          <entry key="jsx" value="8377" />
-          <entry key="rb" value="16536" />
+          <entry key="jsx" value="8410" />
+          <entry key="rb" value="16577" />
           <entry key="scss" value="1424" />
           <entry key="sql" value="7" />
-          <entry key="txt" value="2107" />
+          <entry key="txt" value="2169" />
           <entry key="yml" value="269" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSX Harmony" value="8377" />
+          <entry key="JSX Harmony" value="8410" />
           <entry key="JavaScript" value="32" />
-          <entry key="PLAIN_TEXT" value="2240" />
+          <entry key="PLAIN_TEXT" value="2302" />
           <entry key="RHTML" value="12218" />
-          <entry key="Ruby" value="16581" />
+          <entry key="Ruby" value="16622" />
           <entry key="SCSS" value="1424" />
           <entry key="SQL" value="7" />
-          <entry key="Scratch" value="43" />
+          <entry key="Scratch" value="44" />
           <entry key="YAML" value="269" />
         </counts>
       </usages-collector>
@@ -186,10 +187,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/packs/javascripts/game/game.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1268">
-              <caret line="119" column="26" selection-start-line="119" selection-start-column="26" selection-end-line="119" selection-end-column="26" />
+            <state relative-caret-position="878">
+              <caret line="114" column="13" selection-start-line="114" selection-start-column="13" selection-end-line="114" selection-end-column="13" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/packs/javascripts/game/shop.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="487">
+              <caret line="37" column="59" selection-start-line="37" selection-start-column="59" selection-end-line="37" selection-end-column="59" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -243,8 +256,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/game_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+            <state relative-caret-position="362">
+              <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -651,18 +664,18 @@
   <component name="LineStatusTrackerManager">
     <file path="$PROJECT_DIR$/app/assets/packs/javascripts/game/game.jsx">
       <ranges>
-        <range start1="57" end1="57" start2="57" end2="67" changelist="a6b44f51-5573-4dd3-be02-e4278347effa" />
-        <range start1="68" end1="69" start2="78" end2="80" changelist="60ff61af-420c-4c48-9303-ae31d37a7758" />
-        <range start1="77" end1="78" start2="88" end2="89" changelist="60ff61af-420c-4c48-9303-ae31d37a7758" />
-        <range start1="86" end1="86" start2="97" end2="103" changelist="60ff61af-420c-4c48-9303-ae31d37a7758" />
+        <range start1="77" end1="79" start2="77" end2="80" changelist="60ff61af-420c-4c48-9303-ae31d37a7758" />
+        <range start1="87" end1="88" start2="88" end2="89" changelist="60ff61af-420c-4c48-9303-ae31d37a7758" />
+        <range start1="96" end1="96" start2="97" end2="103" changelist="60ff61af-420c-4c48-9303-ae31d37a7758" />
+        <range start1="106" end1="107" start2="113" end2="115" changelist="a6b44f51-5573-4dd3-be02-e4278347effa" />
       </ranges>
     </file>
     <file path="$PROJECT_DIR$/app/controllers/game_controller.rb">
       <ranges>
-        <range start1="0" end1="1" start2="0" end2="1" changelist="a6b44f51-5573-4dd3-be02-e4278347effa" />
         <range start1="11" end1="14" start2="11" end2="22" changelist="60ff61af-420c-4c48-9303-ae31d37a7758" />
-        <range start1="20" end1="20" start2="28" end2="30" changelist="a6b44f51-5573-4dd3-be02-e4278347effa" />
-        <range start1="40" end1="40" start2="50" end2="51" changelist="a6b44f51-5573-4dd3-be02-e4278347effa" />
+        <range start1="27" end1="28" start2="35" end2="37" changelist="a6b44f51-5573-4dd3-be02-e4278347effa" />
+        <range start1="37" end1="38" start2="46" end2="48" changelist="a6b44f51-5573-4dd3-be02-e4278347effa" />
+        <range start1="39" end1="39" start2="49" end2="50" changelist="a6b44f51-5573-4dd3-be02-e4278347effa" />
       </ranges>
     </file>
   </component>
@@ -1016,7 +1029,7 @@
       <workItem from="1540400420043" duration="34021000" />
       <workItem from="1540613303040" duration="124876000" />
       <workItem from="1541516769623" duration="18377000" />
-      <workItem from="1541610280662" duration="16789000" />
+      <workItem from="1541610280662" duration="17827000" />
     </task>
     <task id="LOCAL-00001" summary="Minimal game implementation.">
       <created>1539700438465</created>
@@ -1291,11 +1304,18 @@
       <option name="project" value="LOCAL" />
       <updated>1541620648224</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Game results automatically loading to game after page loading">
+      <created>1541664133247</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1541664133247</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="314827000" />
+    <option name="totallyTimeSpent" value="315865000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1825" height="1096" extended-state="6" />
@@ -1357,7 +1377,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Action admin_panel, action set_perms, checking for user permissions moved to method 'check_user'." />
     <MESSAGE value="View for admin_panel." />
     <MESSAGE value="Refactored view for admin_panel. Data for view ordered by id. To user registration action added default set of permission level." />
     <MESSAGE value="Forms in admin panel tables for adding records to database." />
@@ -1382,10 +1401,10 @@
     <MESSAGE value="Migration for working with game date" />
     <MESSAGE value="Action get_results for sending saved results to game" />
     <MESSAGE value="Action get_results upgraded to send JSON" />
-    <option name="LAST_COMMIT_MESSAGE" value="Action get_results upgraded to send JSON" />
+    <MESSAGE value="Game results automatically loading to game after page loading" />
+    <option name="LAST_COMMIT_MESSAGE" value="Game results automatically loading to game after page loading" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://E:/superBackup2/web__/Forum/app/controllers/alpha_parser_controller.rb" />
     <entry file="file://E:/superBackup2/web__/Forum/app/controllers/messages_controller.rb" />
     <entry file="file://$PROJECT_DIR$/db/migrate/20181026032415_create_subforums.rb" />
     <entry file="file://$PROJECT_DIR$/db/migrate/20181026032458_create_posts.rb" />
@@ -1618,16 +1637,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/packs/javascripts/game/game.design.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="180" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://a03f6ba0-961a-4c39-a4f2-396bb4209ccb/database/cookie_clicker_development/schema/public/table/subforums">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1639,13 +1648,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="28" selection-start-column="28" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://a03f6ba0-961a-4c39-a4f2-396bb4209ccb/database/cookie_clicker_development/schema/public/table/producers">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1663,16 +1665,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/packs/javascripts/game/game.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1268">
-          <caret line="119" column="26" selection-start-line="119" selection-start-column="26" selection-end-line="119" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/services/game.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -1687,10 +1679,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://a03f6ba0-961a-4c39-a4f2-396bb4209ccb/database/cookie_clicker_development/schema/public/table/producers">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/packs/javascripts/game/game.design.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="180" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/packs/javascripts/game/shop.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="37" column="59" selection-start-line="37" selection-start-column="59" selection-end-line="37" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/packs/javascripts/game/game.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="878">
+          <caret line="114" column="13" selection-start-line="114" selection-start-column="13" selection-end-line="114" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/game_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+        <state relative-caret-position="362">
+          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
         </state>
       </provider>
     </entry>

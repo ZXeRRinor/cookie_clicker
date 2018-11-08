@@ -25,7 +25,8 @@ class GameController < ApplicationController
       producers.update_attributes(data[:producers])
     else
       producers = current_user.producers.new(data[:producers])
-      unless producers.save
+      if producers.save
+      else
         redirect_to_error 'saving_error'
         return
       end
@@ -35,8 +36,10 @@ class GameController < ApplicationController
       prices.update_attributes(data[:prices])
     else
       prices = current_user.prices.new(data[:prices])
-      unless prices.save
+      if prices.save
+      else
         redirect_to_error 'saving_error'
+        return
       end
     end
   end

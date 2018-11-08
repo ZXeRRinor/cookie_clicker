@@ -104,7 +104,8 @@ class Game extends Component {
     }
 
     componentWillUnmount() {
-        clearInterval(this.state.timer);
+        clearInterval(this.state.incrementTimer);
+        clearInterval(this.state.saveTimer);
     }
 
     render() {
