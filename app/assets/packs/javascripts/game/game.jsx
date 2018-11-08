@@ -75,8 +75,9 @@ class Game extends Component {
     constructor(props) {
         super(props);
         game_store.dispatch({type: 'addUserCookie'});
-        this.state = {incrementTimer: setInterval(this.cookieIncrement, 1000)};//, saveTimer: setInterval(this.saveResults, 10000)};
-        this.saveResults = this.saveResults.bind(this)
+        this.state = {incrementTimer: setInterval(this.cookieIncrement, 1000), saveTimer: setInterval(this.saveResults, 6000)};
+        this.getResults();
+        this.saveResults = this.saveResults.bind(this);
     }
 
     saveResults() {
@@ -85,12 +86,18 @@ class Game extends Component {
         let currentPricesOfProducers = game_store.getState().currentPricesOfProducers;
         let userCookies = game_store.getState().userCookies;
         let authenticity_token = document.querySelector('.data').childNodes[3].content;
-        $.post('/game/save_result', {
+        $.post('/game/save_results', {
             data: {
                 user_cookies: userCookies,
                 user_producers: userProducers,
                 current_prices_of_producers: currentPricesOfProducers
             }, authenticity_token: authenticity_token
+        });
+    }
+
+    getResults() {
+        $.get('/game/get_results', {}, (data, status, y) => {
+            game_store.dispatch({type: 'setData', payload: data});
         });
     }
 
