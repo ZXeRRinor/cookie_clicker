@@ -97,6 +97,7 @@ class Game extends Component {
 
     getResults() {
         $.get('/game/get_results', {}, (data, status, y) => {
+            console.log(data);
             game_store.dispatch({type: 'setData', payload: data});
         });
     }
