@@ -55,6 +55,16 @@ function gameReducer(state = initialState, action) {
             new_state['currentPricesOfProducers'][producer] *= 2;
             return (new_state);
         }
+        case 'setData': {
+            let new_state = state;
+            new_state = {
+                ...state,
+                userCookies: action.payload['userCookies'],
+                userProducers: action.payload['userProducers'],
+                currentPricesOfProducers: action.payload['currentPricesOfProducers']
+            };
+            return(new_state);
+        }
     }
 }
 

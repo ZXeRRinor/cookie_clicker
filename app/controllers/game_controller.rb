@@ -1,4 +1,4 @@
-include Currents, Errors, Permissions
+include Currents, Errors, Permissions, Game
 
 class GameController < ApplicationController
   def game
@@ -18,6 +18,8 @@ class GameController < ApplicationController
     unless check_curr_user
       return
     end
+    p data[:cookies][:user_cookies].to_i
+    current_user.update_attribute(:user_cookies, data[:cookies][:user_cookies].to_i)
     producers = Producer.find_by(user_id: current_user.id)
     if producers
       producers.update_attributes(data[:producers])
@@ -38,6 +40,7 @@ class GameController < ApplicationController
       end
     end
   end
+
 end
 
 def check_curr_user
