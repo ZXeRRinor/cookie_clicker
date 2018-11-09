@@ -22,6 +22,7 @@ class UsersController < ApplicationController
     end
     user.producers.new(prod_params)
     user.prices.new(price_params)
+    user.user_cookies = 0
     if user.save
       set_current_user(user)
       if user.permissions >= ADMINPERMS
