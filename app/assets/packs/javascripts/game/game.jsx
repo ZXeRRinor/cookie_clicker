@@ -33,7 +33,7 @@ function gameReducer(state = initialState, action) {
     switch (action.type) {
         case 'addUserCookie': {
             let userCookies = state.userCookies;
-            userCookies += userCookies === 0 ? 1 : Math.floor(userCookies / 100);
+            userCookies += userCookies <= 100 ? 1 : Math.floor(userCookies / 100);
             return ({
                 ...state, userCookies: userCookies
             });

@@ -12,14 +12,16 @@ class UsersController < ApplicationController
       return
     end
     user.permissions = User.all.empty? ? ADMINPERMS : USERPERMS
-    user.producers.new
+    prod_params = {}
     PRODUCER_LIST.each do |producer|
-      user.producers.update_attribute(producer, 0)
+      prod_params[producer] = DEFAULT_AMOUNT
     end
-    user.prices.new
-    PRODUCER_LIST.each do |price|
-      user.prices.update_attribute(price, 0)
+    price_params = {}
+    PRODUCER_LIST.each do |producer|
+      price_params[producer] = PRODUCERS[producer.to_sym][:price]
     end
+    user.producers.new(prod_params)
+    user.prices.new(price_params)
     if user.save
       set_current_user(user)
       if user.permissions >= ADMINPERMS
@@ -35,6 +37,7 @@ class UsersController < ApplicationController
         return
       end
     end
+    redirect_to '/'
   end
 
   def change_password

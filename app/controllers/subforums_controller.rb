@@ -3,7 +3,7 @@ include(Currents, Errors)
 class SubforumsController < ApplicationController
 
   def init
-    p Subforum.new(id: 0, title: 'root', subforum_id: 0).save
+    Subforum.new(id: 0, title: 'root', subforum_id: 0).save
   end
 
   def new
@@ -30,6 +30,7 @@ class SubforumsController < ApplicationController
     else
       redirect_to_error 'saving_error'
     end
+    redirect_to '/'
   end
 
   def show
