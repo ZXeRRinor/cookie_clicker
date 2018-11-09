@@ -176,4 +176,50 @@
       </tbody>
     </table>
   <% end %>
+  <%#= render 'partials/collapse', btn_text: 'Producer list', id: 'prod_list' do %>
+  <!--    <table class="table table-bordered">-->
+  <!--      <thead>-->
+  <!--      <tr>-->
+  <!--        <th scope="col">ID</th>-->
+  <!--        <th scope="col">User ID</th>-->
+  <!--        <th scope="col">Auto Clicker</th>-->
+  <!--        <th scope="col">Auto Oven</th>-->
+  <!--        <th scope="col">User ID</th>-->
+  <!--        <th scope="col">User ID</th>-->
+  <!--        <th scope="col">User ID</th>-->
+  <!--        <th scope="col">User ID</th>-->
+  <!--        <th scope="col">Created at</th>-->
+  <!--        <th scope="col">Updated at</th>-->
+  <!--      </tr>-->
+  <!--      </thead>-->
+  <!--      <tbody>-->
+  <%# @messages.each do |message| %>
+  <!--        <tr>-->
+  <!--          <td><%#= message.id %></td>-->
+  <!--          <td><%#= message.content %></td>-->
+  <!--          <td><%#= message.user_id %></td>-->
+  <!--          <td><%#= message.post_id %></td>-->
+  <!--          <td><%#= message.created_at %></td>-->
+  <!--          <td><%#= message.updated_at %></td>-->
+  <!--          <td><%#= render 'partials/additional_links', ctrlr: 'admin', id: "message_#{ message.id }", actCh: 'change_record_form', actDel: 'delete_record' %></td>-->
+  <!--        </tr>-->
+  <%# end %>
+  <%#= form_with model: Message.new, method: 'post', url: {controller: 'admin', action: 'create_record', record_type: 'message'} do |f| %>
+  <!--        <tr>-->
+  <!--          <td><%#= f.text_field :id, class: 'form-control', placeholder: 'ID' %></td>-->
+  <!--          <td><%#= f.text_field :content, class: 'form-control', placeholder: 'Content' %></td>-->
+  <!--          <td><%#= f.text_field :user_id, class: 'form-control', placeholder: 'User ID' %></td>-->
+  <!--          <td><%#= f.text_field :post_id, class: 'form-control', placeholder: 'Post ID' %></td>-->
+  <!--          <td><%#= f.text_field :created_at, class: 'form-control', placeholder: 'Created at' %></td>-->
+  <!--          <td><%#= f.text_field :updated_at, class: 'form-control', placeholder: 'Updated at' %></td>-->
+  <!--        </tr>-->
+  <!--        <tr>-->
+  <!--          <td>-->
+  <%#= f.submit 'Force add to database', class: 'btn btn-warning' %>
+  <!--          </td>-->
+  <!--        </tr>-->
+  <%# end %>
+  <!--      </tbody>-->
+  <!--    </table>-->
+  <%# end %>
 </div>

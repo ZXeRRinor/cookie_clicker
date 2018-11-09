@@ -105,7 +105,7 @@ class AdminController < ApplicationController
 end
 
 def user_params
-  params.require(:user).permit(:id, :email, :name, :permissions, :created_at, :updated_at, :password)
+  params.require(:user).permit(:id, :email, :name, :permissions, :user_cookies, :created_at, :updated_at, :password)
 end
 
 def subforum_params
