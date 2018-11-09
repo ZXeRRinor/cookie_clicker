@@ -17,19 +17,19 @@ class LeaderBoard extends Component {
 
     render() {
         return (
-            <table className='leaderboard'>
+            <table className='leaderboard table table-bordered'>
                 <thead>
                 <tr>
-                    <td>Position</td>
-                    <td>User ID</td>
-                    <td>Name</td>
-                    <td>User's cookies</td>
+                    <th scope='col'>Position</th>
+                    <th scope='col'>User ID</th>
+                    <th scope='col'>Name</th>
+                    <th scope='col'>User's cookies</th>
                 </tr>
                 </thead>
                 <tbody>
                 {this.state.users.map((user, index) =>
                     <tr className='leaderboard_item' key={index}>
-                        <td>{index + 1}</td>
+                        <td scope='col'>{index + 1}</td>
                         <td>{user.id}</td>
                         <td>{user.name}</td>
                         <td>{user.cookies}</td>
