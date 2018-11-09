@@ -6,7 +6,7 @@ import Shop from "./shop";
 import {SHOP_ELEMENTS, PRODUCER_LIST} from "./game.design";
 
 const initialState = {
-    userCookies: 5000,
+    userCookies: 0,
     userProducers: {
         'Auto Clicker': 0,
         'Auto Oven': 0,
@@ -33,7 +33,7 @@ function gameReducer(state = initialState, action) {
     switch (action.type) {
         case 'addUserCookie': {
             let userCookies = state.userCookies;
-            userCookies += Math.floor(userCookies / 100);
+            userCookies += userCookies === 0 ? 1 : Math.floor(userCookies / 100);
             return ({
                 ...state, userCookies: userCookies
             });

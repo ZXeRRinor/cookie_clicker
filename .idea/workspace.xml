@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6b44f51-5573-4dd3-be02-e4278347effa" name="Default Changelist" comment="">
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/packs/javascripts/game/game.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/packs/javascripts/game/game.jsx" afterDir="false" />
     </list>
     <list id="60ff61af-420c-4c48-9303-ae31d37a7758" name="Action get_results upgraded to send JSON" comment="">
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a03f6ba0-961a-4c39-a4f2-396bb4209ccb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a03f6ba0-961a-4c39-a4f2-396bb4209ccb.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/packs/javascripts/game/game.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/packs/javascripts/game/game.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/packs/javascripts/game/leaderboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/packs/javascripts/game/leaderboard.jsx" afterDir="false" />
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/app/controllers/game_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/game_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
@@ -102,7 +109,11 @@
           <entry key="enc" value="1" />
           <entry key="erb" value="108" />
           <entry key="js" value="12" />
+<<<<<<< Updated upstream
           <entry key="jsx" value="35" />
+=======
+          <entry key="jsx" value="37" />
+>>>>>>> Stashed changes
           <entry key="messages" value="2" />
           <entry key="png" value="1" />
           <entry key="posts" value="3" />
@@ -119,7 +130,11 @@
         <counts>
           <entry key="Database Element" value="16" />
           <entry key="Image" value="1" />
+<<<<<<< Updated upstream
           <entry key="JSX Harmony" value="35" />
+=======
+          <entry key="JSX Harmony" value="37" />
+>>>>>>> Stashed changes
           <entry key="JavaScript" value="12" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="RHTML" value="108" />
@@ -137,19 +152,33 @@
           <entry key="design" value="133" />
           <entry key="erb" value="12218" />
           <entry key="js" value="32" />
+<<<<<<< Updated upstream
           <entry key="jsx" value="8568" />
           <entry key="rb" value="16601" />
           <entry key="scss" value="1531" />
           <entry key="sql" value="7" />
           <entry key="txt" value="2334" />
+=======
+          <entry key="jsx" value="8688" />
+          <entry key="rb" value="16610" />
+          <entry key="scss" value="1531" />
+          <entry key="sql" value="7" />
+          <entry key="txt" value="2426" />
+>>>>>>> Stashed changes
           <entry key="yml" value="269" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+<<<<<<< Updated upstream
           <entry key="JSX Harmony" value="8568" />
           <entry key="JavaScript" value="32" />
           <entry key="PLAIN_TEXT" value="2467" />
+=======
+          <entry key="JSX Harmony" value="8688" />
+          <entry key="JavaScript" value="32" />
+          <entry key="PLAIN_TEXT" value="2559" />
+>>>>>>> Stashed changes
           <entry key="RHTML" value="12218" />
           <entry key="Ruby" value="16646" />
           <entry key="SCSS" value="1531" />
@@ -182,8 +211,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/packs/javascripts/game/game.jsx">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="531">
               <caret line="99" column="30" selection-start-line="99" selection-start-column="30" selection-end-line="99" selection-end-column="30" />
+=======
+            <state relative-caret-position="1541">
+              <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
+>>>>>>> Stashed changes
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -194,8 +228,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/packs/javascripts/game/clicker.jsx">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="460">
               <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+=======
+            <state relative-caret-position="506">
+              <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+>>>>>>> Stashed changes
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -203,6 +242,29 @@
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/packs/javascripts/game/leaderboard.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/packs/javascripts/quad_equ.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+>>>>>>> Stashed changes
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/packs/javascripts/game/shop.jsx">
           <provider selected="true" editor-type-id="text-editor">
@@ -430,15 +492,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="782">
               <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/messages/new.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -1018,7 +1071,11 @@
       <workItem from="1540400420043" duration="34021000" />
       <workItem from="1540613303040" duration="124876000" />
       <workItem from="1541516769623" duration="18377000" />
+<<<<<<< Updated upstream
       <workItem from="1541610280662" duration="22340000" />
+=======
+      <workItem from="1541610280662" duration="26665000" />
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="Minimal game implementation.">
       <created>1539700438465</created>
@@ -1335,11 +1392,40 @@
       <option name="project" value="LOCAL" />
       <updated>1541685015384</updated>
     </task>
+<<<<<<< Updated upstream
     <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="320378000" />
+=======
+    <task id="LOCAL-00046" summary="Debug">
+      <created>1541685348482</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1541685348482</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Fix">
+      <created>1541686316612</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1541686316612</updated>
+    </task>
+    <task id="LOCAL-00048" summary="LeaderBoard component for render game leaderboard in game_field">
+      <created>1541747932338</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1541747932338</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="324703000" />
+>>>>>>> Stashed changes
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1825" height="1096" extended-state="6" />
@@ -1401,9 +1487,13 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+<<<<<<< Updated upstream
     <MESSAGE value="Action delete_record for deleting records from database via admin panel." />
     <MESSAGE value="Actions change_record and change_record_form for change records in database from admin panel. Views for change_record_form." />
     <MESSAGE value="Removed import of unused libs." />
+=======
+    <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
+>>>>>>> Stashed changes
     <MESSAGE value="DB config" />
     <MESSAGE value="Force exit if error" />
     <MESSAGE value="DB Config" />
@@ -1426,11 +1516,21 @@
     <MESSAGE value="Autoload results" />
     <MESSAGE value="Fixed problem with click-elements. Wrapped to button" />
     <MESSAGE value="Route for get_result" />
+<<<<<<< Updated upstream
     <option name="LAST_COMMIT_MESSAGE" value="Route for get_result" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/db/migrate/20181026032415_create_subforums.rb" />
     <entry file="file://$PROJECT_DIR$/db/migrate/20181026032458_create_posts.rb" />
+=======
+    <MESSAGE value="Debug" />
+    <MESSAGE value="Fix" />
+    <MESSAGE value="LeaderBoard component for render game leaderboard in game_field" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeaderBoard component for render game leaderboard in game_field" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="editorHistoryManager">
+>>>>>>> Stashed changes
     <entry file="file://$PROJECT_DIR$/db/migrate/20181026200532_create_messages.rb" />
     <entry file="file://$PROJECT_DIR$/db/migrate/20181026203947_messages_belongs_to_user_and_post.rb" />
     <entry file="file://$PROJECT_DIR$/db/migrate/20181107085949_add_user_cookies_to_user.rb" />
@@ -1744,16 +1844,69 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/app/assets/packs/javascripts/game/game.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="531">
           <caret line="99" column="30" selection-start-line="99" selection-start-column="30" selection-end-line="99" selection-end-column="30" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/controllers/game_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/packs/javascripts/game/game.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1541">
+          <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/packs/javascripts/game/clicker.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+>>>>>>> Stashed changes
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< Updated upstream
+=======
+    <entry file="file://$PROJECT_DIR$/app/assets/packs/javascripts/game/shop.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="39" column="95" selection-start-line="39" selection-start-column="95" selection-end-line="39" selection-end-column="95" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/packs/javascripts/quad_equ.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/packs/javascripts/game/leaderboard.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> Stashed changes
   </component>
   <component name="masterDetails">
     <states>
