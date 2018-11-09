@@ -5,6 +5,15 @@ class GameController < ApplicationController
 
   end
 
+  def leaderboard
+    json = []
+    User.all.limit(10).order(user_cookies: :desc).each do |user|
+      json.push({id: user.id, name: user.name, cookies: user.user_cookies})
+    end
+    json = json.to_json.to_s
+    render json: json, content_type: 'application/json'
+  end
+
   def get_results
     unless check_curr_user
       return

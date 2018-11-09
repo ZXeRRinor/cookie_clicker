@@ -4,6 +4,7 @@ import {Provider} from 'react-redux'
 import Clicker from "./clicker";
 import Shop from "./shop";
 import {SHOP_ELEMENTS, PRODUCER_LIST} from "./game.design";
+import LeaderBoard from "./leaderboard";
 
 const initialState = {
     userCookies: 0,
@@ -63,7 +64,7 @@ function gameReducer(state = initialState, action) {
                 userProducers: action.payload['userProducers'],
                 currentPricesOfProducers: action.payload['currentPricesOfProducers']
             };
-            return(new_state);
+            return (new_state);
         }
     }
 }
@@ -75,7 +76,7 @@ class Game extends Component {
     constructor(props) {
         super(props);
         game_store.dispatch({type: 'addUserCookie'});
-        this.state = {incrementTimer: setInterval(this.cookieIncrement, 1000), saveTimer: setInterval(this.saveResults, 6000)};
+        this.state = {incrementTimer: setInterval(this.cookieIncrement, 1000)};  //, saveTimer: setInterval(this.saveResults, 6000)};
         this.getResults();
         this.saveResults = this.saveResults.bind(this);
     }
@@ -119,13 +120,20 @@ class Game extends Component {
     render() {
         return (
             <div className='main_continer'>
-                <button onClick={this.saveResults}>SAVE</button>
                 <Provider store={game_store}>
                     <Clicker/>
                 </Provider>
                 <Provider store={game_store}>
                     <Shop/>
                 </Provider>
+                <Provider store={game_store}>
+                    <LeaderBoard/>
+                </Provider>
+                <button onClick={this.saveResults} className='btn btn-outline-success' type="button"
+                        data-container="body" data-toggle="popover" data-placement="top"
+                        data-content="Save your game results on server">
+                    Save Results
+                </button>
             </div>
         );
     }

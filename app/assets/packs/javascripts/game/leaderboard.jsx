@@ -5,22 +5,37 @@ class LeaderBoard extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {users: {}};
+        this.state = {users: []};
+        this.getLeaderList();
     }
 
-    getResults() {
-        $.get('/game/get_results', {}, (data, status, y) => {
-            this.setState(data);
+    getLeaderList() {
+        $.get('/game/leaderboard', {}, (data, status, y) => {
+            this.setState({users: data});
         });
     }
 
     render() {
         return (
             <table className='leaderboard'>
-                {this.state.users.map((user, index) => {
-
-                })
-                }
+                <thead>
+                <tr>
+                    <td>Position</td>
+                    <td>User ID</td>
+                    <td>Name</td>
+                    <td>User's cookies</td>
+                </tr>
+                </thead>
+                <tbody>
+                {this.state.users.map((user, index) =>
+                    <tr className='leaderboard_item' key={index}>
+                        <td>{index + 1}</td>
+                        <td>{user.id}</td>
+                        <td>{user.name}</td>
+                        <td>{user.cookies}</td>
+                    </tr>
+                )}
+                </tbody>
             </table>
         )
     }

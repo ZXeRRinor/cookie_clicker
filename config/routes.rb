@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'game#game'
   post 'game/save_results', to: 'game#save_results'
   get 'game/get_results', to: 'game#get_results'
+  get 'game/leaderboard', to: 'game#leaderboard'
 
   get 'register', to: 'users#try_register'
   post 'register', to: 'users#register'
