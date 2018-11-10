@@ -76,7 +76,10 @@ class Game extends Component {
     constructor(props) {
         super(props);
         game_store.dispatch({type: 'addUserCookie'});
-        this.state = {incrementTimer: setInterval(this.cookieIncrement, 1000)};  //, saveTimer: setInterval(this.saveResults, 6000)};
+        this.state = {
+            incrementTimer: setInterval(this.cookieIncrement, 1000),
+            saveTimer: setInterval(this.saveResults, 6000)
+        };
         this.getResults();
         this.saveResults = this.saveResults.bind(this);
     }

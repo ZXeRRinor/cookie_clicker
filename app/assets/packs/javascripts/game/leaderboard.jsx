@@ -5,7 +5,7 @@ class LeaderBoard extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {users: []};
+        this.state = {users: [], updateTimer: setInterval(this.getLeaderList, 6000)};
         this.getLeaderList();
     }
 
