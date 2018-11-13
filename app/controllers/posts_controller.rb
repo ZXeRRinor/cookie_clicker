@@ -1,12 +1,6 @@
 include(Currents, Errors)
 
 class PostsController < ApplicationController
-  def show
-    @post = Post.find_by(id: params[:id])
-    @new_message = Message.new
-    @messages = Message.where(post_id: params[:id])
-  end
-
   def new
     unless current_user
       redirect_to_error 'not_logged_in'
@@ -28,6 +22,29 @@ class PostsController < ApplicationController
     else
       redirect_to_error 'saving_error'
     end
+  end
+
+  def show
+    @post = Post.find_by(id: params[:id])
+    @new_message = Message.new
+    @messages = Message.where(post_id: params[:id])
+  end
+
+  def update
+
+  end
+
+  def delete
+    unless current_user
+      redirect_to_error 'not_logged_in'
+    end
+    post = Post.find_by(id: params[:id])
+    if post.user_id == current_user.id || current_user.permissions >= MODERPERMS
+      id = post.subforum_id
+      post.delete
+      redirect_to controller: 'subforums', action: 'show', id: id
+    end
+    redirect_to_error 'not_enough_permissions'
   end
 end
 
