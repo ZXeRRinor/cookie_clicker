@@ -25,11 +25,11 @@
               <div class="subforum_link col-9">
                 <%= link_to "#{sub.title}", {controller: 'subforums', action: 'show', id: sub.id} %>
               </div>
-              <div class="col-3">
+              <span class="col-3">
                 <% if current_user && (sub.user_id == session[:user_id] || current_user.permissions >= MODERPERMS) %>
                   <%= render 'partials/additional_links', id: sub.id, ctrlr: 'subforums', actDel: 'delete', actCh: 'update' %>
                 <% end %>
-              </div>
+              </span>
             </li>
           <% end %>
         </ul>

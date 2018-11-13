@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   get  'forum/:id',             to: 'subforums#show'
   get  'forum/init',            to: 'subforums#init'
   get  'forum/post/:id',        to: 'posts#show'
+  get  'forum/:id/update',      to: 'subforums#update'
+  get  'forum/:id/delete',      to: 'subforums#delete'
 
   get 'error/1/:type',  to: 'errors#default_error'
   get 'error/2',        to: 'errors#incorrect_email_or_password'
