@@ -3,13 +3,16 @@
     <%= stylesheet_pack_tag 'stylesheets/subforums/show' %>
   </head>
   <body>
-    <div class="root">
+    <div class="root container">
       <div class="posts_list">
         <ul class="list-group list-group-flush">
           <% @posts.each do |post| %>
-            <li class="list-group-item list-group-item-primary list_of_links">
-              <div class="post_link">
+            <li class="list-group-item list-group-item-primary list_of_links row">
+              <div class="post_link col-9">
                 <%= link_to "#{post.title}", {controller: 'posts', action: 'show', id: post.id} %>
+              </div>
+              <div class="col-3">
+
               </div>
             </li>
           <% end %>
@@ -18,9 +21,14 @@
       <div class="subforums_list">
         <ul class="list-group list-group-flush">
           <% @subs.each do |sub| %>
-            <li class="list-group-item list-group-item-dark list_of_links">
-              <div class="subforum_link">
+            <li class="list-group-item list-group-item-dark list_of_links row">
+              <div class="subforum_link col-9">
                 <%= link_to "#{sub.title}", {controller: 'subforums', action: 'show', id: sub.id} %>
+              </div>
+              <div class="col-3">
+                <% if current_user && (sub.user_id == session[:user_id] || current_user.permissions >= MODERPERMS) %>
+                  <%= render 'partials/additional_links', id: sub.id, ctrlr: 'subforums', actDel: 'delete', actCh: 'update' %>
+                <% end %>
               </div>
             </li>
           <% end %>

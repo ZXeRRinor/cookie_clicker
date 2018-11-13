@@ -1,4 +1,4 @@
-include(Currents, Errors)
+include(Currents, Errors, Permissions)
 
 class SubforumsController < ApplicationController
 
@@ -21,6 +21,7 @@ class SubforumsController < ApplicationController
     end
     curr_sub = Subforum.find_by(id: params[:id])
     sub = curr_sub.subforums.new(subforum_params)
+    sub.user_id = current_user.id
     if sub.title.nil?
       redirect_to_error 'empty_title'
       return
@@ -40,6 +41,23 @@ class SubforumsController < ApplicationController
     else
       redirect_to_error 'error'
     end
+  end
+
+  def delete
+    unless current_user
+      redirect_to_error 'not_logged_in'
+    end
+    sub = Subforum.find_by(id: params[:id])
+    if sub.user_id == current_user.id || current_user.permissions >= MODERPERMS
+      id = sub.subforum_id
+      sub.delete
+      redirect_to controller: 'subforums', action: 'show', id: id
+    end
+    redirect_to_error 'not_enough_permissions'
+  end
+
+  def update
+
   end
 end
 
