@@ -4,10 +4,10 @@ class MessagesController < ApplicationController
   def create
     unless current_user
       redirect_to_error('not_logged_in')
+      return
     end
-    post = Post.find_by(id: params[:id])
-    message = post.messages.new(msg_params)
-    message.user_id = current_user.id
+    post = Post.find_by_id(params[:id])
+    message = Message.new(msg_params).belongs_to(current_user, post)
     if message.save
       redirect_to controller: 'posts', action: 'show', id: post.id
     else
