@@ -5,7 +5,7 @@ class PostsController < ApplicationController
     unless current_user
       redirect_to_error 'not_logged_in'
     end
-    curr_sub = Subforum.find_by(id: params[:id])
+    curr_sub = Subforum.find_by_id(params[:id])
     @post = curr_sub.posts.new
   end
 
@@ -13,7 +13,7 @@ class PostsController < ApplicationController
     unless current_user
       redirect_to_error 'not_logged_in'
     end
-    curr_sub = Subforum.find_by(id: params[:id])
+    curr_sub = Subforum.find_by_id(params[:id])
     post = Post.new(post_params).belongs_to(current_user, curr_sub)
     if post.save
       redirect_to controller: 'posts', action: 'show', id: post.id
@@ -23,7 +23,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find_by(id: params[:id])
+    @post = Post.find_by_id(params[:id])
     @user = @post.user
     @new_message = Message.new
     @messages = @post.messages
@@ -37,9 +37,9 @@ class PostsController < ApplicationController
     unless current_user
       redirect_to_error 'not_logged_in'
     end
-    post = Post.find_by(id: params[:id])
-    if post.user_id == current_user.id || current_user.permissions >= MODERPERMS
-      id = post.subforum_id
+    post = Post.find_by_id(params[:id])
+    if post.user == current_user || current_user.permissions >= MODERPERMS
+      id = post.subforum.id
       post.delete
       redirect_to controller: 'subforums', action: 'show', id: id
     else
