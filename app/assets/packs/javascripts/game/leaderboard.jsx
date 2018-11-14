@@ -17,7 +17,7 @@ class LeaderBoard extends Component {
 
     render() {
         return (
-            <table className='leaderboard table table-bordered'>
+            <table className='leaderboard table table-bordered col-4'>
                 <thead>
                 <tr>
                     <th scope='col'>Position</th>

@@ -1,4 +1,4 @@
-include(Currents, Errors, Permissions)
+include(Currents, Errors, Permissions, Paths)
 
 class SubforumsController < ApplicationController
 
@@ -19,9 +19,8 @@ class SubforumsController < ApplicationController
       redirect_to_error 'not_logged_in'
       return
     end
-    curr_sub = Subforum.find_by(id: params[:id])
-    sub = curr_sub.subforums.new(subforum_params)
-    sub.user_id = current_user.id
+    curr_sub = Subforum.find_by_id(params[:id])
+    sub = Subforum.new(subforum_params).belongs_to(current_user, curr_sub)
     if sub.title.nil?
       redirect_to_error 'empty_title'
       return
@@ -35,9 +34,11 @@ class SubforumsController < ApplicationController
   end
 
   def show
-    if Subforum.find_by(id: params[:id])
-      @subs = Subforum.where(subforum_id: params[:id])
-      @posts = Post.where(subforum_id: params[:id])
+    sub = Subforum.find_by_id(params[:id])
+    if sub
+      @subs = sub.subforums
+      @posts = sub.posts
+      @path = get_subforum_path(sub)
     else
       redirect_to_error 'error'
     end
@@ -47,13 +48,14 @@ class SubforumsController < ApplicationController
     unless current_user
       redirect_to_error 'not_logged_in'
     end
-    sub = Subforum.find_by(id: params[:id])
-    if sub.user_id == current_user.id || current_user.permissions >= MODERPERMS
-      id = sub.subforum_id
+    sub = Subforum.find_by_id(params[:id])
+    if sub.user == current_user || current_user.permissions >= MODERPERMS
+      id = sub.subforum.id
       sub.delete
       redirect_to controller: 'subforums', action: 'show', id: id
+    else
+      redirect_to_error 'not_enough_permissions'
     end
-    redirect_to_error 'not_enough_permissions'
   end
 
   def update

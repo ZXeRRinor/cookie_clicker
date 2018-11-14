@@ -122,21 +122,23 @@ class Game extends Component {
 
     render() {
         return (
-            <div className='main_continer'>
-                <Provider store={game_store}>
-                    <Clicker/>
-                </Provider>
-                <Provider store={game_store}>
-                    <Shop/>
-                </Provider>
-                <Provider store={game_store}>
-                    <LeaderBoard/>
-                </Provider>
-                <button onClick={this.saveResults} className='btn btn-outline-success' type="button"
-                        data-container="body" data-toggle="popover" data-placement="top"
-                        data-content="Save your game results on server">
-                    Save Results
-                </button>
+            <div className='container-fluid'>
+                <div className='main_container row'>
+                    <Provider store={game_store}>
+                        <Clicker/>
+                    </Provider>
+                    <Provider store={game_store}>
+                        <Shop/>
+                    </Provider>
+                    <Provider store={game_store}>
+                        <LeaderBoard/>
+                    </Provider>
+                    <button onClick={this.saveResults} className='btn btn-outline-success' type="button"
+                            data-container="body" data-toggle="popover" data-placement="top"
+                            data-content="Save your game results on server">
+                        Save Results
+                    </button>
+                </div>
             </div>
         );
     }

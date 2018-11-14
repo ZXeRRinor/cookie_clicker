@@ -30,7 +30,7 @@ class Shop extends Component {
 
     render() {
         return (
-            <div className="shop">
+            <div className="shop col-6">
                 <div className="user_balance">
                     Your balance: {this.props.store.userCookies}
                 </div>

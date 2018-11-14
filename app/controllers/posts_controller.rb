@@ -14,9 +14,7 @@ class PostsController < ApplicationController
       redirect_to_error 'not_logged_in'
     end
     curr_sub = Subforum.find_by(id: params[:id])
-    post = curr_sub.posts.new(post_params)
-    post.user_id = current_user.id
-    p post
+    post = Post.new(post_params).belongs_to(current_user, curr_sub)
     if post.save
       redirect_to controller: 'posts', action: 'show', id: post.id
     else
@@ -26,8 +24,9 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find_by(id: params[:id])
+    @user = @post.user
     @new_message = Message.new
-    @messages = Message.where(post_id: params[:id])
+    @messages = @post.messages
   end
 
   def update
@@ -43,8 +42,9 @@ class PostsController < ApplicationController
       id = post.subforum_id
       post.delete
       redirect_to controller: 'subforums', action: 'show', id: id
+    else
+      redirect_to_error 'not_enough_permissions'
     end
-    redirect_to_error 'not_enough_permissions'
   end
 end
 

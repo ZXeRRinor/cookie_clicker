@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
     end
     if user.authenticate(user_params[:password])
       set_current_user(user)
-      #redirect_to '/'
+      redirect_to '/'
     else
       redirect_to_error('incorrect_email_or_password')
     end
