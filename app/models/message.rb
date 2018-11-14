@@ -5,5 +5,6 @@ class Message < ApplicationRecord
   def belongs_to(user, post)
     self.user = user
     self.post = post
+    self
   end
 end

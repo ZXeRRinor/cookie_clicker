@@ -1,5 +1,3 @@
-include(Currents)
-
 class ErrorsController < ApplicationController
   def error
     error_type = params[:type]

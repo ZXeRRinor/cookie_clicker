@@ -7,5 +7,6 @@ class Subforum < ApplicationRecord
   def belongs_to(user, subforum)
     self.user = user
     self.subforum = subforum
+    self
   end
 end

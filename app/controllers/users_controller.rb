@@ -1,4 +1,4 @@
-include Currents, Errors, Permissions, Game
+include(Game)
 
 class UsersController < ApplicationController
   def try_register
@@ -15,7 +15,7 @@ class UsersController < ApplicationController
       redirect_to_error('user_exists')
       return
     end
-    user.permissions = User.all.empty? ? ADMINPERMS : USERPERMS
+    user.permissions = USERPERMS
     prod_params = {}
     PRODUCER_LIST.each do |producer|
       prod_params[producer] = DEFAULT_AMOUNT

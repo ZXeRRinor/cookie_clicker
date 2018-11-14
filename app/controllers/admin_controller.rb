@@ -1,5 +1,3 @@
-include(Currents, Errors, Permissions)
-
 class AdminController < ApplicationController
   def set_perms
     check_curr_user
@@ -34,13 +32,13 @@ class AdminController < ApplicationController
     id = id.to_i
     case record_type
     when 'user'
-      User.find_by(id: id).delete
+      User.find_by_id(id).delete
     when 'subforum'
-      Subforum.find_by(id: id).delete
+      Subforum.find_by_id(id).delete
     when 'post'
-      Post.find_by(id: id).delete
+      Post.find_by_id(id).delete
     when 'message'
-      Message.find_by(id: id).delete
+      Message.find_by_id(id).delete
     else
       redirect_to_error 'unknown record type'
     end
@@ -53,19 +51,19 @@ class AdminController < ApplicationController
     case record_type
     when 'user'
       user_params.to_enum.each do |attr|
-          User.find_by(id: id).update_attribute(attr.first, attr.last)
+        User.find_by_id(id).update_attribute(attr.first, attr.last)
       end
     when 'subforum'
       subforum_params.to_enum.each do |attr|
-        Subforum.find_by(id: id).update_attribute(attr.first, attr.last)
+        Subforum.find_by_id(id).update_attribute(attr.first, attr.last)
       end
     when 'post'
       post_params.to_enum.each do |attr|
-        Post.find_by(id: id).update_attribute(attr.first, attr.last)
+        Post.find_by_id(id).update_attribute(attr.first, attr.last)
       end
     when 'message'
       message_params.to_enum.each do |attr|
-        Message.find_by(id: id).update_attribute(attr.first, attr.last)
+        Message.find_by_id(id).update_attribute(attr.first, attr.last)
       end
     else
       redirect_to_error 'unknown record type'

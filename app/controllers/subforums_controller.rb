@@ -1,4 +1,4 @@
-include(Currents, Errors, Permissions, Paths)
+include(Paths)
 
 class SubforumsController < ApplicationController
 
@@ -30,7 +30,6 @@ class SubforumsController < ApplicationController
     else
       redirect_to_error 'saving_error'
     end
-    redirect_to '/'
   end
 
   def show

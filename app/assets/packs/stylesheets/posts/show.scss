@@ -4,8 +4,11 @@
 
 .post {
   border-radius: 3px;
-  background-color: #9fcdff;
-  margin: 7px auto;
+  background-color: #bee5eb;
+}
+
+.divider {
+  margin: 5px;
 }
 
 .title {
@@ -21,6 +24,7 @@
 
 .message_form {
   height: 250px;
+  margin-top: 5px;
 }
 
 .message_list {

@@ -3,32 +3,43 @@
     <%= stylesheet_pack_tag 'stylesheets/posts/show' %>
   </head>
   <body>
-    <div class="root container">
+    <div class="container">
       <div class="row">
         <div class="post col-11">
           <div class="row">
-            <div class="title"><%= @post.title %></div>
-            <div><%= @user %></div>
+            <div class="title col-8"><%= @post.title %></div>
+            <div class="col-3">
+              <div class="row justify-content-end">
+                <span class="col-3"><%= @user.name %></span>
+              </div>
+            </div>
           </div>
-          <hr class="my-4">
-          <div class="content"><%= @post.content %></div>
+          <div class="row">
+            <div class="content col-11"><%= @post.content %></div>
+          </div>
         </div>
-        <div class="message_list">
+      </div>
+      <div class="row">
+        <div class="message_list col-11">
           <ul class="list-group list-group-flush">
             <% @messages.each do |message| %>
-              <li class="list-group-item list-group-item-primary message">
-                <div class="msg_author"><%= User.find_by(id: message.user_id).email %></div>
-                <div class="msg_content">
-                  <%= message.content %>
-                </div>
-              </li>
+              <div class="row">
+                <li class="list-group-item list-group-item-info message col-9">
+                  <div class="msg_author"><%= User.find_by(id: message.user_id).email %></div>
+                  <div class="msg_content">
+                    <%= message.content %>
+                  </div>
+                </li>
+              </div>
             <% end %>
           </ul>
         </div>
-        <div class="message_form">
+      </div>
+      <div class="row">
+        <div class="message_form col-8">
           <%= form_with model: @new_message, method: 'post', url: {controller: 'messages', action: 'create'} do |f| %>
             <div class="form-group">
-              <%= f.text_area :content, class: 'form-control', size: '100x10', placeholder: 'Enter your message' %>
+              <%= f.text_area :content, class: 'form-control', placeholder: 'Enter your message' %>
             </div>
             <div class="form-group">
               <%= f.submit 'Write', class: 'btn btn-primary' %>

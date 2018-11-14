@@ -1,5 +1,3 @@
-include(Currents, Errors)
-
 class SessionsController < ApplicationController
   def try_login
     @user = User.new

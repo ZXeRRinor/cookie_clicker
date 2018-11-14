@@ -1,5 +1,3 @@
-include(Currents, Errors)
-
 class PostsController < ApplicationController
   def new
     unless current_user

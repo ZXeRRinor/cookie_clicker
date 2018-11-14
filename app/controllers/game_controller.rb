@@ -1,4 +1,4 @@
-include Currents, Errors, Permissions, Game
+include(Game)
 
 class GameController < ApplicationController
   def game

@@ -1,5 +1,3 @@
-include(Currents, Errors)
-
 class MessagesController < ApplicationController
   def create
     unless current_user
