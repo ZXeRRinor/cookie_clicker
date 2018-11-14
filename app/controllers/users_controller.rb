@@ -6,8 +6,12 @@ class UsersController < ApplicationController
   end
 
   def register
+    if current_user
+      redirect_to_error('logged_in')
+      return
+    end
     user = User.new(user_params)
-    unless User.find_by(email: user_params[:email]).nil?
+    unless User.find_by_email(user_params[:email]).nil?
       redirect_to_error('user_exists')
       return
     end
