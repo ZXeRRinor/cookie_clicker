@@ -14,4 +14,11 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates_format_of :email, with: (EMAIL_REGEXP)
   validates :password, length: {in: PASSWORD_LENGTH}
+
+  def initialize(*params)
+    super(*params)
+    self.set_default_values
+    self.create_producers
+    self.create_prices
+  end
 end

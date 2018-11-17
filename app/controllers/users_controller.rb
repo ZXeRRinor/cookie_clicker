@@ -7,11 +7,10 @@ class UsersController < ApplicationController
 
   def register
     check_for_register do
-      user = User.new(user_params)
       if check_user_params(user_params)
         return
       end
-      user.set_default_values
+      user = User.new(user_params)
       if user.save
         set_current_user(user)
       end

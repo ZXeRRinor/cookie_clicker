@@ -26,4 +26,18 @@ module UserUtils
     end
     nil
   end
+
+  def check_current_user(permissions = false)
+    unless current_user
+      redirect_to_error 'not_logged_in'
+      return
+    end
+    if permissions && current_user.permissions < permissions
+      redirect_to_error 'not_enough_perms'
+      return
+    end
+    if block_given?
+      yield
+    end
+  end
 end

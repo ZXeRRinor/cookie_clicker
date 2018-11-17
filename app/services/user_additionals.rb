@@ -1,3 +1,5 @@
+include(UserConstants)
+
 module UserAdditionals
   def create_producers
     prod_params = {}
