@@ -1,4 +1,4 @@
-include(Game, Currents, UserUtils, UserConstants)
+include(Game, Currents, UserUtils, UserConstants, Params)
 
 class UsersController < ApplicationController
   def try_register
@@ -19,15 +19,13 @@ class UsersController < ApplicationController
   end
 
   def change_password
-    unless current_user
-      redirect_to_error('not_logged_in')
-      return
+    check_current_user do
+      unless current_user.update_attributes(password: user_params[:password])
+        redirect_to_error('password_not_changed')
+        return
+      end
+      redirect_to controller: 'sessions', action: 'logout'
     end
-    unless current_user.update_attributes(password: user_params[:password])
-      redirect_to_error('password_not_changed')
-      return
-    end
-    redirect_to controller: 'sessions', action: 'logout'
   end
 
   def profile
@@ -46,8 +44,5 @@ class UsersController < ApplicationController
   def show_current
     redirect_to controller: 'users', action: 'show_user', id: current_user.id
   end
-end
 
-def user_params
-  params.require(:user).permit(:email, :name, :password, :password_confirmation)
 end
