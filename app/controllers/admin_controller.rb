@@ -1,28 +1,26 @@
-include(Currents, Permissions)
+include(Admin, Currents, Permissions)
 
 class AdminController < ApplicationController
+  ACCEPTED_TYPES = %w[user subforum post message]
+
   def set_perms
-    check_curr_user
-    user = User.find_by_id(set_perms_id)
-    user.permissions = params[:perms]
-    if user.save
-      redirect_to controller: 'users', action: 'show', id: user.id
-    else
-      redirect_to_error 'saving_error'
+    check_current_user(ADMINPERMS) do
+      user = User.find_by_id(set_perms_id)
+      user.permissions = params[:perms]
+      if user.save
+        redirect_to controller: 'users', action: 'show', id: user.id
+      else
+        redirect_to_error 'saving_error'
+      end
     end
   end
 
   def create_record
     check_current_user(ADMINPERMS) do
-      case params[:record_type]
-      when 'user'
-        User.new(user_params).save(validate: false)
-      when 'subforum'
-        Subforum.new(subforum_params).save(validate: false)
-      when 'post'
-        Post.new(post_params).save(validate: false)
-      when 'message'
-        Message.new(message_params).save(validate: false)
+      if ACCEPTED_TYPES.include?(record_type)
+        eval("@creature = #{record_type.capitalize}")
+        eval("@creature_params = #{record_type}_params")
+        @creature.new(@creature_params).save(validate: false)
       else
         redirect_to_error 'unknown record type'
       end
@@ -33,15 +31,9 @@ class AdminController < ApplicationController
     check_current_user(ADMINPERMS) do
       record_type, id = params[:id].split('_')
       id = id.to_i
-      case record_type
-      when 'user'
-        User.find_by_id(id).delete
-      when 'subforum'
-        Subforum.find_by_id(id).delete
-      when 'post'
-        Post.find_by_id(id).delete
-      when 'message'
-        Message.find_by_id(id).delete
+      if ACCEPTED_TYPES.include?(record_type)
+        eval("@creature = #{record_type.capitalize}")
+        @creature.find_by_id(id).delete
       else
         redirect_to_error 'unknown record type'
       end
@@ -52,12 +44,11 @@ class AdminController < ApplicationController
   def change_record
     check_current_user(ADMINPERMS) do
       record_type, id = params[:type], params[:id].to_i
-      accepted_types = %w[user subforum post message]
-      if accepted_types.include?(record_type)
-        eval("creature_params = #{record_type}_params")
-        eval("creature = #{record_type.capitalize}")
-        creature_params.to_enum.each do |attr|
-          creature.find_by_id(id).update_attribute(attr.first, attr.last)
+      if ACCEPTED_TYPES.include?(record_type)
+        eval("@creature_params = #{record_type}_params")
+        eval("@creature = #{record_type.capitalize}")
+        @creature_params.to_enum.each do |attr|
+          @creature.find_by_id(id).update_attribute(attr.first, attr.last)
         end
       else
         redirect_to_error 'unknown record type'
@@ -71,20 +62,9 @@ class AdminController < ApplicationController
     check_current_user(ADMINPERMS) do
       record_type, id = params[:id].split('_')
       id = id.to_i
-      case record_type
-      when 'user'
-        @user = User.find_by_id(id)
-        eval("creature = #{record_type.capitalize}.new")
+      if ACCEPTED_TYPES.include?(record_type)
+        eval("@#{record_type} = #{record_type.capitalize}.find_by_id(#{id})")
         render "admin/change_record_forms/#{record_type}"
-      when 'subforum'
-        @subforum = Subforum.find_by(id: id)
-        render 'admin/change_record_forms/subforum'
-      when 'post'
-        @post = Post.find_by(id: id)
-        render 'admin/change_record_forms/post'
-      when 'message'
-        @message = Message.find_by(id: id)
-        render 'admin/change_record_forms/message'
       else
         redirect_to_error 'unknown record type'
       end
@@ -99,20 +79,4 @@ class AdminController < ApplicationController
       @messages = Message.all.order(id: :asc)
     end
   end
-end
-
-def user_params
-  params.require(:user).permit(:id, :email, :name, :permissions, :user_cookies, :created_at, :updated_at, :password)
-end
-
-def subforum_params
-  params.require(:subforum).permit(:id, :title, :user_id, :subforum_id, :created_at, :updated_at, :password)
-end
-
-def post_params
-  params.require(:post).permit(:id, :title, :content, :user_id, :subforum_id, :created_at, :updated_at, :password)
-end
-
-def message_params
-  params.require(:message).permit(:id, :content, :user_id, :post_id, :created_at, :updated_at, :password)
 end
