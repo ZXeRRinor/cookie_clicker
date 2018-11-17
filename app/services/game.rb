@@ -13,4 +13,7 @@ module Game
       'Quantum Cookie Singularity': {price: 2097152, performance: 262144},
       'Admin Cookie Creator': {price: 134217728, performance: 4194304},
   }
+
+  LEADERBOARD_USR_AMOUNT = 10
+  BASE_COOKIES = 0
 end

@@ -34,7 +34,7 @@
               Change password
             </button>
           </p>
-          <div class="collapse" id="collapseExample">
+          <div class="collapse change_pass_collapse" id="collapseExample">
             <div class="card card-body">
               <%= form_with model: @user, method: 'patch', url: {controller: 'users', action: 'change_password'} do |f| %>
                 <div class="form-group">

@@ -1,4 +1,8 @@
 <span class="additional_links">
-  <%= link_to 'Change', {controller: ctrlr, action: actCh, id: id}, class: 'btn btn-outline-warning' %>
-  <%= link_to 'Delete', {controller: ctrlr, action: actDel, id: id}, class: 'btn btn-outline-danger' %>
+  <% unless actCh == '--no-action' %>
+    <%= link_to 'Change', {controller: ctrlr, action: actCh, id: id}, class: 'btn btn-outline-warning' %>
+  <% end %>
+  <% unless actDel == '--no-action' %>
+    <%= link_to 'Delete', {controller: ctrlr, action: actDel, id: id}, class: 'btn btn-outline-danger' %>
+  <% end %>
 </span>

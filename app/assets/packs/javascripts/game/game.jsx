@@ -85,7 +85,6 @@ class Game extends Component {
     }
 
     saveResults() {
-        console.log('saving');
         let userProducers = game_store.getState().userProducers;
         let currentPricesOfProducers = game_store.getState().currentPricesOfProducers;
         let userCookies = game_store.getState().userCookies;
@@ -101,8 +100,9 @@ class Game extends Component {
 
     getResults() {
         $.get('/game/get_results', {}, (data, status, y) => {
-            console.log(data);
-            game_store.dispatch({type: 'setData', payload: data});
+            if (status === 'success') {
+                game_store.dispatch({type: 'setData', payload: data});
+            }
         });
     }
 

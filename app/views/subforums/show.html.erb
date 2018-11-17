@@ -16,7 +16,7 @@
                   </div>
                   <div class="col-3">
                     <% if current_user && (post.user_id == session[:user_id] || current_user.permissions >= MODERPERMS) %>
-                      <%= render 'partials/additional_links', id: post.id, ctrlr: 'posts', actDel: 'delete', actCh: 'update' %>
+                      <%= render 'partials/additional_links', id: post.id, ctrlr: 'posts', actDel: 'delete', actCh: '--no-action' %>
                     <% end %>
                   </div>
                 </div>
@@ -38,7 +38,7 @@
                   </div>
                   <div class="col-3">
                     <% if current_user && (sub.user_id == session[:user_id] || current_user.permissions >= MODERPERMS) %>
-                      <%= render 'partials/additional_links', id: sub.id, ctrlr: 'subforums', actDel: 'delete', actCh: 'update' %>
+                      <%= render 'partials/additional_links', id: sub.id, ctrlr: 'subforums', actDel: 'delete', actCh: '--no-action' %>
                     <% end %>
                   </div>
                 </div>
@@ -63,7 +63,7 @@
                 </div>
               <% end %>
               <%= render 'partials/collapse', id: 'new_sub', btn_text: 'New subforum' do %>
-                <div class="new_post_form_container">
+                <div class="new_post_form_container ">
                   <%= form_with model: Subforum.new, method: 'post', url: {controller: 'subforums', action: 'create'} do |f| %>
                     <div class="form-group">
                       <%= f.text_field :title, class: 'form-control', placeholder: 'Enter title of new subforum' %>

@@ -1,4 +1,4 @@
-include(Game)
+include(Game, Currents, UserUtils, UserConstants)
 
 class UsersController < ApplicationController
   def try_register
@@ -6,43 +6,17 @@ class UsersController < ApplicationController
   end
 
   def register
-    if current_user
-      redirect_to_error('logged_in')
-      return
-    end
-    user = User.new(user_params)
-    unless User.find_by_email(user_params[:email]).nil?
-      redirect_to_error('user_exists')
-      return
-    end
-    user.permissions = USERPERMS
-    prod_params = {}
-    PRODUCER_LIST.each do |producer|
-      prod_params[producer] = DEFAULT_AMOUNT
-    end
-    price_params = {}
-    PRODUCER_LIST.each do |producer|
-      price_params[producer] = PRODUCERS[producer.to_sym][:price]
-    end
-    user.producers.new(prod_params)
-    user.prices.new(price_params)
-    user.user_cookies = 0
-    if user.save
-      set_current_user(user)
-      if user.permissions >= ADMINPERMS
-        redirect_to controller: 'admin', action: 'admin_panel'
-      end
-    else
-      if /[\w]+@[\w]+\.[A-Za-z]/ =~ user_params[:email]
-        redirect_to_error('invalid_email')
+    check_for_register do
+      user = User.new(user_params)
+      if check_user_params(user_params)
         return
       end
-      if (6..50).cover?(user_params[:email].length)
-        redirect_to_error('invalid_password')
-        return
+      user.set_default_values
+      if user.save
+        set_current_user(user)
       end
+      redirect_to '/'
     end
-    redirect_to '/'
   end
 
   def change_password

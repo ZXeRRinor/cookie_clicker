@@ -7,7 +7,7 @@ class GameController < ApplicationController
 
   def leaderboard
     json = []
-    User.all.limit(10).order(user_cookies: :desc).each do |user|
+    User.all.limit(LEADERBOARD_USR_AMOUNT).order(user_cookies: :desc).each do |user|
       json.push({id: user.id, name: user.name, cookies: user.user_cookies})
     end
     json = json.to_json.to_s
@@ -19,7 +19,6 @@ class GameController < ApplicationController
       return
     end
     cookies = current_user.user_cookies
-
     producers = current_user.producers.first
     prices = current_user.prices.first
     @json = {
@@ -34,7 +33,6 @@ class GameController < ApplicationController
     unless check_curr_user
       return
     end
-    p data[:cookies][:user_cookies].to_i
     current_user.update_attribute(:user_cookies, data[:cookies][:user_cookies].to_i)
     producers = Producer.find_by(user_id: current_user.id)
     if producers
@@ -73,7 +71,7 @@ end
 def data
   data = params.require(:data)
   cookies = data.permit(:user_cookies)
-  user_producers = data.require(:user_producers).permit('Auto Clicker', 'Auto Oven', 'Cookie Farm', 'Cookie Factory', 'Cookie Reactor', 'Cookie Materialiser', 'Quantum Cookie Singularity', 'Admin Cookie Creator')
-  prices = data.require(:current_prices_of_producers).permit('Auto Clicker', 'Auto Oven', 'Cookie Farm', 'Cookie Factory', 'Cookie Reactor', 'Cookie Materialiser', 'Quantum Cookie Singularity', 'Admin Cookie Creator')
+  user_producers = data.require(:user_producers).permit(PRODUCER_LIST)
+  prices = data.require(:current_prices_of_producers).permit(PRODUCER_LIST)
   {cookies: cookies, producers: user_producers, prices: prices}
 end

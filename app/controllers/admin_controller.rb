@@ -1,7 +1,7 @@
 class AdminController < ApplicationController
   def set_perms
     check_curr_user
-    user = User.find_by(id: set_perms_id)
+    user = User.find_by_id(set_perms_id)
     user.permissions = params[:perms]
     if user.save
       redirect_to controller: 'users', action: 'show', id: user.id

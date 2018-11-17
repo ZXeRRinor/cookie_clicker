@@ -5,13 +5,20 @@ class LeaderBoard extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {users: [], updateTimer: setInterval(this.getLeaderList, 6000)};
+        this.state = {users: []}; //, updateTimer: setInterval(this.getLeaderList, 6000)};
+        this.getLeaderList = this.getLeaderList.bind(this);
         this.getLeaderList();
+    }
+
+    componentWillUnmount() {
+        //clearInterval(this.state.updateTimer);
     }
 
     getLeaderList() {
         $.get('/game/leaderboard', {}, (data, status, y) => {
-            this.setState({users: data});
+            if (status === 'success') {
+                this.setState({users: data});
+            }
         });
     }
 
