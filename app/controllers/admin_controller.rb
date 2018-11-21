@@ -22,7 +22,7 @@ class AdminController < ApplicationController
         eval("@creature_params = #{record_type}_params")
         @creature.new(@creature_params).save(validate: false)
       else
-        redirect_to_error 'unknown record type'
+        redirect_to_error 'unknown_record_type'
       end
     end
   end
@@ -35,7 +35,7 @@ class AdminController < ApplicationController
         eval("@creature = #{record_type.capitalize}")
         @creature.find_by_id(id).delete
       else
-        redirect_to_error 'unknown record type'
+        redirect_to_error 'unknown_record_type'
       end
       redirect_to controller: 'admin', action: 'admin_panel'
     end

@@ -19,12 +19,12 @@ class GameController < ApplicationController
       cookies = current_user.user_cookies
       producers = current_user.producers.first
       prices = current_user.prices.first
-      @json = {
+      json = {
           userCookies: cookies,
           userProducers: producers,
           currentPricesOfProducers: prices
       }.to_json.to_s
-      render json: @json, content_type: 'application/json'
+      render json: json, content_type: 'application/json'
     end
   end
 

@@ -1,4 +1,4 @@
-include(UserConstants)
+include(UserConstants, Game)
 
 module UserAdditionals
   def create_producers

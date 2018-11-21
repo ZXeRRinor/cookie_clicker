@@ -88,7 +88,7 @@ class Game extends Component {
         let userProducers = game_store.getState().userProducers;
         let currentPricesOfProducers = game_store.getState().currentPricesOfProducers;
         let userCookies = game_store.getState().userCookies;
-        let authenticity_token = document.querySelector('.data').childNodes[3].content;
+        let authenticity_token = document.querySelector('.meta_tags').childNodes[3].content;
         $.post('/game/save_results', {
             data: {
                 user_cookies: userCookies,

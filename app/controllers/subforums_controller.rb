@@ -35,7 +35,7 @@ class SubforumsController < ApplicationController
       @posts = sub.posts
       @path = get_subforum_path(sub)
     else
-      redirect_to_error 'error'
+      redirect_to_error 'not_found'
     end
   end
 

@@ -13,6 +13,8 @@ class UsersController < ApplicationController
       user = User.new(user_params)
       if user.save
         set_current_user(user)
+      else
+        redirect_to_error 'saving_error'
       end
       redirect_to '/'
     end
@@ -22,19 +24,15 @@ class UsersController < ApplicationController
     check_current_user do
       unless current_user.update_attributes(password: user_params[:password])
         redirect_to_error('password_not_changed')
-        return
       end
-      redirect_to controller: 'sessions', action: 'logout'
     end
   end
 
   def profile
-    unless current_user
-      redirect_to_error('not_logged_in')
-      return
+    check_current_user do
+      @user = User.new
+      @current_user = current_user
     end
-    @user = User.new
-    @current_user = current_user
   end
 
   def show_user
@@ -44,5 +42,4 @@ class UsersController < ApplicationController
   def show_current
     redirect_to controller: 'users', action: 'show_user', id: current_user.id
   end
-
 end

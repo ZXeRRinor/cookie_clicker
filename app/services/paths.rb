@@ -9,4 +9,14 @@ module Paths
     path.push(sub)
     path.reverse
   end
+
+  # def check_path_for(type, id)
+  #   case type
+  #   when 'subforum'
+  #
+  #   when 'post'
+  #
+  #   when ''
+  #   end
+  # end
 end

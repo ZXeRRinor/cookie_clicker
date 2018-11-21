@@ -30,10 +30,10 @@
                   <div class="subforum_link col-7">
                     <%= link_to "#{sub.title}", {controller: 'subforums', action: 'show', id: sub.id} %>
                   </div>
-                  <div class="col-1">
+                  <div class="col-1 sub_amount">
                     Posts: <%= sub.posts.length %>
                   </div>
-                  <div class="col-1">
+                  <div class="col-1 sub_amount">
                     Subs: <%= sub.subforums.length %>
                   </div>
                   <div class="col-3">
