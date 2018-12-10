@@ -1,5 +1,5 @@
 <nav aria-label="breadcrumb">
-  <ol class="breadcrumb path">
+  <ol class="bg-dark breadcrumb path">
     <% path.each do |sub| %>
       <li class="breadcrumb-item">
         <%= link_to sub.title, {controller: 'subforums', action: 'show', id: sub.id} %>

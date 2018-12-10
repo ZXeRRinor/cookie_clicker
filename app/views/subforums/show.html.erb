@@ -5,9 +5,9 @@
       <%= render 'partials/path', path: @path %>
       <ul class="list-group list-group-flush posts_list">
         <% @posts.each do |post| %>
-          <li class="list-group-item list-group-item-info">
+          <li class="list-group-item bg-secondary list-group-item-info">
             <div class="row">
-              <div class="post_link col-9">
+              <div class="post_link col-9 text-light">
                 <%= link_to "#{post.title}", {controller: 'posts', action: 'show', id: post.id} %>
               </div>
               <div class="col-3">
@@ -21,9 +21,9 @@
       </ul>
       <ul class="list-group list-group-flush subforums_list">
         <% @subs.each do |sub| %>
-          <li class="list-group-item list-group-item-success">
+          <li class="list-group-item bg-dark list-group-item-success">
             <div class="row">
-              <div class="subforum_link col-7">
+              <div class="subforum_link col-7 text-light">
                 <%= link_to "#{sub.title}", {controller: 'subforums', action: 'show', id: sub.id} %>
               </div>
               <div class="col-1 sub_amount">

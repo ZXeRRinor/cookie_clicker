@@ -2,7 +2,7 @@
 
 <div class="root container">
   <%= render 'partials/collapse', btn_text: 'User list', id: 'user_list' do %>
-    <table class="table table-bordered table-sm">
+    <table class="table table-bordered table-sm bg-dark text-light">
       <thead>
       <tr>
         <th scope="col">ID</th>
@@ -30,7 +30,7 @@
       <% end %>
       <%= form_with model: User.new, method: 'post', url: {controller: 'admin', action: 'create_record', record_type: 'user'} do |f| %>
         <tr>
-          <td><%= f.text_field :id, class: 'form-control', placeholder: 'ID' %></td>
+          <td class="bg-dark text-light"><%= f.text_field :id, class: 'form-control', placeholder: 'ID' %></td>
           <td><%= f.text_field :email, class: 'form-control', placeholder: 'E-Mail' %></td>
           <td><%= f.text_field :name, class: 'form-control', placeholder: 'Name' %></td>
           <td><%= f.text_field :permissions, class: 'form-control', placeholder: 'Permissions' %></td>
@@ -38,7 +38,7 @@
           <td><%= f.text_field :updated_at, class: 'form-control', placeholder: 'Updated at' %></td>
         </tr>
         <tr>
-          <td>
+          <td colspan="2">
             <%= f.text_field :password, class: 'form-control', placeholder: 'Password' %>
           </td>
           <td>
@@ -50,7 +50,7 @@
     </table>
   <% end %>
   <%= render 'partials/collapse', btn_text: 'Subforum list', id: 'sub_list' do %>
-    <table class="table table-bordered table-sm">
+    <table class="table table-bordered table-sm bg-dark text-light">
       <thead>
       <tr>
         <th scope="col">ID</th>
@@ -95,7 +95,7 @@
     </table>
   <% end %>
   <%= render 'partials/collapse', btn_text: 'Post list', id: 'post_list' do %>
-    <table class="table table-bordered table-sm">
+    <table class="table table-bordered table-sm bg-dark text-light">
       <thead>
       <tr>
         <th scope="col">ID</th>
@@ -143,7 +143,7 @@
     </table>
   <% end %>
   <%= render 'partials/collapse', btn_text: 'Message list', id: 'msg_list' do %>
-    <table class="table table-bordered table-sm">
+    <table class="table table-bordered table-sm bg-dark text-light">
       <thead>
       <tr>
         <th scope="col">ID</th>
