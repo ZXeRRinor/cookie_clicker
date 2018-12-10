@@ -1,8 +1,6 @@
 include(UserConstants)
 
 class User < ApplicationRecord
-  include(UserAdditionals)
-
   has_secure_password
 
   has_many :posts

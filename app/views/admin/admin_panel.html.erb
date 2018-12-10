@@ -1,3 +1,5 @@
+<%= stylesheet_pack_tag 'stylesheets/admin/admin_panel' %>
+
 <div class="root container">
   <%= render 'partials/collapse', btn_text: 'User list', id: 'user_list' do %>
     <table class="table table-bordered table-sm">
@@ -7,9 +9,9 @@
         <th scope="col">Email</th>
         <th scope="col">Name</th>
         <th scope="col">Permissions</th>
-        <th scope="col">Cookies</th>
         <th scope="col">Created at</th>
         <th scope="col">Updated at</th>
+        <th scope="col">Actions</th>
       </tr>
       </thead>
       <tbody>
@@ -19,10 +21,11 @@
           <td><%= user.email %></td>
           <td><%= user.name %></td>
           <td><%= user.permissions %></td>
-          <td><%= user.user_cookies %></td>
-          <td><%= user.created_at %></td>
-          <td><%= user.updated_at %></td>
-          <td><%= render 'partials/additional_links', ctrlr: 'admin', id: "user_#{ user.id }", actCh: 'change_record_form', actDel: 'delete_record' %></td>
+          <td class="date"><%= user.created_at %></td>
+          <td class="date"><%= user.updated_at %></td>
+          <td class="table_buttons">
+            <%= render 'partials/additional_links', ctrlr: 'admin', id: "user_#{ user.id }", actCh: 'change_record_form', actDel: 'delete_record' %>
+          </td>
         </tr>
       <% end %>
       <%= form_with model: User.new, method: 'post', url: {controller: 'admin', action: 'create_record', record_type: 'user'} do |f| %>
@@ -31,7 +34,6 @@
           <td><%= f.text_field :email, class: 'form-control', placeholder: 'E-Mail' %></td>
           <td><%= f.text_field :name, class: 'form-control', placeholder: 'Name' %></td>
           <td><%= f.text_field :permissions, class: 'form-control', placeholder: 'Permissions' %></td>
-          <td><%= f.text_field :user_cookies, class: 'form-control', placeholder: 'User Cookies' %></td>
           <td><%= f.text_field :created_at, class: 'form-control', placeholder: 'Created at' %></td>
           <td><%= f.text_field :updated_at, class: 'form-control', placeholder: 'Updated at' %></td>
         </tr>
@@ -57,6 +59,7 @@
         <th scope="col">Parent subforum ID</th>
         <th scope="col">Created at</th>
         <th scope="col">Updated at</th>
+        <th scope="col">Actions</th>
       </tr>
       </thead>
       <tbody>
@@ -66,9 +69,11 @@
           <td><%= subforum.title %></td>
           <td><%= subforum.user_id %></td>
           <td><%= subforum.subforum_id %></td>
-          <td><%= subforum.created_at %></td>
-          <td><%= subforum.updated_at %></td>
-          <td><%= render 'partials/additional_links', ctrlr: 'admin', id: "subforum_#{ subforum.id }", actCh: 'change_record_form', actDel: 'delete_record' %></td>
+          <td class="date"><%= subforum.created_at %></td>
+          <td class="date"><%= subforum.updated_at %></td>
+          <td class="table_buttons">
+            <%= render 'partials/additional_links', ctrlr: 'admin', id: "subforum_#{ subforum.id }", actCh: 'change_record_form', actDel: 'delete_record' %>
+          </td>
         </tr>
       <% end %>
       <%= form_with model: Subforum.new, method: 'post', url: {controller: 'admin', action: 'create_record', record_type: 'subforum'} do |f| %>
@@ -100,6 +105,7 @@
         <th scope="col">Subforum ID</th>
         <th scope="col">Created at</th>
         <th scope="col">Updated at</th>
+        <th scope="col">Actions</th>
       </tr>
       </thead>
       <tbody>
@@ -110,9 +116,11 @@
           <td><%= post.content %></td>
           <td><%= post.user_id %></td>
           <td><%= post.subforum_id %></td>
-          <td><%= post.created_at %></td>
-          <td><%= post.updated_at %></td>
-          <td><%= render 'partials/additional_links', ctrlr: 'admin', id: "post_#{ post.id }", actCh: 'change_record_form', actDel: 'delete_record' %></td>
+          <td class="date"><%= post.created_at %></td>
+          <td class="date"><%= post.updated_at %></td>
+          <td class="table_buttons">
+            <%= render 'partials/additional_links', ctrlr: 'admin', id: "post_#{ post.id }", actCh: 'change_record_form', actDel: 'delete_record' %>
+          </td>
         </tr>
       <% end %>
       <%= form_with model: Post.new, method: 'post', url: {controller: 'admin', action: 'create_record', record_type: 'post'} do |f| %>
@@ -144,6 +152,7 @@
         <th scope="col">Post ID</th>
         <th scope="col">Created at</th>
         <th scope="col">Updated at</th>
+        <th scope="col">Actions</th>
       </tr>
       </thead>
       <tbody>
@@ -153,9 +162,11 @@
           <td><%= message.content %></td>
           <td><%= message.user_id %></td>
           <td><%= message.post_id %></td>
-          <td><%= message.created_at %></td>
-          <td><%= message.updated_at %></td>
-          <td><%= render 'partials/additional_links', ctrlr: 'admin', id: "message_#{ message.id }", actCh: 'change_record_form', actDel: 'delete_record' %></td>
+          <td class="date"><%= message.created_at %></td>
+          <td class="date"><%= message.updated_at %></td>
+          <td class="table_buttons">
+            <%= render 'partials/additional_links', ctrlr: 'admin', id: "message_#{ message.id }", actCh: 'change_record_form', actDel: 'delete_record' %>
+          </td>
         </tr>
       <% end %>
       <%= form_with model: Message.new, method: 'post', url: {controller: 'admin', action: 'create_record', record_type: 'message'} do |f| %>

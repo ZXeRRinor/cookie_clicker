@@ -1,4 +1,4 @@
-include(Admin, Currents, Permissions)
+include(Admin, Currents, Permissions, UserUtils)
 
 class AdminController < ApplicationController
   ACCEPTED_TYPES = %w[user subforum post message]
