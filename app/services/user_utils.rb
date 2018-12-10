@@ -1,4 +1,4 @@
-include Currents, Game, Permissions, UserConstants
+include Currents, Permissions, UserConstants
 
 module UserUtils
   def check_for_register

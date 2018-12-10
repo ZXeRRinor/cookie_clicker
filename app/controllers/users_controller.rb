@@ -1,4 +1,4 @@
-include(Game, Currents, UserUtils, UserConstants, Params)
+include(Currents, UserUtils, UserConstants, Params)
 
 class UsersController < ApplicationController
   def try_register
