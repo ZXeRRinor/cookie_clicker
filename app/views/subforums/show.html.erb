@@ -1,83 +1,77 @@
-<html>
-  <head>
-    <%= stylesheet_pack_tag 'stylesheets/subforums/show' %>
-  </head>
-  <body>
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-11">
-          <%= render 'partials/path', path: @path %>
-          <ul class="list-group list-group-flush posts_list">
-            <% @posts.each do |post| %>
-              <li class="list-group-item list-group-item-info">
-                <div class="row">
-                  <div class="post_link col-9">
-                    <%= link_to "#{post.title}", {controller: 'posts', action: 'show', id: post.id} %>
-                  </div>
-                  <div class="col-3">
-                    <% if current_user && (post.user_id == session[:user_id] || current_user.permissions >= MODERPERMS) %>
-                      <%= render 'partials/additional_links', id: post.id, ctrlr: 'posts', actDel: 'delete', actCh: '--no-action' %>
-                    <% end %>
-                  </div>
+<%= stylesheet_pack_tag 'stylesheets/subforums/show' %>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-11">
+      <%= render 'partials/path', path: @path %>
+      <ul class="list-group list-group-flush posts_list">
+        <% @posts.each do |post| %>
+          <li class="list-group-item list-group-item-info">
+            <div class="row">
+              <div class="post_link col-9">
+                <%= link_to "#{post.title}", {controller: 'posts', action: 'show', id: post.id} %>
+              </div>
+              <div class="col-3">
+                <% if current_user && (post.user_id == session[:user_id] || current_user.permissions >= MODERPERMS) %>
+                  <%= render 'partials/additional_links', id: post.id, ctrlr: 'posts', actDel: 'delete', actCh: '--no-action' %>
+                <% end %>
+              </div>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+      <ul class="list-group list-group-flush subforums_list">
+        <% @subs.each do |sub| %>
+          <li class="list-group-item list-group-item-success">
+            <div class="row">
+              <div class="subforum_link col-7">
+                <%= link_to "#{sub.title}", {controller: 'subforums', action: 'show', id: sub.id} %>
+              </div>
+              <div class="col-1 sub_amount">
+                Posts: <%= sub.posts.length %>
+              </div>
+              <div class="col-1 sub_amount">
+                Subs: <%= sub.subforums.length %>
+              </div>
+              <div class="col-3">
+                <% if current_user && (sub.user_id == session[:user_id] || current_user.permissions >= MODERPERMS) %>
+                  <%= render 'partials/additional_links', id: sub.id, ctrlr: 'subforums', actDel: 'delete', actCh: '--no-action' %>
+                <% end %>
+              </div>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+      <div class="row create_buttons">
+        <div class="col-7">
+          <%= render 'partials/collapse', id: 'new_post', btn_text: 'New post' do %>
+            <div class="new_post_form_container">
+              <%= form_with model: Post.new, method: 'post', url: {controller: 'posts', action: 'create'} do |f| %>
+                <div class="form-group">
+                  <%= f.text_field :title, class: 'form-control', placeholder: 'Enter title of new post' %>
                 </div>
-              </li>
-            <% end %>
-          </ul>
-          <ul class="list-group list-group-flush subforums_list">
-            <% @subs.each do |sub| %>
-              <li class="list-group-item list-group-item-success">
-                <div class="row">
-                  <div class="subforum_link col-7">
-                    <%= link_to "#{sub.title}", {controller: 'subforums', action: 'show', id: sub.id} %>
-                  </div>
-                  <div class="col-1 sub_amount">
-                    Posts: <%= sub.posts.length %>
-                  </div>
-                  <div class="col-1 sub_amount">
-                    Subs: <%= sub.subforums.length %>
-                  </div>
-                  <div class="col-3">
-                    <% if current_user && (sub.user_id == session[:user_id] || current_user.permissions >= MODERPERMS) %>
-                      <%= render 'partials/additional_links', id: sub.id, ctrlr: 'subforums', actDel: 'delete', actCh: '--no-action' %>
-                    <% end %>
-                  </div>
+                <div class="form-group">
+                  <%= f.text_area :content, class: 'form-control', placeholder: 'Enter content of new post' %>
                 </div>
-              </li>
-            <% end %>
-          </ul>
-          <div class="row create_buttons">
-            <div class="col-7">
-              <%= render 'partials/collapse', id: 'new_post', btn_text: 'New post' do %>
-                <div class="new_post_form_container">
-                  <%= form_with model: Post.new, method: 'post', url: {controller: 'posts', action: 'create'} do |f| %>
-                    <div class="form-group">
-                      <%= f.text_field :title, class: 'form-control', placeholder: 'Enter title of new post' %>
-                    </div>
-                    <div class="form-group">
-                      <%= f.text_area :content, class: 'form-control', placeholder: 'Enter content of new post' %>
-                    </div>
-                    <div class="form-group">
-                      <%= f.submit 'Create', class: 'btn btn-primary' %>
-                    </div>
-                  <% end %>
-                </div>
-              <% end %>
-              <%= render 'partials/collapse', id: 'new_sub', btn_text: 'New subforum' do %>
-                <div class="new_post_form_container ">
-                  <%= form_with model: Subforum.new, method: 'post', url: {controller: 'subforums', action: 'create'} do |f| %>
-                    <div class="form-group">
-                      <%= f.text_field :title, class: 'form-control', placeholder: 'Enter title of new subforum' %>
-                    </div>
-                    <div class="form-group">
-                      <%= f.submit 'Create', class: 'btn btn-primary' %>
-                    </div>
-                  <% end %>
+                <div class="form-group">
+                  <%= f.submit 'Create', class: 'btn btn-primary' %>
                 </div>
               <% end %>
             </div>
-          </div>
+          <% end %>
+          <%= render 'partials/collapse', id: 'new_sub', btn_text: 'New subforum' do %>
+            <div class="new_post_form_container ">
+              <%= form_with model: Subforum.new, method: 'post', url: {controller: 'subforums', action: 'create'} do |f| %>
+                <div class="form-group">
+                  <%= f.text_field :title, class: 'form-control', placeholder: 'Enter title of new subforum' %>
+                </div>
+                <div class="form-group">
+                  <%= f.submit 'Create', class: 'btn btn-primary' %>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
         </div>
       </div>
     </div>
-  </body>
-</html>
+  </div>
+</div>
