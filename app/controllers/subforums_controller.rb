@@ -31,9 +31,12 @@ class SubforumsController < ApplicationController
   def show
     sub = Subforum.find_by_id(params[:id])
     if sub
-      @subs = sub.subforums
-      @posts = sub.posts
-      @path = get_subforum_path(sub)
+      json = {
+          subs: sub.subforums,
+          posts: sub.posts,
+          path: get_subforum_path(sub)
+      }.to_json.to_s
+      render json: json, content_type: 'application/json'
     else
       redirect_to_error 'not_found'
     end

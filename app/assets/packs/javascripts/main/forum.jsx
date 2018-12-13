@@ -7,8 +7,15 @@ class Forum extends Component {
         super(props);
     }
 
+    componentDidMount() {
+        $.get('/forum/0', (data) => {
+           console.log(data);
+        });
+    }
+
     render() {
         return (
+            <div>Kek!</div>
             /*<div dangerouslySetInnerHTML={{ __html: this.state.navbar }} />*/
         )
     }
