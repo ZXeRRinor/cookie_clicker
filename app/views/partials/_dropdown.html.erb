@@ -4,7 +4,6 @@
   </a>
   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
     <% items.each_with_index do |item, key| %>
-      <% p key %>
       <%= link_to item.first, item.last, class: 'dropdown-item' %>
     <% end %>
     <div class="dropdown-divider"></div>

@@ -5,7 +5,11 @@ environment.plugins.prepend('Provide', new webpack.ProvidePlugin({
     $: 'jquery',
     jQuery: 'jquery',
     THREE: 'three',
-    Popper: ['popper.js', 'default']
+    Popper: ['popper.js', 'default'],
+    'react-router': 'react-router',
+    'react-router-dom': 'react-router-dom',
+    'react-router-native': 'react-router-native',
+    'react-router-config': 'react-router-config'
 }))
 
 module.exports = environment

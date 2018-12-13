@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root 'components#main'
+
+  get 'navbar', to: 'components#navbar'
 
   get 'register', to: 'users#try_register'
   post 'register', to: 'users#register'

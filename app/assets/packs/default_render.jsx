@@ -25,4 +25,4 @@ ReactDOM.render(
         <QuadEqu/>
     </Provider>,
     document.body.appendChild(document.createElement('div')),
-)
+);
