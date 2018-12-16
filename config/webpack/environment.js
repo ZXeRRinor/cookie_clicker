@@ -1,6 +1,6 @@
-const {environment} = require('@rails/webpacker')
+const {environment} = require('@rails/webpacker');
 
-const webpack = require('webpack')
+const webpack = require('webpack');
 environment.plugins.prepend('Provide', new webpack.ProvidePlugin({
     $: 'jquery',
     jQuery: 'jquery',
@@ -9,7 +9,8 @@ environment.plugins.prepend('Provide', new webpack.ProvidePlugin({
     'react-router': 'react-router',
     'react-router-dom': 'react-router-dom',
     'react-router-native': 'react-router-native',
-    'react-router-config': 'react-router-config'
-}))
+    'react-router-config': 'react-router-config',
+    reactstrap: 'reactstrap'
+}));
 
-module.exports = environment
+module.exports = environment;

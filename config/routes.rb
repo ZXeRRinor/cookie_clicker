@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'components#main'
 
   get 'navbar', to: 'components#navbar'
+  get 'get_comp/register_form', to: 'components#generate_register_form'
 
   get 'register', to: 'users#try_register'
   post 'register', to: 'users#register'

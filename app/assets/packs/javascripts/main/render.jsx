@@ -3,6 +3,6 @@ import ReactDOM from 'react-dom';
 import Index from './index';
 
 ReactDOM.render(
-    <Index />,
+    <Index/>,
     document.body.appendChild(document.createElement('div'))
 );
