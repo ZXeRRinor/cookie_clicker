@@ -13,11 +13,12 @@ class Navbar extends Component {
         console.log(this.props.store);
     }
 
+
+
     componentDidMount() {
         $.get('/navbar', (data) => {
             this.setState({permissions: data.permissions, current_user: data.current_user})
         });
-        //this.getModal(10, 'kek', 'text', 'text');
     }
 
     render() {

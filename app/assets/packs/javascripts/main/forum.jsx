@@ -16,7 +16,7 @@ class Forum extends Component {
 
     render() {
         return (
-            <div><RegisterModal/></div>
+            <div></div>
             /*<div dangerouslySetInnerHTML={{ __html: this.state.navbar }} />*/
         )
     }

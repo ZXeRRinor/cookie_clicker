@@ -12,7 +12,7 @@ let mainReducer = (store = initialState, action) => {
     return store;
 };
 
-let store = createStore(mainReducer);
+let store = createStore(mainReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 class Index extends Component {
 
@@ -24,15 +24,12 @@ class Index extends Component {
         return (
             <Provider store={store}>
                 <Router>
-                    <div>
-                        <Navbar/>
-                    </div>
+                    <Route component={Navbar}>
+                        <Route path='/forum' component={Forum}/>
+                    </Route>
                 </Router>
             </Provider>
         );
-        //<div className="routes">
-        //    <Route exact path='/forum' component={Forum}/>
-        //</div>
     }
 }
 
