@@ -31,11 +31,19 @@ class SubforumsController < ApplicationController
   def show
     sub = Subforum.find_by_id(params[:id])
     if sub
-      json = {
-          subs: sub.subforums,
-          posts: sub.posts,
-          path: get_subforum_path(sub)
-      }.to_json.to_s
+      pre_arr = {#костыли mode on
+                 subs: [],
+                 posts: sub.posts,
+                 path: get_subforum_path(sub)
+      }
+      sub.subforums.each do |elem|
+        sub = JSON.parse(elem.to_json.to_s)
+        sub['subs_in'] = elem.subforums.length
+        sub['posts_in'] = elem.posts.length
+        pre_arr[:subs].push(sub)
+      end
+      pre_arr = JSON.parse(pre_arr.to_json.to_s) #костыли mode off
+      json = pre_arr.to_json.to_s
       render json: json, content_type: 'application/json'
     else
       redirect_to_error 'not_found'

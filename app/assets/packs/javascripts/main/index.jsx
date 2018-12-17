@@ -1,10 +1,9 @@
 import React, {Component} from 'react'
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
+import {BrowserRouter as Router, Route} from "react-router-dom";
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 import Navbar from './navbar';
-import Forum from './forum';
-import RegisterModal from "./register_modal";
+import Forum from './forum/forum';
 
 const initialState = {};
 let mainReducer = (store = initialState, action) => {
@@ -24,9 +23,10 @@ class Index extends Component {
         return (
             <Provider store={store}>
                 <Router>
-                    <Route component={Navbar}>
-                        <Route path='/forum' component={Forum}/>
-                    </Route>
+                    <div>
+                        <Route component={Navbar}/>
+                        <Route path='/forum/:sub_id/' component={Forum}/>
+                    </div>
                 </Router>
             </Provider>
         );

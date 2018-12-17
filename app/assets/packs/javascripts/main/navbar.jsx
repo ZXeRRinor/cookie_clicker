@@ -1,16 +1,13 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import {connect} from 'react-redux';
-import RegisterModal from "./register_modal";
+import RegisterModal from "./modals/register_modal";
 
 class Navbar extends Component {
 
     constructor(props) {
         super(props);
         this.state = {navbar: null};
-        console.log(this.props.store);
-        this.props.dispatch('kek', 'megakek');
-        console.log(this.props.store);
     }
 
 
@@ -33,7 +30,7 @@ class Navbar extends Component {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <Link to="/forum" className="nav-link">Forum</Link>
+                                <Link to="/forum/0" className="nav-link">Forum</Link>
                             </li>
                             {
                                 this.state.permissions >= 2 ?
