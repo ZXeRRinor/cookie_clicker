@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import {connect} from 'react-redux';
 import RegisterModal from "./modals/register_modal";
+import LoginModal from "./modals/login_modal";
 
 class Navbar extends Component {
 
@@ -40,15 +41,13 @@ class Navbar extends Component {
                             }
                         </ul>
                         <ul className="navbar-nav right_block">
+                            this.state.current_user == null ?
                             <li>
                                 <RegisterModal/>
+                                <LoginModal/>
                             </li>
+                            : ''
                             {
-                                // this.state.current_user !== null ?
-                                //     <li>
-                                //         <RegisterModal/>
-                                //     </li>
-                                //     : ''
                                 //<
                                 //% if current_user %>
                                 //<

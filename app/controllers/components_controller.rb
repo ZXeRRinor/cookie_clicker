@@ -25,5 +25,9 @@ class ComponentsController < ApplicationController
 
   def generate_register_form
 
+    end
+
+  def generate_login_form
+
   end
 end

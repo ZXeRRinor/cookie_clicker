@@ -59,11 +59,12 @@ class Forum extends Component {
                         </div>
                     </div>
                 </div>
-                /*<div dangerouslySetInnerHTML={{ __html: this.state.navbar }} />*/
+
             )
         } else {
             return (<div/>);
         }
+        //<div dangerouslySetInnerHTML={{ __html: this.state.navbar }} />
     }
 }
 

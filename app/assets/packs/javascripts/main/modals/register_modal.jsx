@@ -10,6 +10,13 @@ class RegisterModal extends Component {
         this.getForm();
     }
 
+    store = () => {
+        return (this.props.store)
+    };
+    dispatch = (type, payload) => {
+        this.props.dispatch(type, payload)
+    };
+
     getForm() {
         $.get('/get_comp/register_form', (data) => {
             this.setState({reg_form: data});
@@ -38,4 +45,9 @@ class RegisterModal extends Component {
     }
 }
 
-export default RegisterModal;
+export default connect(
+    state => ({store: state}),
+    dispatch => ({
+        dispatch: (type, payload) => dispatch({type: type, payload: payload})
+    })
+)(RegisterModal);
