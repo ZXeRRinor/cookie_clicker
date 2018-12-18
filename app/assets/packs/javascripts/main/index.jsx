@@ -4,10 +4,21 @@ import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 import Navbar from './navbar';
 import Forum from './forum/forum';
+import Elem from "./test_el";
 
 const initialState = {};
 let mainReducer = (store = initialState, action) => {
-    console.log(action.type + ': ' + action.payload);
+    let type = action.type;
+    let payload = action.payload;
+    switch (type) {
+        case ('set_curr_sub'): {
+            return ({
+                ...store,
+                curr_sub: payload
+            });
+        }
+
+    }
     return store;
 };
 
@@ -25,7 +36,7 @@ class Index extends Component {
                 <Router>
                     <div>
                         <Route component={Navbar}/>
-                        <Route path='/forum/:sub_id/' component={Forum}/>
+                        <Route path="/forum/:sub_id" component={Forum}/>
                     </div>
                 </Router>
             </Provider>

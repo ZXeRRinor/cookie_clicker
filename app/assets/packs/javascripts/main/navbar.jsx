@@ -11,7 +11,6 @@ class Navbar extends Component {
     }
 
 
-
     componentDidMount() {
         $.get('/navbar', (data) => {
             this.setState({permissions: data.permissions, current_user: data.current_user})
@@ -30,12 +29,12 @@ class Navbar extends Component {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <Link to="/forum/0" className="nav-link">Forum</Link>
+                                <Link to="/forum/0/" className="nav-link">Forum</Link>
                             </li>
                             {
                                 this.state.permissions >= 2 ?
                                     <li className="nav-item">
-                                        <Link to="/admin/panel" className="nav-link">Administrating</Link>
+                                        <Link to="/admin/panel/" className="nav-link">Administrating</Link>
                                     </li>
                                     : ''
                             }

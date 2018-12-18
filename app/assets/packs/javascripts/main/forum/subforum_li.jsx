@@ -20,7 +20,7 @@ class SubforumListElement extends Component {
             <li className="list-group-item bg-dark list-group-item-success">
                 <div className="row">
                     <div className="subforum_link col-7 text-light">
-                        <Link to={'/forum/' + this.props.id}>{this.props.title}</Link>
+                        <Link to={'/forum/' + this.props.id + '/'}>{this.props.title}</Link>
                     </div>
                     <div className="col-1 sub_amount">
                         Posts: {this.props.posts_in}
