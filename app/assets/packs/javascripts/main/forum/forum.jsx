@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import SubforumListElement from "./subforum_li";
-import {Provider} from 'react-redux';
 import PostListElement from "./post_li";
+import {Link} from 'react-router-dom';
 
 class Forum extends Component {
 
@@ -40,20 +40,27 @@ class Forum extends Component {
                 post_list.push(<SubforumListElement id={elem.id} title={elem.title} subs_in={elem.subs_in}
                                                     posts_in={elem.posts_in} key={'sub_' + elem.id}/>)
             });
-            this.setState({subs: sub_list, posts: post_list});
+            this.setState({subs: sub_list, posts: post_list, path: data.path});
         });
     }
 
     render() {
-        if (this.state.content !== null) {
+        if (this.state.path !== null && this.state.path !== undefined) {
             return (
                 <div className="container" key={this.props.match.params.sub_id}>
                     <div className="row justify-content-center">
                         <div className="col-11">
-                            <ul className="list-group list-group-flush posts_list">
+                            <ol className="bg-dark breadcrumb path">
+                                {this.state.path.map((elem, key) =>
+                                    <li className='breadcrumb-item text-light' key={key}>
+                                        <Link to={'/forum' + '/' + elem.id + '/'}>{elem.title}</Link>
+                                    </li>)
+                                }
+                            </ol>
+                            <ul className="list-group list-group-flush posts_list bg-dark">
                                 {this.state.posts}
                             </ul>
-                            <ul className="list-group list-group-flush subforums_list">
+                            <ul className="list-group list-group-flush subforums_list bg-dark">
                                 {this.state.subs}
                             </ul>
                         </div>

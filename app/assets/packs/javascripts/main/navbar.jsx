@@ -21,7 +21,7 @@ class Navbar extends Component {
     render() {
         return (
             <div>
-                <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+                <nav className="navbar sticky-top navbar-expand-lg bg-dark">
                     <Link to='/' className="navbar-brand">Dictionary</Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,31 +40,36 @@ class Navbar extends Component {
                                     : ''
                             }
                         </ul>
-                        <ul className="navbar-nav right_block">
-                            this.state.current_user == null ?
-                            <li>
-                                <RegisterModal/>
-                                <LoginModal/>
-                            </li>
-                            : ''
-                            {
-                                //<
-                                //% if current_user %>
-                                //<
-                                //%= render 'partials/dropdown', open_btn:
-                                //current_user.email, items: {:Profile => {controller: 'users', action: 'profile'}}, last_item_text: 'Logout', last_item_path: {controller: 'sessions', action: 'logout'} %>
-                                //<
-                                //% else %>
-                                //<div>
-                                //    <
-                                //    %= render 'partials/login_modal' %>
-                                //    <
-                                //    %= render 'partials/register_modal' %>
-                                //</div>
-                                // <
-                                // % end %>
-                            }
-                        </ul>
+                        {
+                            this.state.current_user !== null ?
+                                <ul className="navbar-nav right_block row">
+                                    <li>
+                                        <RegisterModal/>
+                                    </li>
+                                    <span className="col-1"/>
+                                    <li>
+                                        <LoginModal/>
+                                    </li>
+                                </ul>
+                                : <ul className="navbar-nav right_block"/>
+                        }
+                        {
+                            //<
+                            //% if current_user %>
+                            //<
+                            //%= render 'partials/dropdown', open_btn:
+                            //current_user.email, items: {:Profile => {controller: 'users', action: 'profile'}}, last_item_text: 'Logout', last_item_path: {controller: 'sessions', action: 'logout'} %>
+                            //<
+                            //% else %>
+                            //<div>
+                            //    <
+                            //    %= render 'partials/login_modal' %>
+                            //    <
+                            //    %= render 'partials/register_modal' %>
+                            //</div>
+                            // <
+                            // % end %>
+                        }
                     </div>
                 </nav>
             </div>

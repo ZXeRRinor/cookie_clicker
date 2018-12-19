@@ -4,7 +4,6 @@ import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 import Navbar from './navbar';
 import Forum from './forum/forum';
-import Elem from "./test_el";
 
 const initialState = {};
 let mainReducer = (store = initialState, action) => {
