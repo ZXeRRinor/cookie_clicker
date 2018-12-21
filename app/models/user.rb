@@ -5,8 +5,7 @@ class User < ApplicationRecord
 
   has_many :posts
   has_many :messages, dependent: :destroy
-  has_many :producers, dependent: :destroy
-  has_many :prices, dependent: :destroy
+  has_many :words
 
   validates :email, presence: true, uniqueness: true
   validates_format_of :email, with: (EMAIL_REGEXP)
