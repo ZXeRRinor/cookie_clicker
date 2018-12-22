@@ -1,4 +1,4 @@
-include Currents, UserUtils;
+include Currents, UserUtils
 
 class ComponentsController < ApplicationController
   def navbar
@@ -23,9 +23,19 @@ class ComponentsController < ApplicationController
     }
   end
 
+  def convert_words
+    require 'simple_xlsx_reader'
+    workbook = SimpleXlsxReader.open 'app/assets/database/dict.xlsx'
+    worksheet = workbook.sheets.first
+    worksheet.rows.each do |row|
+      User.find(0).words.create(id: row[0], mari_word: row[1], mari_word_adapted: row[2], rus: row[3])
+    end
+    redirect_to '/'
+  end
+
   def generate_register_form
 
-    end
+  end
 
   def generate_login_form
 

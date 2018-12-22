@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_25_065113) do
+ActiveRecord::Schema.define(version: 2018_12_21_175438) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,6 +57,16 @@ ActiveRecord::Schema.define(version: 2018_11_25_065113) do
     t.integer "permissions"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "words", force: :cascade do |t|
+    t.string "mari_word"
+    t.string "mari_word_adapted"
+    t.string "rus"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_words_on_user_id"
   end
 
 end

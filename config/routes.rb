@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'navbar', to: 'components#navbar'
   get 'get_comp/register_form', to: 'components#generate_register_form'
   get 'get_comp/login_form', to: 'components#generate_login_form'
+  get 'convert', to: 'components#convert_words'
 
   get 'register', to: 'users#try_register'
   post 'register', to: 'users#register'
