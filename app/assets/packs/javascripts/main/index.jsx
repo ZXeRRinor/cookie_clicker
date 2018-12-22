@@ -4,16 +4,17 @@ import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 import Navbar from './navbar';
 import Forum from './forum/forum';
+import Dictionary from "./dictionary/dictionary";
 
 const initialState = {};
 let mainReducer = (store = initialState, action) => {
     let type = action.type;
     let payload = action.payload;
     switch (type) {
-        case ('set_curr_sub'): {
+        case ('set_curr_user'): {
             return ({
                 ...store,
-                curr_sub: payload
+                curr_user: payload
             });
         }
 
@@ -35,6 +36,7 @@ class Index extends Component {
                 <Router>
                     <div>
                         <Route component={Navbar}/>
+                        <Route component={Dictionary}/>
                         <Route path="/forum/:sub_id" component={Forum}/>
                     </div>
                 </Router>
