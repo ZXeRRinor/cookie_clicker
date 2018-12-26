@@ -5,6 +5,7 @@ class Dictionary extends Component {
 
     constructor(props) {
         super(props);
+        this.state = {changes: 0};
     }
 
     store = () => {
@@ -15,13 +16,22 @@ class Dictionary extends Component {
     };
 
     inputChange = (event) => {
-        console.log(event);
+        let text = event.target.value;
+        this.setState({in_text: text});
+        //this.setState({changes: this.state.changes + 1})
+    };
+
+    translate = (word, origin_lang, target_lang) => {
+        $.get('/translate/', {word: word, origin_lang: origin_lang, target_lang: target_lang}, (data) => {
+            this.setState({translation_result: data['translation_result']});
+        });
     };
 
     render() {
+        this.translate('привет', 'mari')
         return (
             <div>
-                <input onChange={this.inputChange}>Word</input>
+                <input onChange={this.inputChange} className='translate_input'/>
             </div>
         )
     }
