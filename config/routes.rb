@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get 'get_comp/login_form', to: 'components#generate_login_form'
   get 'convert', to: 'components#convert_words'
 
+  get '/translate/', to: 'dictionary#translate'
+
   get 'register', to: 'users#try_register'
   post 'register', to: 'users#register'
   get 'login', to: 'sessions#try_login'

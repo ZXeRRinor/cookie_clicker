@@ -17,8 +17,13 @@ class Dictionary extends Component {
 
     inputChange = (event) => {
         let text = event.target.value;
-        this.setState({in_text: text});
-        //this.setState({changes: this.state.changes + 1})
+        this.setState({input_text: text});
+    };
+
+    translateClick = () => {
+        this.translate(this.state.input_text, 'rus', 'mari');
+        console.log(this.state.translation_result);
+        document.querySelector('.translate_output').value = this.state.translation_result;
     };
 
     translate = (word, origin_lang, target_lang) => {
@@ -28,10 +33,11 @@ class Dictionary extends Component {
     };
 
     render() {
-        this.translate('привет', 'mari')
         return (
             <div>
                 <input onChange={this.inputChange} className='translate_input'/>
+                <input className='translate_output' size='50x50'/>
+                <button onClick={this.translateClick}>Translate</button>
             </div>
         )
     }

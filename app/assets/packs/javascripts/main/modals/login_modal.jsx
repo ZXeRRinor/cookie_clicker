@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {Button, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
+import {Button, Modal, ModalHeader, ModalBody} from 'reactstrap';
 
 class LoginModal extends Component {
 
@@ -22,6 +22,10 @@ class LoginModal extends Component {
             this.setState({reg_form: data});
         });
     }
+
+    toggle = () => {
+        this.setState({modal: !this.state.modal});
+    };
 
     render() {
         return (
