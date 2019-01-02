@@ -24,21 +24,27 @@ class LoginModal extends Component {
     }
 
     toggle = () => {
-        this.setState({modal: !this.state.modal});
+        this.setState({
+            modal: !this.state.modal
+        })
     };
 
     render() {
-        return (
-            <div className="bg-dark">
-                <Button color="primary" onClick={this.toggle}>Login</Button>
-                <Modal isOpen={this.state.modal} toggle={this.toggle} className="bg-dark">
-                    <ModalHeader toggle={this.toggle} className="bg-dark">Login</ModalHeader>
-                    <ModalBody className="bg-dark">
-                        <div dangerouslySetInnerHTML={{__html: this.state.reg_form}}/>
-                    </ModalBody>
-                </Modal>
-            </div>
-        );
+        if (this.state.reg_form) {
+            return (
+                <div className="bg-dark">
+                    <Button color="primary" onClick={this.toggle}>Login</Button>
+                    <Modal isOpen={this.state.modal} toggle={this.toggle} className="bg-dark">
+                        <ModalHeader toggle={this.toggle} className="bg-dark">Login</ModalHeader>
+                        <ModalBody className="bg-dark">
+                            <div dangerouslySetInnerHTML={{__html: this.state.reg_form}}/>
+                        </ModalBody>
+                    </Modal>
+                </div>
+            );
+        } else {
+            return (<div/>);
+        }
     }
 }
 

@@ -8,7 +8,7 @@ class Navbar extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {navbar: null};
+        this.state = {navbar: null, current_user: null, permissions: 0};
     }
 
 
@@ -51,7 +51,8 @@ class Navbar extends Component {
                                         <LoginModal/>
                                     </li>
                                 </ul>
-                                : <ul className="navbar-nav right_block"/>
+                                :
+                                <ul className="navbar-nav right_block"/>
                         }
                         {
                             //<

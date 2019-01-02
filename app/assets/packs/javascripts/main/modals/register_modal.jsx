@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {Button, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
+import {Button, Modal, ModalHeader, ModalBody} from 'reactstrap';
 
 class RegisterModal extends Component {
 
@@ -30,17 +30,21 @@ class RegisterModal extends Component {
     };
 
     render() {
-        return (
-            <div className="bg-dark">
-                <Button color="primary" onClick={this.toggle}>Register</Button>
-                <Modal isOpen={this.state.modal} toggle={this.toggle} className="bg-dark">
-                    <ModalHeader toggle={this.toggle} className="bg-dark">Register</ModalHeader>
-                    <ModalBody className="bg-dark">
-                        <div dangerouslySetInnerHTML={{__html: this.state.reg_form}}/>
-                    </ModalBody>
-                </Modal>
-            </div>
-        );
+        if (this.state.reg_form) {
+            return (
+                <div className="bg-dark">
+                    <Button color="primary" onClick={this.toggle}>Register</Button>
+                    <Modal isOpen={this.state.modal} toggle={this.toggle} className="bg-dark">
+                        <ModalHeader toggle={this.toggle} className="bg-dark">Register</ModalHeader>
+                        <ModalBody className="bg-dark">
+                            <div dangerouslySetInnerHTML={{__html: this.state.reg_form}}/>
+                        </ModalBody>
+                    </Modal>
+                </div>
+            );
+        } else {
+            return (<div/>);
+        }
         //<div dangerouslySetInnerHTML={{__html: this.state.reg_form}}/>
     }
 }

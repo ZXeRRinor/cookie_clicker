@@ -20,15 +20,19 @@ class Dictionary extends Component {
         this.setState({input_text: text});
     };
 
+    updateOutput = () => {
+        document.querySelector('.translate_output').value = this.state.translation_result;
+    };
+
     translateClick = () => {
         this.translate(this.state.input_text, 'rus', 'mari');
         console.log(this.state.translation_result);
-        document.querySelector('.translate_output').value = this.state.translation_result;
     };
 
     translate = (word, origin_lang, target_lang) => {
         $.get('/translate/', {word: word, origin_lang: origin_lang, target_lang: target_lang}, (data) => {
             this.setState({translation_result: data['translation_result']});
+            this.updateOutput();
         });
     };
 
