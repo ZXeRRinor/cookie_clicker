@@ -9,9 +9,8 @@ class Navbar extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {navbar: null, current_user: null, permissions: 0, current: 'dict'};
+        this.state = {navbar: null, current_user: null, permissions: 0, collapsed: 'dict'};
     }
-
 
     componentDidMount() {
         $.get('/navbar', (data) => {
@@ -19,31 +18,49 @@ class Navbar extends Component {
         });
     }
 
-    handleClick = (e) => {
-        console.log('click ', e);
+    toggleCollapsed = () => {
         this.setState({
-            current: e.key,
+            collapsed: !this.state.collapsed,
         });
-    }
+    };
 
     render() {
         return (
-            <Menu
-                onClick={this.handleClick}
-                selectedKeys={[this.state.current]}
-                mode="horizontal"
-            >
-                <Menu.Item key="dict">
-                    <Link to="/forum/0/" className="nav-link">Forum</Link>
-                </Menu.Item>
-                {this.state.permissions >= 2 ?
-                    <Menu.Item key="admin">
-                        <Link to="/admin/panel/" className="nav-link">Administrating</Link>
+            <div>
+                <Button type="primary" onClick={this.toggleCollapsed} style={{marginBottom: 16}}>
+                    <Icon type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}/>
+                </Button>
+                <Menu
+                    defaultSelectedKeys={['dictionary']}
+                    mode="inline"
+                    theme="dark"
+                    inlineCollapsed={this.state.collapsed}
+                >
+                    <Menu.Item key="dictionary">
+                        <Icon type="interation" />
+                        <span>Dictionary</span>
                     </Menu.Item>
-                    : ''
-                }
-            </Menu>
-
+                    <Menu.Item key="messages">
+                        <Icon type="message" />
+                        <span>Messages</span>
+                    </Menu.Item>
+                    {this.state.permissions >= 2 ?
+                        <Menu.Item key="admin">
+                            <Link to="/admin/panel/" className="nav-link">Administrating</Link>
+                        </Menu.Item>
+                        : ''
+                    }
+                </Menu>
+                <Menu
+                    onClick={this.handleClick}
+                    selectedKeys={[this.state.current]}
+                    mode="horizontal"
+                >
+                    <Menu.Item key="dict">
+                        <Link to="/forum/0/" className="nav-link">Forum</Link>
+                    </Menu.Item>
+                </Menu>
+            </div>
         );
         {/*<div>*/
         }

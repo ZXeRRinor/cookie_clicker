@@ -46,6 +46,7 @@ class Dictionary extends Component {
                     placeholder={"Input " + this.state.origin_lang + " word"}
                     enterButton="Translate"
                     onSearch={value => this.translateClick(value)}
+                    theme="dark"
                 />
                 <input className='translate_output' size='50x50'/>
             </div>
