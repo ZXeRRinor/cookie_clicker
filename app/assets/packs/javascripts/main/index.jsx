@@ -36,7 +36,7 @@ class Index extends Component {
                 <Router>
                     <div>
                         <Route component={Navbar}/>
-                        <Route component={Dictionary}/>
+                        <Route path="/dictionary" component={Dictionary}/>
                         <Route path="/forum/:sub_id" component={Forum}/>
                     </div>
                 </Router>
