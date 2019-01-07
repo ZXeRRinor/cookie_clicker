@@ -38,44 +38,44 @@ class Navbar extends Component {
                 >
                     <Menu.Item key="home">
                         <Link to="/" className="nav-link">
-
+                            <Icon type="home"/>
                             <span>Home</span>
                         </Link>
                     </Menu.Item>
                     <Menu.Item key="dictionary">
                         <Link to="" className="nav-link">
-
+                            <Icon type="interation"/>
                             <span>Dictionary</span>
                         </Link>
                     </Menu.Item>
                     <Menu.Item key="notifications">
                         <Link to="" className="nav-link">
-
+                            <Icon type="bell"/>
                             <span>Notifications</span>
                         </Link>
                     </Menu.Item>
                     <Menu.Item key="my_discussions">
                         <Link to="" className="nav-link">
-
+                            <Icon type="exclamation-circle"/>
                             <span>My discussions</span>
                         </Link>
                     </Menu.Item>
                     <Menu.Item key="messages">
                         <Link to="" className="nav-link">
-
+                            <Icon type="message"/>
                             <span>Messages</span>
                         </Link>
                     </Menu.Item>
                     <Menu.Item key="settings">
                         <Link to="" className="nav-link">
-
+                            <Icon type="setting"/>
                             <span>Settings</span>
                         </Link>
                     </Menu.Item>
                     {this.state.permissions >= 2 ?
                         <Menu.Item key="administrating">
                             <Link to="/admin/panel/" className="nav-link">
-
+                                <Icon type="code"/>
                                 <span>Administrating</span>
                             </Link>
                         </Menu.Item>
