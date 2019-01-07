@@ -13,7 +13,6 @@
  *= require_tree .
  *= require_self
  */
-@import 'antd.css';
 
 body {
     background-color: #1b1e21;
