@@ -1,0 +1,2 @@
+class WordVersion < ApplicationRecord
+end
