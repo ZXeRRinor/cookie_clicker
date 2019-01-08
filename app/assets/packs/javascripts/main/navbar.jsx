@@ -9,7 +9,7 @@ class Navbar extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {navbar: null, current_user: null, permissions: 0, collapsed: 'dict'};
+        this.state = {navbar: null, current_user: null, permissions: 0, collapsed: true};
     }
 
     componentDidMount() {
@@ -20,7 +20,7 @@ class Navbar extends Component {
 
     toggleCollapsed = () => {
         this.setState({
-            collapsed: !this.state.collapsed,
+            collapsed: !this.state.collapsed
         });
     };
 
