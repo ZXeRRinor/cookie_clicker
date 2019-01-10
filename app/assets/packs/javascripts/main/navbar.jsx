@@ -12,6 +12,13 @@ class Navbar extends Component {
         this.state = {navbar: null, current_user: null, permissions: 0, collapsed: true};
     }
 
+    store = () => {
+        return (this.props.store)
+    };
+    dispatch = (type, payload) => {
+        this.props.dispatch(type, payload)
+    };
+
     componentDidMount() {
         $.get('/navbar', (data) => {
             this.setState({permissions: data.permissions, current_user: data.current_user})
@@ -22,18 +29,15 @@ class Navbar extends Component {
         this.setState({
             collapsed: !this.state.collapsed
         });
+        this.dispatch('set_navbar_state', this.state.collapsed ? 'not_collapsed' : 'collapsed');
     };
 
     render() {
         return (
             <div style={{width: 256}}>
-                <Button type="primary" onClick={this.toggleCollapsed} style={{marginBottom: 16}}>
-                    <Icon type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}/>
-                </Button>
                 <Menu
-                    defaultSelectedKeys={['dictionary']}
+                    defaultSelectedKeys={['home']}
                     mode="inline"
-                    theme="dark"
                     inlineCollapsed={this.state.collapsed}
                 >
                     <Menu.Item key="home">
@@ -82,6 +86,9 @@ class Navbar extends Component {
                         : ''
                     }
                 </Menu>
+                <Button type="primary" onClick={this.toggleCollapsed} style={{marginBottom: 16}}>
+                    <Icon type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}/>
+                </Button>
             </div>
         );
     }

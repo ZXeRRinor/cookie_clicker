@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {Input} from 'antd'
+import {Input, List} from 'antd'
 
 const Search = Input.Search;
 

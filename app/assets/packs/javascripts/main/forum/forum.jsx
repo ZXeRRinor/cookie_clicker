@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import SubforumListElement from "./subforum_li";
 import PostListElement from "./post_li";
 import {Link} from 'react-router-dom';
+import { List } from 'antd';
 
 class Forum extends Component {
 
@@ -20,14 +21,14 @@ class Forum extends Component {
     };
 
     componentDidUpdate() {
-        if (this.state.id !== this.props.match.params.sub_id) {
+        if (this.state.id !== this.props.match.params.discussion_id) {
             this.compileComponent();
-            this.setState({id: this.props.match.params.sub_id});
+            this.setState({id: this.props.match.params.discussion_id});
         }
     }
 
     compileComponent() {
-        $.get('/forum/' + this.props.match.params.sub_id, (data) => {
+        $.get('/discussion/' + this.props.match.params.discussion_id, (data) => {
             //this.setState({content: data});
             let content = data;
             let sub_list = [];
@@ -47,13 +48,13 @@ class Forum extends Component {
     render() {
         if (this.state.path !== null && this.state.path !== undefined) {
             return (
-                <div className="container" key={this.props.match.params.sub_id}>
+                <div className="container" key={this.props.match.params.discussion_id}>
                     <div className="row justify-content-center">
                         <div className="col-11">
                             <ol className="bg-dark breadcrumb path">
                                 {this.state.path.map((elem, key) =>
                                     <li className='breadcrumb-item text-light' key={key}>
-                                        <Link to={'/forum' + '/' + elem.id + '/'}>{elem.title}</Link>
+                                        <Link to={'/discussion' + '/' + elem.id + '/'}>{elem.title}</Link>
                                     </li>)
                                 }
                             </ol>

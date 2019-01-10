@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   get 'forum/:id/new_post', to: 'posts#new'
   post 'forum/:id/new_post', to: 'posts#create'
   post 'forum/post/:id/new', to: 'messages#create'
-  get 'forum/:id', to: 'subforums#show'
+  get 'discussion/:id', to: 'subforums#show'
   get 'forum/init', to: 'subforums#init'
   get 'forum/post/:id', to: 'posts#show'
   get 'forum/:id/update', to: 'subforums#update'
