@@ -1,5 +1,8 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
+import {Input, List} from 'antd'
+
+const Search = Input.Search;
 
 class Dictionary extends Component {
 
@@ -24,8 +27,8 @@ class Dictionary extends Component {
         document.querySelector('.translate_output').value = this.state.translation_result;
     };
 
-    translateClick = () => {
-        this.translate(this.state.input_text, 'rus', 'mari');
+    translateClick = (value) => {
+        this.translate(value, 'rus', 'mari');
         console.log(this.state.translation_result);
     };
 
@@ -39,11 +42,16 @@ class Dictionary extends Component {
     render() {
         return (
             <div>
-                <input onChange={this.inputChange} className='translate_input'/>
+                <Search
+                    placeholder={"Input " + this.state.origin_lang + " word"}
+                    enterButton="Translate"
+                    onSearch={value => this.translateClick(value)}
+                    theme="dark"
+                />
                 <input className='translate_output' size='50x50'/>
-                <button onClick={this.translateClick}>Translate</button>
             </div>
         )
+
     }
 }
 

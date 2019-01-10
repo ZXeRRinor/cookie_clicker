@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {Link} from "react-router-dom";
+import { List } from 'antd';
 
 class PostListElement extends Component {
 
@@ -20,7 +21,7 @@ class PostListElement extends Component {
             <li className="list-group-item bg-secondary list-group-item-info">
                 <div className="row">
                     <div className="post_link col-9 text-light">
-                        <Link to={'/forum/' + this.props.sub_id + '/' +this.props.id + '/'}>{this.props.title}</Link>
+                        <Link to={'/forum/' + this.props.sub_id + '/' + this.props.id + '/'}>{this.props.title}</Link>
                     </div>
                     <div className="col-3">
                         /* delete and change buttons */

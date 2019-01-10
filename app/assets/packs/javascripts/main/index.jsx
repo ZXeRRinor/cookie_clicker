@@ -5,8 +5,9 @@ import {Provider} from 'react-redux';
 import Navbar from './navbar';
 import Forum from './forum/forum';
 import Dictionary from "./dictionary/dictionary";
+import {Row, Col} from 'antd';
 
-const initialState = {};
+const initialState = {navbar_state: 'collapsed'};
 let mainReducer = (store = initialState, action) => {
     let type = action.type;
     let payload = action.payload;
@@ -15,6 +16,12 @@ let mainReducer = (store = initialState, action) => {
             return ({
                 ...store,
                 curr_user: payload
+            });
+        }
+        case ('set_navbar_state'): {
+            return ({
+                ...store,
+                navbar_state: payload
             });
         }
 
@@ -28,16 +35,34 @@ class Index extends Component {
 
     constructor(props) {
         super(props);
+        this.state = {};
     }
+
+    componentDidMount() {
+        this.getNavbarSize();
+        store.subscribe(this.getNavbarSize);
+    }
+
+    getNavbarSize = () => {
+        console.log("Store: " + store.navbar_state);
+        this.setState({navbar_size: store.getState().navbar_state === 'collapsed' ? 2 : 4});
+        console.log("State: " + this.state.navbar_size);
+    };
 
     render() {
         return (
             <Provider store={store}>
                 <Router>
                     <div>
-                        <Route component={Navbar}/>
-                        <Route component={Dictionary}/>
-                        <Route path="/forum/:sub_id" component={Forum}/>
+                        <Row>
+                            <Col span={this.state.navbar_size}>
+                                <Route component={Navbar}/>
+                            </Col>
+                            <Col span={24 - this.state.navbar_size}>
+                                <Route path="/dictionary" component={Dictionary}/>
+                                <Route path="/discussion/:discussion_id" component={Forum}/>
+                            </Col>
+                        </Row>
                     </div>
                 </Router>
             </Provider>

@@ -1,16 +1,23 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import {connect} from 'react-redux';
-import RegisterModal from "./modals/register_modal";
-import LoginModal from "./modals/login_modal";
+//import RegisterModal from "./modals/register_modal";
+//import LoginModal from "./modals/login_modal";
+import {Menu, Icon, Button} from 'antd';
 
 class Navbar extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {navbar: null, current_user: null, permissions: 0};
+        this.state = {navbar: null, current_user: null, permissions: 0, collapsed: true};
     }
 
+    store = () => {
+        return (this.props.store)
+    };
+    dispatch = (type, payload) => {
+        this.props.dispatch(type, payload)
+    };
 
     componentDidMount() {
         $.get('/navbar', (data) => {
@@ -18,64 +25,72 @@ class Navbar extends Component {
         });
     }
 
+    toggleCollapsed = () => {
+        this.setState({
+            collapsed: !this.state.collapsed
+        });
+        this.dispatch('set_navbar_state', this.state.collapsed ? 'not_collapsed' : 'collapsed');
+    };
+
     render() {
         return (
-            <div>
-                <nav className="navbar sticky-top navbar-expand-lg bg-dark">
-                    <Link to='/' className="navbar-brand">Dictionary</Link>
-                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarNav">
-                        <ul className="navbar-nav">
-                            <li className="nav-item">
-                                <Link to="/forum/0/" className="nav-link">Forum</Link>
-                            </li>
-                            {
-                                this.state.permissions >= 2 ?
-                                    <li className="nav-item">
-                                        <Link to="/admin/panel/" className="nav-link">Administrating</Link>
-                                    </li>
-                                    : ''
-                            }
-                        </ul>
-                        {
-                            this.state.current_user !== null ?
-                                <ul className="navbar-nav right_block row">
-                                    <li>
-                                        <RegisterModal/>
-                                    </li>
-                                    <span className="col-1"/>
-                                    <li>
-                                        <LoginModal/>
-                                    </li>
-                                </ul>
-                                :
-                                <ul className="navbar-nav right_block"/>
-                        }
-                        {
-                            //<
-                            //% if current_user %>
-                            //<
-                            //%= render 'partials/dropdown', open_btn:
-                            //current_user.email, items: {:Profile => {controller: 'users', action: 'profile'}}, last_item_text: 'Logout', last_item_path: {controller: 'sessions', action: 'logout'} %>
-                            //<
-                            //% else %>
-                            //<div>
-                            //    <
-                            //    %= render 'partials/login_modal' %>
-                            //    <
-                            //    %= render 'partials/register_modal' %>
-                            //</div>
-                            // <
-                            // % end %>
-                        }
-                    </div>
-                </nav>
+            <div style={{width: 256}}>
+                <Menu
+                    defaultSelectedKeys={['home']}
+                    mode="inline"
+                    inlineCollapsed={this.state.collapsed}
+                >
+                    <Menu.Item key="home">
+                        <Link to="/" className="nav-link">
+                            <Icon type="home"/>
+                            <span>Home</span>
+                        </Link>
+                    </Menu.Item>
+                    <Menu.Item key="dictionary">
+                        <Link to="/dictionary" className="nav-link">
+                            <Icon type="interation"/>
+                            <span>Dictionary</span>
+                        </Link>
+                    </Menu.Item>
+                    <Menu.Item key="notifications">
+                        <Link to="/notifications" className="nav-link">
+                            <Icon type="bell"/>
+                            <span>Notifications</span>
+                        </Link>
+                    </Menu.Item>
+                    <Menu.Item key="my_discussions">
+                        <Link to="/my_discussions" className="nav-link">
+                            <Icon type="exclamation-circle"/>
+                            <span>My discussions</span>
+                        </Link>
+                    </Menu.Item>
+                    <Menu.Item key="messages">
+                        <Link to="/messages" className="nav-link">
+                            <Icon type="message"/>
+                            <span>Messages</span>
+                        </Link>
+                    </Menu.Item>
+                    <Menu.Item key="settings">
+                        <Link to="/settings" className="nav-link">
+                            <Icon type="setting"/>
+                            <span>Settings</span>
+                        </Link>
+                    </Menu.Item>
+                    {this.state.permissions >= 2 ?
+                        <Menu.Item key="administrating">
+                            <Link to="/admin/panel/" className="nav-link">
+                                <Icon type="code"/>
+                                <span>Administrating</span>
+                            </Link>
+                        </Menu.Item>
+                        : ''
+                    }
+                </Menu>
+                <Button type="primary" onClick={this.toggleCollapsed} style={{marginBottom: 16}}>
+                    <Icon type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}/>
+                </Button>
             </div>
         );
-
     }
 }
 
