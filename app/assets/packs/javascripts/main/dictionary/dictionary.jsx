@@ -47,11 +47,14 @@ class Dictionary extends Component {
     };
 
     translate = (word, origin_lang, target_lang) => {
-        $.get(this.state.backtranslations ? '/translate/with_backtrans' : '/translate', {
+        $.get('/translate', {
+            backtranslations: this.state.backtranslations,
             word: word,
             origin_lang: origin_lang,
             target_lang: target_lang
         }, (data) => {
+            console.log(this.state.backtranslations);
+            console.log(data);
             this.setState({translation_result: data['translation_result']});
             this.updateOutput();
             this.setState({backtrans_mode: this.state.backtranslations})
@@ -72,7 +75,7 @@ class Dictionary extends Component {
                     </Col>
                     <Col span={1}/>
                     <Col span={4}>
-                        <span>Backtranslations (can be very slow) </span>
+                        <span>Backtranslations (can be slow) </span>
                         {
                             this.state.origin_lang === 'mari' ?
                                 <Switch disabled/> :
@@ -89,7 +92,7 @@ class Dictionary extends Component {
                     <Col span={1}/>
                     <Col span={3}>
                         <Link to="/add_new_word/">
-                            <Button type="primary" onClick></Button>
+                            <Button type="primary"></Button>
                         </Link>
                     </Col>
                 </Row>
@@ -102,15 +105,15 @@ class Dictionary extends Component {
                                     this.state.backtrans_mode ?
                                         <Row key={key}>
                                             <Col span={5}>
-                                                <p>{val[0]}</p>
+                                                <p>{val['mari_word']}</p>
                                             </Col>
                                             <Col span={19}>
-                                                <p>{val[1]}</p>
+                                                <p>{val['rus']}</p>
                                             </Col>
                                         </Row> :
                                         <Row key={key}>
                                             <Col span={20}>
-                                                <p>{val}</p>
+                                                <p>{val['word']}</p>
                                             </Col>
                                         </Row>
                                 )

@@ -4,7 +4,7 @@ module Dictionary
     mari_words = []
     Word.find_each do |word|
       if regexp =~ word.rus
-        mari_words.push(word.mari_word, word.id)
+        mari_words.push({word: word.mari_word, id: word.id})
       end
     end
     mari_words
@@ -15,7 +15,7 @@ module Dictionary
     mari_words = []
     Word.find_each do |word|
       if regexp =~ word.rus
-        mari_words.push(word.mari_word, word.rus, word.id)
+        mari_words.push({mari_word: word.mari_word, rus: word.rus, id: word.id})
       end
     end
     mari_words
@@ -26,7 +26,7 @@ module Dictionary
     translations = []
     Word.find_each do |word|
       if regexp =~ word.mari_word
-        translations.push(word.rus, word.id)
+        translations.push({word: word.rus, id: word.id})
       end
     end
     translations
