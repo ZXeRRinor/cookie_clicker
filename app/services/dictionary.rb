@@ -4,7 +4,18 @@ module Dictionary
     mari_words = []
     Word.find_each do |word|
       if regexp =~ word.rus
-        mari_words.push(word.mari_word)
+        mari_words.push(word.mari_word, word.id)
+      end
+    end
+    mari_words
+  end
+
+  def find_words_by_rus_with_backtrans(rus_word)
+    regexp = Regexp.new(rus_word.downcase)
+    mari_words = []
+    Word.find_each do |word|
+      if regexp =~ word.rus
+        mari_words.push(word.mari_word, word.rus, word.id)
       end
     end
     mari_words
@@ -15,7 +26,7 @@ module Dictionary
     translations = []
     Word.find_each do |word|
       if regexp =~ word.mari_word
-        translations.push(word.rus)
+        translations.push(word.rus, word.id)
       end
     end
     translations
@@ -28,6 +39,14 @@ module Dictionary
     end
     if origin_lang == 'rus'
       result = {translation_result: find_words_by_rus(word)}
+    end
+    result
+  end
+
+  def translate_with_backtrans(origin_lang, word)
+    result = nil
+    if origin_lang == 'rus'
+      result = {translation_result: find_words_by_rus_with_backtrans(word)}
     end
     result
   end

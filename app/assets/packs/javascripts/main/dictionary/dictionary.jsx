@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {Input, Switch, Row, Col, Card, Select} from 'antd'
+import {Input, Switch, Row, Col, Card, Select, Button} from 'antd'
+import {Link} from "react-router-dom";
 
 const Search = Input.Search;
 const Option = Select.Option;
@@ -64,7 +65,7 @@ class Dictionary extends Component {
                 <Row>
                     <Col span={6}>
                         <Search
-                            placeholder={"Enter " + this.state.origin_lang === 'rus' ? 'russian' : this.state.origin_lang + " word"}
+                            placeholder={"Enter #{this.state.origin_lang === 'rus' ? 'russian' : this.state.origin_lang} word"}
                             enterButton="Translate"
                             onSearch={value => this.translateClick(value)}
                         />
@@ -84,6 +85,12 @@ class Dictionary extends Component {
                             <Option value="mari">Mari -> Russian</Option>
                             <Option value="rus">Russian -> Mari</Option>
                         </Select>
+                    </Col>
+                    <Col span={1}/>
+                    <Col span={3}>
+                        <Link to="/add_new_word/">
+                            <Button type="primary" onClick></Button>
+                        </Link>
                     </Col>
                 </Row>
 
