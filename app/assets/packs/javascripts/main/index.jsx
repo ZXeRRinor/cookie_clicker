@@ -6,6 +6,7 @@ import Navbar from './navbar';
 import Forum from './forum/forum';
 import Dictionary from "./dictionary/dictionary";
 import {Row, Col} from 'antd';
+import AddNewWord from "./new_word/new_word";
 
 const initialState = {navbar_state: 'collapsed'};
 let mainReducer = (store = initialState, action) => {
@@ -59,6 +60,7 @@ class Index extends Component {
                             <Col span={24 - this.state.navbar_size}>
                                 <Route path="/dictionary" component={Dictionary}/>
                                 <Route path="/discussion/:discussion_id" component={Forum}/>
+                                <Route path="/add_new_word/" component={AddNewWord}/>
                             </Col>
                         </Row>
                     </div>

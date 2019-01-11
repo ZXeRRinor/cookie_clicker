@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'convert', to: 'components#convert_words'
 
   get '/translate', to: 'dictionary#translate_to_json'
+  get '/add_new_word', to: 'dictionary#add_new_word'
 
   get 'register', to: 'users#try_register'
   post 'register', to: 'users#register'

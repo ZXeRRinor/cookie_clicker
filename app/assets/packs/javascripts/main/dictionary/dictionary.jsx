@@ -68,7 +68,7 @@ class Dictionary extends Component {
                 <Row>
                     <Col span={6}>
                         <Search
-                            placeholder={"Enter #{this.state.origin_lang === 'rus' ? 'russian' : this.state.origin_lang} word"}
+                            placeholder={'Enter ' + this.state.origin_lang === 'rus' ? 'russian' : this.state.origin_lang + ' word'}
                             enterButton="Translate"
                             onSearch={value => this.translateClick(value)}
                         />
@@ -77,13 +77,13 @@ class Dictionary extends Component {
                     <Col span={4}>
                         <span>Backtranslations (can be slow) </span>
                         {
-                            this.state.origin_lang === 'mari' ?
+                            this.state.origin_lang === ' mari' ?
                                 <Switch disabled/> :
                                 <Switch onChange={this.onChangeBacktransSwitch}/>
                         }
                     </Col>
                     <Col span={1}/>
-                    <Col span={4}>
+                    <Col span={2}>
                         <Select defaultValue="mari" onChange={this.onChangeLangSelect}>
                             <Option value="mari">Mari -> Russian</Option>
                             <Option value="rus">Russian -> Mari</Option>
@@ -92,7 +92,7 @@ class Dictionary extends Component {
                     <Col span={1}/>
                     <Col span={3}>
                         <Link to="/add_new_word/">
-                            <Button type="primary"></Button>
+                            <Button type="primary">Add new word</Button>
                         </Link>
                     </Col>
                 </Row>
@@ -105,15 +105,15 @@ class Dictionary extends Component {
                                     this.state.backtrans_mode ?
                                         <Row key={key}>
                                             <Col span={5}>
-                                                <p>{val['mari_word']}</p>
+                                                <p>{val[' mari_word']}</p>
                                             </Col>
                                             <Col span={19}>
-                                                <p>{val['rus']}</p>
+                                                <p>{val[' rus']}</p>
                                             </Col>
                                         </Row> :
                                         <Row key={key}>
                                             <Col span={20}>
-                                                <p>{val['word']}</p>
+                                                <p>{val[' word']}</p>
                                             </Col>
                                         </Row>
                                 )
