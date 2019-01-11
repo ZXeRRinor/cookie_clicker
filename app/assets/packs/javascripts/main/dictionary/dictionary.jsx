@@ -64,10 +64,9 @@ class Dictionary extends Component {
                 <Row>
                     <Col span={6}>
                         <Search
-                            placeholder={"Input " + this.state.origin_lang + " word"}
+                            placeholder={"Enter " + this.state.origin_lang === 'rus' ? 'russian' : this.state.origin_lang + " word"}
                             enterButton="Translate"
                             onSearch={value => this.translateClick(value)}
-                            theme="dark"
                         />
                     </Col>
                     <Col span={1}/>
