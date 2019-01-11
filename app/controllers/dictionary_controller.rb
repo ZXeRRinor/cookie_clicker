@@ -8,4 +8,6 @@ class DictionaryController < ApplicationController
       render json: translate_b(params[:origin_lang], params[:word]).to_json.to_s, content_type: 'application/json'
     end
   end
+
+
 end

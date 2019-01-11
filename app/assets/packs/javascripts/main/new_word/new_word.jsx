@@ -70,7 +70,7 @@ class AddNewWord extends Component {
         const formItems = keys.map((k, index) => (
             <Form.Item
                 {...(index === 0 ? formItemLayout : formItemLayoutWithOutLabel)}
-                label={index === 0 ? 'Значения' : ''}
+                label={index === 0 ? 'Meanings' : ''}
                 required={false}
                 key={k}
             >
@@ -79,10 +79,10 @@ class AddNewWord extends Component {
                     rules: [{
                         required: true,
                         whitespace: true,
-                        message: "Please enter word's значение or delete this field.",
+                        message: "Please enter word meaning or delete this field.",
                     }],
                 })(
-                    <Input placeholder="Значение" style={{width: '60%', marginRight: 8}}/>
+                    <Input placeholder="Meaning" style={{width: '60%', marginRight: 8}}/>
                 )}
                 {keys.length > 1 ? (
                     <Icon
