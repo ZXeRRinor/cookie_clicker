@@ -39,14 +39,12 @@ class Index extends Component {
     }
 
     componentDidMount() {
-        this.getNavbarSize();
-        store.subscribe(this.getNavbarSize);
+        this.navbarSizeToState();
+        store.subscribe(this.navbarSizeToState);
     }
 
-    getNavbarSize = () => {
-        console.log("Store: " + store.navbar_state);
+    navbarSizeToState = () => {
         this.setState({navbar_size: store.getState().navbar_state === 'collapsed' ? 2 : 4});
-        console.log("State: " + this.state.navbar_size);
     };
 
     render() {
