@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {Input, List, Row, Col, Card} from 'antd'
+import {Input, Switch, Row, Col, Card} from 'antd'
 
 const Search = Input.Search;
 
@@ -8,7 +8,7 @@ class Dictionary extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {changes: 0, translation_result: []};
+        this.state = {changes: 0, translation_result: [], backtranslations: false};
     }
 
     store = () => {
@@ -27,6 +27,10 @@ class Dictionary extends Component {
         this.setState({translation_result: this.state.translation_result === undefined ? [] : this.state.translation_result});
     };
 
+    onChangeBacktransSwitch = (checked) => {
+        this.setState({backtranslations: !this.state.backtranslations})
+    };
+
     translateClick = (value) => {
         const or_l = 'rus';
         const targ_l = 'mari';
@@ -35,7 +39,11 @@ class Dictionary extends Component {
     };
 
     translate = (word, origin_lang, target_lang) => {
-        $.get('/translate/', {word: word, origin_lang: origin_lang, target_lang: target_lang}, (data) => {
+        $.get(this.state.backtranslations ? '/translate/with_backtrans' : '/translate', {
+            word: word,
+            origin_lang: origin_lang,
+            target_lang: target_lang
+        }, (data) => {
             this.setState({translation_result: data['translation_result']});
             this.updateOutput();
         });
@@ -54,13 +62,31 @@ class Dictionary extends Component {
                             theme="dark"
                         />
                     </Col>
+                    <Col span={1}/>
+                    <Col span={4}>
+                        <span>Backtranslations (can be very slow) </span><Switch
+                        onChange={this.onChangeBacktransSwitch}/>
+                    </Col>
                 </Row>
                 <Row>
-                    <Col span={6}>
+                    <Col span={16}>
                         <Card title={this.state.input_word} bordered={false}>
                             {
                                 this.state.translation_result.map((val, key) =>
-                                    <p key={key}>{val}</p>
+                                    this.state.backtranslations ?
+                                        <Row key={key}>
+                                            <Col span={5}>
+                                                <p>{val[0]}</p>
+                                            </Col>
+                                            <Col span={19}>
+                                                <p>{val[1]}</p>
+                                            </Col>
+                                        </Row> :
+                                        <Row key={key}>
+                                            <Col span={5}>
+                                                <p>{val}</p>
+                                            </Col>
+                                        </Row>
                                 )
                             }
                         </Card>
