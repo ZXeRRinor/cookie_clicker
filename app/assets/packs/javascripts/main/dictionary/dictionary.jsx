@@ -1,14 +1,21 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {Input, Switch, Row, Col, Card} from 'antd'
+import {Input, Switch, Row, Col, Card, Select} from 'antd'
 
 const Search = Input.Search;
+const Option = Select.Option;
 
 class Dictionary extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {changes: 0, translation_result: [], backtranslations: false};
+        this.state = {
+            origin_lang: 'mari',
+            target_lang: 'rus',
+            translation_result: [],
+            backtranslations: false,
+            backtrans_mode: false
+        };
     }
 
     store = () => {
@@ -18,9 +25,11 @@ class Dictionary extends Component {
         this.props.dispatch(type, payload)
     };
 
-    inputChange = (event) => {
-        let text = event.target.value;
-        this.setState({input_text: text});
+    onChangeLangSelect = (value) => {
+        this.setState({origin_lang: value, target_lang: value === 'rus' ? 'mari' : 'rus'});
+        if (value === 'mari') {
+            this.setState({backtranslations: false});
+        }
     };
 
     updateOutput = () => {
@@ -32,10 +41,8 @@ class Dictionary extends Component {
     };
 
     translateClick = (value) => {
-        const or_l = 'rus';
-        const targ_l = 'mari';
-        this.translate(value, or_l, targ_l);
-        this.setState({origin_lang: or_l, target_lang: targ_l, input_word: value})
+        this.translate(value, this.state.origin_lang, this.state.target_lang);
+        this.setState({input_word: value})
     };
 
     translate = (word, origin_lang, target_lang) => {
@@ -46,6 +53,7 @@ class Dictionary extends Component {
         }, (data) => {
             this.setState({translation_result: data['translation_result']});
             this.updateOutput();
+            this.setState({backtrans_mode: this.state.backtranslations})
         });
     };
 
@@ -64,16 +72,28 @@ class Dictionary extends Component {
                     </Col>
                     <Col span={1}/>
                     <Col span={4}>
-                        <span>Backtranslations (can be very slow) </span><Switch
-                        onChange={this.onChangeBacktransSwitch}/>
+                        <span>Backtranslations (can be very slow) </span>
+                        {
+                            this.state.origin_lang === 'mari' ?
+                                <Switch disabled/> :
+                                <Switch onChange={this.onChangeBacktransSwitch}/>
+                        }
+                    </Col>
+                    <Col span={1}/>
+                    <Col span={4}>
+                        <Select defaultValue="mari" onChange={this.onChangeLangSelect}>
+                            <Option value="mari">Mari -> Russian</Option>
+                            <Option value="rus">Russian -> Mari</Option>
+                        </Select>
                     </Col>
                 </Row>
+
                 <Row>
                     <Col span={16}>
                         <Card title={this.state.input_word} bordered={false}>
                             {
                                 this.state.translation_result.map((val, key) =>
-                                    this.state.backtranslations ?
+                                    this.state.backtrans_mode ?
                                         <Row key={key}>
                                             <Col span={5}>
                                                 <p>{val[0]}</p>
@@ -83,7 +103,7 @@ class Dictionary extends Component {
                                             </Col>
                                         </Row> :
                                         <Row key={key}>
-                                            <Col span={5}>
+                                            <Col span={20}>
                                                 <p>{val}</p>
                                             </Col>
                                         </Row>
