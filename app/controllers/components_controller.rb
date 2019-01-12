@@ -30,4 +30,8 @@ class ComponentsController < ApplicationController
   def generate_login_form
 
   end
+
+  def csrg_meta_tags_comp
+
+  end
 end

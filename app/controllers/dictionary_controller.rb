@@ -9,5 +9,8 @@ class DictionaryController < ApplicationController
     end
   end
 
-
+  def add_new_word
+    p 'new_word'
+    p params
+  end
 end

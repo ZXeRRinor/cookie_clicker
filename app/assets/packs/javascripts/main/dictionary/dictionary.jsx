@@ -91,7 +91,7 @@ class Dictionary extends Component {
                     </Col>
                     <Col span={1}/>
                     <Col span={3}>
-                        <Link to="/add_new_word/">
+                        <Link to="/add_new_word">
                             <Button type="primary">Add new word</Button>
                         </Link>
                     </Col>

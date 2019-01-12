@@ -2,13 +2,14 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'components#main'
 
-  get 'navbar', to: 'components#navbar'
-  get 'get_comp/register_form', to: 'components#generate_register_form'
-  get 'get_comp/login_form', to: 'components#generate_login_form'
+  get '/navbar', to: 'components#navbar'
+  get '/get_comp/register_form', to: 'components#generate_register_form'
+  get '/get_comp/login_form', to: 'components#generate_login_form'
   get 'convert', to: 'components#convert_words'
+  get '/get_comp/csrf_tags', to: 'components#csrg_meta_tags_comp'
 
   get '/translate', to: 'dictionary#translate_to_json'
-  get '/add_new_word', to: 'dictionary#add_new_word'
+  post '/add_new_word', to: 'dictionary#add_new_word'
 
   get 'register', to: 'users#try_register'
   post 'register', to: 'users#register'

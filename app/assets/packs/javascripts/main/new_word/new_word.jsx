@@ -41,11 +41,21 @@ class AddNewWord extends Component {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
             if (!err) {
-                console.log('Received values of form: ', values);
-                $.get('/add_new_word', {values: values});
+                this.sendData(values);
             }
         });
     };
+
+    sendData = (values) => {
+        console.log('send');
+        $.post('/add_new_word', {authenticity_token: this.state.authenticity_token, values: values});
+    };
+
+    componentDidMount() {
+        $.get('/get_comp/csrf_tags', (data) => {
+            this.setState({authenticity_token: $(data)[2].content});
+        });
+    }
 
     render() {
         const {getFieldDecorator, getFieldValue} = this.props.form;
@@ -100,6 +110,7 @@ class AddNewWord extends Component {
                 <Row>
                     <Col span={10}>
                         <Form onSubmit={this.handleSubmit}>
+                            <div className="csrf_meta_tags"/>
                             <Form.Item {...formItemLayoutWithOutLabel}>
                                 {getFieldDecorator('word', {
                                     rules: [{required: true, message: 'Please input word!'}],
