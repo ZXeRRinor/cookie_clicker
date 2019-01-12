@@ -109,8 +109,8 @@ sequence|table|25024|25026|5
       <Comment>standard public schema</Comment>
       <StateNumber>351</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionTimestamp>2019-01-12.00:06:01.853</IntrospectionTimestamp>
-      <IntrospectionStateNumber>36764</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2019-01-12.05:19:58.768</IntrospectionTimestamp>
+      <IntrospectionStateNumber>36766</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -258,7 +258,7 @@ sequence|table|25024|25026|5
     <table id="40" parent="18" name="words">
       <ObjectId>24988</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>3646</StateNumber>
+      <StateNumber>36766</StateNumber>
     </table>
     <column id="41" parent="33" name="key">
       <Position>1</Position>
@@ -746,17 +746,30 @@ sequence|table|25024|25026|5
       <StateNumber>3646</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <index id="120" parent="40" name="words_pkey">
+    <column id="120" parent="40" name="mari">
+      <Position>8</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>36765</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="121" parent="40" name="rus_word">
+      <Position>9</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>36766</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="122" parent="40" name="words_pkey">
       <ObjectId>24995</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="121" parent="40" name="index_words_on_user_id">
+    <index id="123" parent="40" name="index_words_on_user_id">
       <ObjectId>24997</ObjectId>
       <ColNames>user_id</ColNames>
     </index>
-    <key id="122" parent="40" name="words_pkey">
+    <key id="124" parent="40" name="words_pkey">
       <ObjectId>24996</ObjectId>
+      <StateNumber>3646</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>words_pkey</UnderlyingIndexName>
       <Primary>1</Primary>

@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {Form, Input, Icon, Button, Row, Col} from 'antd'
+import {Form, Input, Icon, Button, Row, Col, Select} from 'antd'
 
 let id = 0;
 
@@ -84,7 +84,7 @@ class AddNewWord extends Component {
                 required={false}
                 key={k}
             >
-                {getFieldDecorator(`names[${k}]`, {
+                {getFieldDecorator(`meanings[${k}]`, {
                     validateTrigger: ['onChange', 'onBlur'],
                     rules: [{
                         required: true,
@@ -108,9 +108,8 @@ class AddNewWord extends Component {
             <div>
                 <Row style={{height: '70px'}}/>
                 <Row>
-                    <Col span={10}>
+                    <Col span={8}>
                         <Form onSubmit={this.handleSubmit}>
-                            <div className="csrf_meta_tags"/>
                             <Form.Item {...formItemLayoutWithOutLabel}>
                                 {getFieldDecorator('word', {
                                     rules: [{required: true, message: 'Please input word!'}],
@@ -128,6 +127,24 @@ class AddNewWord extends Component {
                                 <Button type="primary" htmlType="submit">Submit</Button>
                             </Form.Item>
                         </Form>
+                    </Col>
+                    <Col span={16}>
+                        <Form.Item
+                            {...formItemLayoutWithOutLabel}
+                            label="Select origin language"
+                            hasFeedback
+                        >
+                            {getFieldDecorator('origin_lang', {
+                                rules: [
+                                    {required: true, message: 'Please select origin language'},
+                                ],
+                            })(
+                                <Select placeholder="Please select a country" style={{width: '120px'}}>
+                                    <Select.Option value="mari">Mari</Select.Option>
+                                    <Select.Option value="rus">Russian</Select.Option>
+                                </Select>
+                            )}
+                        </Form.Item>
                     </Col>
                 </Row>
             </div>
