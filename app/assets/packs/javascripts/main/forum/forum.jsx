@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import SubforumListElement from "./subforum_li";
 import PostListElement from "./post_li";
 import {Link} from 'react-router-dom';
-import { List } from 'antd';
+import { Breadcrumb, List } from 'antd';
 
 class Forum extends Component {
 
@@ -51,19 +51,19 @@ class Forum extends Component {
                 <div className="container" key={this.props.match.params.discussion_id}>
                     <div className="row justify-content-center">
                         <div className="col-11">
-                            <ol className="bg-dark breadcrumb path">
+                            <Breadcrumb>
                                 {this.state.path.map((elem, key) =>
-                                    <li className='breadcrumb-item text-light' key={key}>
+                                    <Breadcrumb.Item key={key}>
                                         <Link to={'/discussion' + '/' + elem.id + '/'}>{elem.title}</Link>
-                                    </li>)
+                                    </Breadcrumb.Item>)
                                 }
-                            </ol>
-                            <ul className="list-group list-group-flush posts_list bg-dark">
+                            </Breadcrumb>
+                            <List>
                                 {this.state.posts}
-                            </ul>
-                            <ul className="list-group list-group-flush subforums_list bg-dark">
+                            </List>
+                            <List>
                                 {this.state.subs}
-                            </ul>
+                            </List>
                         </div>
                     </div>
                 </div>

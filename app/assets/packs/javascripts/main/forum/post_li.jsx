@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {Link} from "react-router-dom";
-import { List } from 'antd';
+import { List, Row, Col } from 'antd';
 
 class PostListElement extends Component {
 
@@ -18,16 +18,16 @@ class PostListElement extends Component {
 
     render() {
         return (
-            <li className="list-group-item bg-secondary list-group-item-info">
-                <div className="row">
-                    <div className="post_link col-9 text-light">
-                        <Link to={'/forum/' + this.props.sub_id + '/' + this.props.id + '/'}>{this.props.title}</Link>
-                    </div>
-                    <div className="col-3">
+            <List.Item>
+                <Row>
+                    <Col span={18}>
+                        <Link to={'/discussion/' + this.props.sub_id + '/' + this.props.id + '/'}>{this.props.title}</Link>
+                    </Col>
+                    <Col spanw={6}>
                         /* delete and change buttons */
-                    </div>
-                </div>
-            </li>
+                    </Col>
+                </Row>
+            </List.Item>
         )
     }
 }
