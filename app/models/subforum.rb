@@ -4,6 +4,7 @@ class Subforum < ApplicationRecord
   belongs_to :word_version
   has_many :subforums, dependent: :destroy
   has_many :posts, dependent: :destroy
+  has_once :vote
 
   def belongs_to_sub(user, subforum)
     self.user = user
