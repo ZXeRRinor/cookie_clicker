@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_12_022058) do
+ActiveRecord::Schema.define(version: 2019_01_12_025702) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 2019_01_12_022058) do
     t.integer "permissions"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "authority"
   end
 
   create_table "word_versions", force: :cascade do |t|
