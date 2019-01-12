@@ -10,7 +10,8 @@ class DictionaryController < ApplicationController
   end
 
   def add_new_word
-    word, meanings, origin_lang = params[:values][:word], params[:values][:meanings], params[:values][:origin_lang]
+    values = params[:values]
+    word, meanings, origin_lang = values[:word], values[:meanings], values[:origin_lang]
     meanings.delete_if {|elem| elem.blank?}
     meanings = meanings.join(', ')
     if origin_lang == 'mari'
@@ -21,10 +22,28 @@ class DictionaryController < ApplicationController
       version.save
       version.subforums.new(title: word)
     else
-      if Word.find_by(rus: word)
+      if Word.find_by(rus_word: word)
         return
       end
-      version = current_user.word_versions.new(rus: word, mari_word: meanings)
+      version = current_user.word_versions.new(rus_word: word, mari: meanings)
+      version.save
+      version.subforums.new(title: word)
+    end
+  end
+
+  def update_word
+    values = params[:values]
+    word, meanings, origin_lang, id = values[:word], values[:meanings], values[:origin_lang], values[:id]
+    meanings.delete_if {|elem| elem.blank?}
+    meanings = meanings.join(', ')
+    if origin_lang == 'mari'
+      vers_num = Word.find_by_mari(word).word_versions.last
+      version = current_user.word_versions.new(mari_word: word, rus: meanings, version: ++vers_num)
+      version.save
+      version.subforums.new(title: word)
+    else
+      vers_num = Word.find_by_rus(word).word_versions.last
+      version = current_user.word_versions.new(rus_word: word, mari: meanings, version: ++vers_num)
       version.save
       version.subforums.new(title: word)
     end
