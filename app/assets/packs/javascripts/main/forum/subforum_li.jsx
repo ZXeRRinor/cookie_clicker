@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
-import {List, Row, Col} from 'antd';
+import {Col, List, Row} from 'antd';
 
 class SubforumListElement extends Component {
 
@@ -25,13 +25,13 @@ class SubforumListElement extends Component {
                     </Col>
                     <Col span={2}>
                         Posts: {this.props.posts_in}
-                    </div>
+                    </Col>
                     <Col span={2}>
                         Subs: {this.props.subs_in}
-                    </div>
+                    </Col>
                     <Col span={6}>
                         /* delete and change buttons */
-                    </div>
+                    </Col>
                 </Row>
             </List.Item>
         );

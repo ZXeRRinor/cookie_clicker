@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {Form, Input, Icon, Button, Row, Col, Select} from 'antd'
+import {Button, Col, Form, Icon, Input, Row, Select} from 'antd'
 
 let id = 0;
 

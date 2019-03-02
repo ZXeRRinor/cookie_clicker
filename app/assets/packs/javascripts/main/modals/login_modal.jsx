@@ -1,13 +1,13 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {Button, Modal, ModalHeader, ModalBody} from 'reactstrap';
+import {Modal} from 'antd';
+import LoginForm from './login_form'
 
 class LoginModal extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {reg_form: null, modal: false};
-        this.getForm();
+        this.state = {reg_form: null, visible: false};
     }
 
     store = () => {
@@ -17,34 +17,37 @@ class LoginModal extends Component {
         this.props.dispatch(type, payload)
     };
 
+    showModal = () => {
+        this.dispatch('set_login_modal_visibility', true)
+    };
+
+    handleOk = (e) => {
+        this.dispatch('set_login_modal_visibility', false)
+    };
+
+    handleCancel = (e) => {
+        this.dispatch('set_login_modal_visibility', false)
+    };
+
     getForm() {
         $.get('/get_comp/login_form', (data) => {
             this.setState({reg_form: data});
         });
     }
 
-    toggle = () => {
-        this.setState({
-            modal: !this.state.modal
-        })
-    };
-
     render() {
-        if (this.state.reg_form) {
-            return (
-                <div className="bg-dark">
-                    <Button color="primary" onClick={this.toggle}>Login</Button>
-                    <Modal isOpen={this.state.modal} toggle={this.toggle} className="bg-dark">
-                        <ModalHeader toggle={this.toggle} className="bg-dark">Login</ModalHeader>
-                        <ModalBody className="bg-dark">
-                            <div dangerouslySetInnerHTML={{__html: this.state.reg_form}}/>
-                        </ModalBody>
-                    </Modal>
-                </div>
-            );
-        } else {
-            return (<div/>);
-        }
+        return (
+            <div>
+                <Modal
+                    title="Log in"
+                    visible={this.store()['login_modal_visibility']}
+                    onOk={this.handleOk}
+                    onCancel={this.handleCancel}
+                >
+                    <LoginForm/>
+                </Modal>
+            </div>
+        );
     }
 }
 

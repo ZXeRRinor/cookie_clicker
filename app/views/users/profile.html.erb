@@ -1,52 +1,52 @@
 <html>
-  <head>
-    <%= stylesheet_pack_tag 'stylesheets/users/profile' %>
-  </head>
-  <body>
-    <div class="user_profile container">
-      <div class="row justify-content-center">
-        <ul class="list-group list-group-flush col-5">
-          <li class="list-group-item row">
-            <div class="user_avatar col-10"></div>
-          </li>
-          <li class="list-group-item row">
-            <span class="col-8">Your name: </span>
-            <span class="col-4"><%= @current_user.name %></span>
-          </li>
-          <li class="list-group-item row">
-            <span class="user_email col-8">Your e-mail: </span>
-            <span class="user_email col-4"><%= @current_user.email %></span>
-          </li>
-          <li class="list-group-item row">
-            <span class="user_balance col-8">Registered: </span>
-            <span class="user_balance col-4"><%= @current_user.created_at %></span>
-          </li>
-        </ul>
-      </div>
-      <div class="row justify-content-center">
-        <div class="change_password col-5">
-          <p>
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-              Change password
-            </button>
-          </p>
-          <div class="collapse change_pass_collapse" id="collapseExample">
-            <div class="card card-body">
-              <%= form_with model: @user, method: 'patch', url: {controller: 'users', action: 'change_password'} do |f| %>
-                <div class="form-group">
-                  <%= f.password_field :password, class: 'form-control', placeholder: 'Enter your new password' %>
-                </div>
-                <div class="form-group">
-                  <%= f.password_field :password_confirmation, class: 'form-control', placeholder: 'Confirm your new password' %>
-                </div>
-                <div class="form-group">
-                  <%= f.submit 'Change', class: 'btn btn-primary' %>
-                </div>
-              <% end %>
+<head>
+  <%= stylesheet_pack_tag 'stylesheets/users/profile' %>
+</head>
+<body>
+<div class="user_profile container">
+  <div class="row justify-content-center">
+    <ul class="list-group list-group-flush col-5">
+      <li class="list-group-item row">
+        <div class="user_avatar col-10"></div>
+      </li>
+      <li class="list-group-item row">
+        <span class="col-8">Your name: </span>
+        <span class="col-4"><%= @current_user.name %></span>
+      </li>
+      <li class="list-group-item row">
+        <span class="user_email col-8">Your e-mail: </span>
+        <span class="user_email col-4"><%= @current_user.email %></span>
+      </li>
+      <li class="list-group-item row">
+        <span class="user_balance col-8">Registered: </span>
+        <span class="user_balance col-4"><%= @current_user.created_at %></span>
+      </li>
+    </ul>
+  </div>
+  <div class="row justify-content-center">
+    <div class="change_password col-5">
+      <p>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          Change password
+        </button>
+      </p>
+      <div class="collapse change_pass_collapse" id="collapseExample">
+        <div class="card card-body">
+          <%= form_with model: @user, method: 'patch', url: {controller: 'users', action: 'change_password'} do |f| %>
+            <div class="form-group">
+              <%= f.password_field :password, class: 'form-control', placeholder: 'Enter your new password' %>
             </div>
-          </div>
+            <div class="form-group">
+              <%= f.password_field :password_confirmation, class: 'form-control', placeholder: 'Confirm your new password' %>
+            </div>
+            <div class="form-group">
+              <%= f.submit 'Change', class: 'btn btn-primary' %>
+            </div>
+          <% end %>
         </div>
       </div>
     </div>
-  </body>
+  </div>
+</div>
+</body>
 </html>

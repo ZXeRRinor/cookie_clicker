@@ -26,9 +26,9 @@ Rails.application.routes.draw do
   post 'forum/post/:id/new', to: 'messages#create'
   get 'discussion/:id', to: 'subforums#show'
   get 'forum/init', to: 'subforums#init'
-  get 'forum/post/:id', to: 'posts#show'
+  get 'discussion/post/:id', to: 'posts#show'
   get 'forum/:id/update', to: 'subforums#update'
-  get 'forum/:id/delete', to: 'subforums#delete'
+  get 'discussion/:id/delete', to: 'subforums#delete'
   get 'forum/post/:id/update', to: 'posts#update'
   get 'forum/post/:id/delete', to: 'posts#delete'
 

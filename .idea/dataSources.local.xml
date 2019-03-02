@@ -10,5 +10,8 @@
       <user-name>postgres</user-name>
       <introspection-schemas>@:@</introspection-schemas>
     </data-source>
+    <data-source name="postgres@localhost" uuid="cc70b375-3c17-4393-8c3f-019ccfa80777">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" exact-version="0" />
+    </data-source>
   </component>
 </project>

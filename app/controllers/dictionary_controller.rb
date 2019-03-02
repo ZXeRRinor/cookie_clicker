@@ -20,16 +20,15 @@ class DictionaryController < ApplicationController
           return
         end
         version = current_user.word_versions.new(mari_word: word, rus: meanings)
-        version.save
-        version.subforums.new(title: word)
       else
         if Word.find_by(rus_word: word)
           return
         end
         version = current_user.word_versions.new(rus_word: word, mari: meanings)
-        version.save
-        version.subforums.new(title: word)
       end
+      version.save
+      discussion = version.subforums.create(title: word)
+      discussion.create_vote
     end
   end
 
@@ -42,14 +41,13 @@ class DictionaryController < ApplicationController
       if origin_lang == 'mari'
         vers_num = Word.find_by_mari(word).word_versions.last
         version = current_user.word_versions.new(mari_word: word, rus: meanings, version: ++vers_num)
-        version.save
-        version.subforums.new(title: word)
       else
         vers_num = Word.find_by_rus(word).word_versions.last
         version = current_user.word_versions.new(rus_word: word, mari: meanings, version: ++vers_num)
-        version.save
-        version.subforums.new(title: word)
       end
+      version.save
+      discussion = version.subforums.create(title: word)
+      discussion.create_vote
     end
   end
 end

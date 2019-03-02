@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {Link} from "react-router-dom";
-import { List, Row, Col } from 'antd';
+import {Col, List, Row} from 'antd';
 
 class PostListElement extends Component {
 
@@ -21,7 +21,8 @@ class PostListElement extends Component {
             <List.Item>
                 <Row>
                     <Col span={18}>
-                        <Link to={'/discussion/' + this.props.sub_id + '/' + this.props.id + '/'}>{this.props.title}</Link>
+                        <Link
+                            to={'/discussion/' + this.props.sub_id + '/' + this.props.id + '/'}>{this.props.title}</Link>
                     </Col>
                     <Col spanw={6}>
                         /* delete and change buttons */

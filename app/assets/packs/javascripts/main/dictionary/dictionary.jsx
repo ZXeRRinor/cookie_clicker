@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {Input, Switch, Row, Col, Card, Select, Button} from 'antd'
+import {Button, Card, Col, Input, Row, Select, Switch} from 'antd'
 import {Link} from "react-router-dom";
 
 const Search = Input.Search;

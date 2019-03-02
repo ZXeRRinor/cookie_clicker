@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import {connect} from 'react-redux';
 //import RegisterModal from "./modals/register_modal";
 //import LoginModal from "./modals/login_modal";
-import {Menu, Icon, Button} from 'antd';
+import {Button, Icon, Menu} from 'antd';
 
 class Navbar extends Component {
 
@@ -30,6 +30,14 @@ class Navbar extends Component {
             collapsed: !this.state.collapsed
         });
         this.dispatch('set_navbar_state', this.state.collapsed ? 'not_collapsed' : 'collapsed');
+    };
+
+    showLoginModal = () => {
+        this.dispatch('set_login_modal_visibility', true)
+    };
+
+    showRegisterModal = () => {
+        this.dispatch('set_register_modal_visibility', true)
     };
 
     render() {
@@ -59,7 +67,7 @@ class Navbar extends Component {
                         </Link>
                     </Menu.Item>
                     <Menu.Item key="my_discussions">
-                        <Link to="/my_discussions" className="nav-link">
+                        <Link to="/discussion/0" className="nav-link">
                             <Icon type="exclamation-circle"/>
                             <span>My discussions</span>
                         </Link>
@@ -76,6 +84,24 @@ class Navbar extends Component {
                             <span>Settings</span>
                         </Link>
                     </Menu.Item>
+                    {this.store().curr_user === null ?
+                        <Menu.Item key="login">
+                            <a onClick={this.showLoginModal}>
+                                <Icon type="login"/>
+                                <span>Login</span>
+                            </a>
+                        </Menu.Item>
+                        : ''
+                    }
+                    {this.store().curr_user === null ?
+                        <Menu.Item key="register">
+                            <a onClick={this.showRegisterModal}>
+                                <Icon type="plus-circle"/>
+                                <span>Register</span>
+                            </a>
+                        </Menu.Item>
+                        : ''
+                    }
                     {this.state.permissions >= 2 ?
                         <Menu.Item key="administrating">
                             <Link to="/admin/panel/" className="nav-link">
